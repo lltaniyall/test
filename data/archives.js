@@ -117,10 +117,10 @@ const ARCHIVES = [
 "artist": "椎名林檎",
 "time": 9052,
 "type": "song"
-}
-]
-},"
-"{
+    }
+  ]
+},
+{
 "date": "2026-07-15",
 "membersOnly": false,
 "title": "【 歌枠 】暑すぎるから夏のお歌が歌ひたくなるでせう～～～が！【 甘萬つもり｜#個人Vtuber 】",
@@ -204,8 +204,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2026-07-10",
 "membersOnly": false,
 "title": "【 歌枠 】ボカロ縛りでインタアネツト老人会【 甘萬つもり｜#個人Vtuber 】",
@@ -331,8 +331,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2026-07-03",
 "membersOnly": false,
 "title": "【 歌枠 】久しぶりの歌枠♡ジヤンルごちや混ぜのリハビリお歌！【 甘萬つもり｜#個人Vtuber 】",
@@ -440,8 +440,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2026-05-17",
 "membersOnly": false,
 "title": "【 アカペラ歌枠 】久しぶりにチルなお唄。睡眠導入にだうぞ♡【 甘萬つもり｜#個人Vtuber 】",
@@ -585,8 +585,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2026-03-15",
 "membersOnly": false,
 "title": "【 歌枠 】寝る前に聞きたい曲を集めてみました♡【 甘萬つもり｜#個人Vtuber 】",
@@ -688,8 +688,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2026-02-25",
 "membersOnly": false,
 "title": "【 歌枠 】ヴヰチユーバア三歳になりまして、一寸だけ【 甘萬つもり｜#個人Vtuber 】",
@@ -725,8 +725,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2026-02-19",
 "membersOnly": false,
 "title": "【 歌枠 】ご機嫌にカラオケがしたいのです【 甘萬つもり｜#個人Vtuber 】",
@@ -798,8 +798,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2026-02-18",
 "membersOnly": false,
 "title": "【 歌枠 】お手柔らかにお願ひします‥‥【 甘萬つもり｜#個人Vtuber 】",
@@ -841,8 +841,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-10-07",
 "membersOnly": false,
 "title": "【 アカペラ歌枠 】睡眠導入♡子守歌代はりになりますやうに【 甘萬つもり｜#個人Vtuber 】",
@@ -938,8 +938,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-09-09",
 "membersOnly": false,
 "title": "【 歌枠 】結局ボカロがアガるつてワケ♡【 甘萬つもり｜#個人Vtuber 】",
@@ -1041,8 +1041,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-09-02",
 "membersOnly": false,
 "title": "【 歌枠 】リクエストが欲しいカラオケボツクス【 甘萬つもり｜#個人Vtuber 】",
@@ -1156,8 +1156,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-08-20",
 "membersOnly": false,
 "title": "【 歌枠 】はあ？誕生日？まうめでたくなんかないんだからね【 甘萬つもり｜#個人Vtuber 】",
@@ -1235,8 +1235,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-08-14",
 "membersOnly": true,
 "title": "【 歌枠 】平成夏ソングた～～くさん♡久しぶりの歌枠！【 甘萬つもり｜#個人Vtuber 】",
@@ -1362,8 +1362,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-06-25",
 "membersOnly": false,
 "title": "【 歌枠 】♡♡どろどろこつてりなラヴソング♡♡【 甘萬つもり｜#個人Vtuber 】",
@@ -1453,8 +1453,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-06-17",
 "membersOnly": false,
 "title": "【 歌枠 】低音ハスキヰ給仕による椎名林檎/東京事変縛り【 甘萬つもり｜#個人Vtuber 】",
@@ -1592,8 +1592,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-06-03",
 "membersOnly": false,
 "title": "【 歌枠 】みきとPさん楽曲縛り！チル・・・【 甘萬つもり｜#個人Vtuber 】",
@@ -1665,8 +1665,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-05-27",
 "membersOnly": false,
 "title": "【 歌枠 】ゆるりと！久しぶりのお唄です【 甘萬つもり｜#個人Vtuber 】",
@@ -1773,8 +1773,8 @@ const ARCHIVES = [
 "type": "talk"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-04-07",
 "membersOnly": false,
 "title": "【 歌枠 】アカペラでまつたり寝落ち出来さうな感じのやつ【 甘萬つもり｜#個人Vtuber 】",
@@ -1822,8 +1822,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-03-12",
 "membersOnly": false,
 "title": "【 歌枠 】格好イイ曲たくさんやりたい日～！【 甘萬つもり｜#個人Vtuber 】",
@@ -1937,8 +1937,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-03-11",
 "membersOnly": true,
 "title": "【 歌枠 】楽しいカラオケボツクス【 甘萬つもり｜#個人Vtuber 】",
@@ -2040,8 +2040,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-02-24",
 "membersOnly": false,
 "title": "【 歌枠 】明日からヴヰチユーバア3年生ツで本当ですか？【 甘萬つもり｜#個人Vtuber 】",
@@ -2095,8 +2095,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-02-11",
 "membersOnly": false,
 "title": "【歌枠】アカペラでまつたり【 甘萬つもり｜#個人Vtuber 】",
@@ -2198,8 +2198,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-01-27",
 "membersOnly": false,
 "title": "【 歌枠 】一週間頑張るためのカラオケ【 甘萬つもり｜#個人Vtuber 】",
@@ -2295,8 +2295,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2025-01-18",
 "membersOnly": false,
 "title": "【歌枠】眠れない人間たちにアカペラ聞いてもらふ会【 甘萬つもり｜#個人Vtuber 】",
@@ -2422,8 +2422,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-12-26",
 "membersOnly": false,
 "title": "【 歌枠 】ボカロ歌ひたいなあ、の、気分！！！【 甘萬つもり｜#個人Vtuber 】",
@@ -2549,8 +2549,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-12-19",
 "membersOnly": false,
 "title": "【 歌と雑談 】見せびらかし？たいものがあるのですよ【 甘萬つもり｜#個人Vtuber 】",
@@ -2622,8 +2622,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-09-18",
 "membersOnly": false,
 "title": "【歌枠】二カ月ぶりツて本当？【 #個人vtuber｜甘萬つもり】",
@@ -2719,8 +2719,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-07-20",
 "membersOnly": false,
 "title": "【歌枠】今更なんだけれどダウナ～低音と自称してイイか？【 #個人vtuber｜甘萬つもり】",
@@ -2846,8 +2846,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-06-20",
 "membersOnly": false,
 "title": "【歌枠】皆はカラオケ行ツたら最初に何入れる？【#vtuber ｜甘萬つもり】",
@@ -2967,8 +2967,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-05-18",
 "membersOnly": true,
 "title": "【歌枠】夕方にチル～※一部無音でごめん【 #個人vtuber ｜甘萬つもり】",
@@ -3124,8 +3124,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-04-10",
 "membersOnly": false,
 "title": "【縦型歌枠】お歌の時間や～～～【#vtuber ｜甘萬つもり】",
@@ -3185,8 +3185,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-03-16",
 "membersOnly": false,
 "title": "【歌枠】アイドル縛り♡最前来て！！！【 #新人vtuber｜甘萬つもり】",
@@ -3306,8 +3306,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-03-09",
 "membersOnly": false,
 "title": "【歌枠】カラオケ久しぶりだねえ【 #新人vtuber Vtuber｜甘萬つもり】",
@@ -3409,8 +3409,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-02-07",
 "membersOnly": false,
 "title": "【歌枠】皆様甘いもの好きか～～～？【新人Vtuber｜甘萬つもり】",
@@ -3518,8 +3518,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-01-15",
 "membersOnly": false,
 "title": "【歌枠】深い意味はないけどソワソワしながら唄う【新人Vtuber｜甘萬つもり】",
@@ -3573,8 +3573,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2024-01-06",
 "membersOnly": false,
 "title": "【縦型配信】珍しく午前中に起きました【 甘萬つもり｜#新人Vtuber 】",
@@ -3634,8 +3634,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-12-16",
 "membersOnly": false,
 "title": "【雑談｜歌枠】のんびり歌うなどする【新人Vtuber｜甘萬つもり】",
@@ -3683,8 +3683,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-12-07",
 "membersOnly": false,
 "title": "【歌枠】ちゆ♡ゲリラでごめん（笑）【新人Vtuber｜甘萬つもり】",
@@ -3750,8 +3750,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-12-06",
 "membersOnly": false,
 "title": "【歌枠】ガチ恋距離（笑）【新人Vtuber｜甘萬つもり】",
@@ -3841,8 +3841,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-11-18",
 "membersOnly": false,
 "title": "【雑談｜歌枠】土曜日の夜如何お過ごしですか【新人Vtuber｜甘萬つもり】",
@@ -3926,8 +3926,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-11-07",
 "membersOnly": false,
 "title": "【歌枠】古のボヲカロイド曲をたくさん【新人Vtuber｜甘萬つもり】",
@@ -4035,8 +4035,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-10-19",
 "membersOnly": false,
 "title": "【歌枠】※※ほぼ作業枠でした【新人Vtuber｜甘萬つもり】",
@@ -4156,8 +4156,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-10-01",
 "membersOnly": false,
 "title": "【歌枠】懐メロ沢山！スナツク気分～～【新人Vtuber｜甘萬つもり】",
@@ -4271,8 +4271,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-08-25",
 "membersOnly": false,
 "title": "【半年記念｜歌枠】【新人Vtuber｜甘萬つもり】",
@@ -4344,8 +4344,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-08-15",
 "membersOnly": false,
 "title": "【歌枠】椎名林檎/東京事変縛りで夜を迎えやうの回【 #新人Vtuber 】",
@@ -4435,8 +4435,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-07-29",
 "membersOnly": false,
 "title": "【歌枠】けふもけふとて、カラオケボツクス【 #新人Vtuber 】",
@@ -4550,8 +4550,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-07-24",
 "membersOnly": false,
 "title": "【歌枠】ほぼカラオケボツクス【 #新人Vtuber 】",
@@ -4629,8 +4629,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-07-15",
 "membersOnly": false,
 "title": "【歌枠】お唄のリストを作りましたの【 #新人Vtuber 】",
@@ -4720,8 +4720,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-07-10",
 "membersOnly": false,
 "title": "【歌枠】何度目かの歌枠テスト【 #新人Vtuber 】",
@@ -4775,8 +4775,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-05-04",
 "membersOnly": false,
 "title": "【 #歌枠 】低音ハスキヰなヲンナのお唄 【 新人Vtuber 】",
@@ -4842,8 +4842,8 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},"
-"{
+},
+{
 "date": "2023-03-15",
 "membersOnly": false,
 "title": "【歌】理　解　し　ま　し　た",
