@@ -20,6 +20,8 @@
   --rose:#cba9bd;
   --softrose:#dcc8d5;
   --gold:#c3a46d;
+  --member:#7f4f89;
+  --member-soft:rgba(127,79,137,.10);
   --line:rgba(116,85,123,.24);
 }
 
@@ -238,6 +240,24 @@ nav a{
   letter-spacing:.13em;
 }
 
+.memberBadge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  min-height:1.55em;
+  padding:.10em .42em;
+  border:1px solid rgba(127,79,137,.72);
+  background:var(--member-soft);
+  color:var(--member);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-size:inherit;
+  font-weight:700;
+  line-height:1.15;
+  letter-spacing:.06em;
+  white-space:nowrap;
+}
+
 .card h3{
   font-size:1.35rem;
   margin:1rem 0;
@@ -270,10 +290,21 @@ nav a{
   font:600 .8rem "Playfair Display",serif;
 }
 
+.latestDateGroup{
+  display:flex;
+  align-items:center;
+  gap:.45rem;
+  min-width:0;
+}
+
 .latestDate{
   color:var(--accent);
   font:600 .72rem "Playfair Display",serif;
   letter-spacing:.06em;
+}
+
+.latestDateGroup .memberBadge{
+  font-size:.72rem;
 }
 
 .latestArrow,.songArrow,.artistSongArrow{
@@ -794,6 +825,10 @@ footer{
     font-size:.72rem;
     letter-spacing:.035em;
     white-space:nowrap;
+  }
+
+  .homeMemberBadge{
+    display:none !important;
   }
 
   .latestTitle{
@@ -2369,6 +2404,19 @@ body > header{
   transform:translateY(-2px);
   box-shadow:0 12px 26px rgba(93,65,100,.09);
 }
+.archiveCardDateLine{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+  min-width:0;
+  font-size:.72rem;
+}
+
+.archiveCardDateLine .card-date,
+.archiveCardDateLine .memberBadge{
+  font-size:1em;
+}
+
 .archiveIndexCard .card-date{
   grid-column:1;
   position:relative;
@@ -2525,15 +2573,29 @@ body > header{
   background:rgba(244,238,245,.96) !important;
 }
 #historyList .historyCard{
-  grid-template-columns:220px minmax(0,1fr) 72px !important;
+  grid-template-columns:260px minmax(0,1fr) 72px !important;
   column-gap:18px !important;
 }
+#historyList .historyDateLine{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+  min-width:0;
+  font-size:.75rem;
+  white-space:nowrap;
+}
+
 #historyList .historyDate{
-  min-width:220px !important;
+  min-width:0 !important;
   color:#9A6D91 !important;
   font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-size:1em;
   letter-spacing:.06em;
   white-space:nowrap !important;
+}
+
+#historyList .historyDateLine .memberBadge{
+  font-size:1em;
 }
 #historyList .historyListen{
   white-space:nowrap !important;
@@ -2616,7 +2678,8 @@ body > header{
     background-size:125px auto;
   }
   .archiveIndexCard h3{font-size:.94rem; line-height:1.42;}
-  .archiveIndexCard .card-date{font-size:.68rem;}
+  .archiveCardDateLine{font-size:.68rem;}
+  .archiveIndexCard .card-date{font-size:1em;}
   .archiveIndexCard .card-meta{font-size:.72rem;}
   .archiveCardArrow{font-size:.78rem; padding-left:12px;}
 
@@ -2637,8 +2700,13 @@ body > header{
     grid-template-columns:1fr auto !important;
     row-gap:7px !important;
   }
-  #historyList .historyDate{
+  #historyList .historyDateLine{
     grid-column:1 / -1 !important;
+    min-width:0 !important;
+    font-size:.72rem;
+    white-space:nowrap !important;
+  }
+  #historyList .historyDate{
     min-width:0 !important;
     white-space:nowrap !important;
   }
@@ -2803,11 +2871,23 @@ body > header{
   margin-bottom:18px;
 }
 
-.archiveDetailSection #dateLabel{
+.archiveDetailDateLine{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
   margin:0 0 10px;
+  font-size:.78rem;
+}
+
+.archiveDetailSection #dateLabel{
+  margin:0;
   color:var(--accent);
-  font:600 .78rem "Shippori Mincho","Noto Serif JP",serif;
+  font:600 1em "Shippori Mincho","Noto Serif JP",serif;
   letter-spacing:.09em;
+}
+
+.archiveDetailDateLine .memberBadge{
+  font-size:1em;
 }
 
 .archiveDetailSection #archiveTitle{
@@ -2872,9 +2952,16 @@ footer #footDate{
     margin-bottom:12px !important;
   }
 
-  main.archiveDetailPage .archiveDetailSection #dateLabel{
+  main.archiveDetailPage .archiveDetailSection .archiveDetailDateLine{
+    gap:.45rem;
     margin-bottom:7px !important;
     font-size:.67rem !important;
+    line-height:1.4 !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection #dateLabel{
+    margin:0 !important;
+    font-size:1em !important;
     line-height:1.4 !important;
   }
 
@@ -3208,7 +3295,7 @@ footer #footDate{
 
 .archiveControlBar{
   display:grid;
-  grid-template-columns:auto auto minmax(180px,1fr);
+  grid-template-columns:auto auto minmax(0,1fr) auto;
   gap:12px;
   align-items:center;
   padding:12px 14px;
@@ -3288,6 +3375,40 @@ footer #footDate{
   display:inline-block;
   margin-left:.45em;
   color:var(--gold);
+}
+
+.archiveMemberFilter{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  margin:0;
+  padding:0;
+  border:0;
+  color:var(--muted);
+  font-size:.66rem;
+  white-space:nowrap;
+}
+
+.archiveMemberFilterTitle{
+  margin-right:2px;
+  color:var(--accent);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-size:inherit;
+  font-weight:600;
+  letter-spacing:.06em;
+}
+
+.archiveMemberFilter label{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  cursor:pointer;
+}
+
+.archiveMemberFilter input{
+  margin:0;
+  accent-color:var(--main);
 }
 
 .archiveResultCount{
@@ -3404,6 +3525,21 @@ footer #footDate{
     gap:8px;
     padding:10px;
     align-items:end;
+  }
+
+  .archiveMemberFilter{
+    grid-column:1 / -1;
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px 12px;
+    padding-top:3px;
+    font-size:.62rem;
+    white-space:normal;
+  }
+
+  .archiveMemberFilterTitle{
+    flex:0 0 100%;
+    margin-bottom:1px;
   }
 
   .archiveSortControl{

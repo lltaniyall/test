@@ -94,7 +94,8 @@ ARCHIVES.forEach(archive => {
       performances.push({
         date: archive.date,
         archiveTitle: archive.title,
-        time: song.time
+        time: song.time,
+        membersOnly: archive.membersOnly === true
       });
     });
 });
@@ -110,7 +111,10 @@ if(!performances.length){
 } else {
   root.innerHTML = performances.map(p => `
     <a class="historyCard" href="../../archive/${p.date}/?t=${p.time}">
-      <div class="historyDate">${formatHistoryDate(p.date)}</div>
+      <div class="historyDateLine">
+        <span class="historyDate">${formatHistoryDate(p.date)}</span>
+        ${p.membersOnly ? '<span class="memberBadge">メン限</span>' : ''}
+      </div>
       <div class="historyArchiveTitle">${p.archiveTitle}</div>
       <div class="historyListen">視聴 ↗</div>
     </a>

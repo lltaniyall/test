@@ -42,6 +42,13 @@
           日付で絞り込む<span id="archiveFilterToggleMark" class="archiveFilterToggleMark" aria-hidden="true">＋</span>
         </button>
 
+        <div class="archiveMemberFilter" role="radiogroup" aria-label="メンバー限定配信">
+          <span class="archiveMemberFilterTitle">メンバー限定配信：</span>
+          <label><input type="radio" name="archiveMemberFilter" value="all" checked> すべて</label>
+          <label><input type="radio" name="archiveMemberFilter" value="exclude"> 含まない</label>
+          <label><input type="radio" name="archiveMemberFilter" value="only"> メン限のみ</label>
+        </div>
+
         <p id="archiveResultCount" class="archiveResultCount" aria-live="polite"></p>
       </div>
 
@@ -106,6 +113,7 @@ const daySelect = document.getElementById("archiveDay");
 const startDateInput = document.getElementById("archiveStartDate");
 const endDateInput = document.getElementById("archiveEndDate");
 const clearFilter = document.getElementById("archiveFilterClear");
+const memberFilterInputs = [...document.querySelectorAll('input[name="archiveMemberFilter"]')];
 
 const simpleKanji = "〇一二三四五六七八九";
 const daiji = ["","壱","弐","参","肆","伍","陸","漆","捌","玖"];
@@ -193,12 +201,22 @@ function activeMode(){
   return filterModeInputs.find(input => input.checked)?.value || "ymd";
 }
 
+function activeMemberFilter(){
+  return memberFilterInputs.find(input => input.checked)?.value || "all";
+}
+
 function hasActiveFilter(){
-  if(activeMode() === "range") return Boolean(startDateInput.value || endDateInput.value);
-  return Boolean(yearSelect.value || monthSelect.value || daySelect.value);
+  const memberFiltered = activeMemberFilter() !== "all";
+  if(activeMode() === "range") return memberFiltered || Boolean(startDateInput.value || endDateInput.value);
+  return memberFiltered || Boolean(yearSelect.value || monthSelect.value || daySelect.value);
 }
 
 function matchesFilter(archive){
+  const memberMode = activeMemberFilter();
+  const isMembersOnly = archive.membersOnly === true;
+  if(memberMode === "exclude" && isMembersOnly) return false;
+  if(memberMode === "only" && !isMembersOnly) return false;
+
   if(activeMode() === "range"){
     const start = startDateInput.value;
     const end = endDateInput.value;
@@ -217,7 +235,10 @@ function matchesFilter(archive){
 function archiveCard(a){
   const count = a.songs.filter(s => s.type === "song").length;
   return `<a class="card archiveIndexCard" href="./${a.date}/">
-    <span class="card-date">${formatArchiveDate(a.date)}</span>
+    <span class="archiveCardDateLine">
+      <span class="card-date">${formatArchiveDate(a.date)}</span>
+      ${a.membersOnly === true ? '<span class="memberBadge">メン限</span>' : ''}
+    </span>
     <h3>${a.title}</h3>
     <p class="card-meta">${formatDaijiCount(count)}</p>
     <span class="archiveCardArrow" aria-hidden="true">↗</span>
@@ -254,6 +275,7 @@ filterToggle.addEventListener("click", () => {
 });
 
 sortSelect.addEventListener("change", renderArchives);
+memberFilterInputs.forEach(input => input.addEventListener("change", renderArchives));
 filterModeInputs.forEach(input => input.addEventListener("change", () => setFilterMode(input.value)));
 
 yearSelect.addEventListener("change", () => {
@@ -280,6 +302,8 @@ clearFilter.addEventListener("click", () => {
   daySelect.value = "";
   startDateInput.value = "";
   endDateInput.value = "";
+  const allMembersRadio = memberFilterInputs.find(input => input.value === "all");
+  if(allMembersRadio) allMembersRadio.checked = true;
   populateMonths();
   populateDays();
   renderArchives();

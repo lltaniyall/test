@@ -46,6 +46,18 @@ if(!archive){
 }
 
 $("#dateLabel").textContent=jpArchiveDate(archive.date);
+
+const archiveDateLine=document.createElement("div");
+archiveDateLine.className="archiveDetailDateLine";
+$("#dateLabel").before(archiveDateLine);
+archiveDateLine.appendChild($("#dateLabel"));
+if(archive.membersOnly === true){
+  const memberBadge=document.createElement("span");
+  memberBadge.className="memberBadge";
+  memberBadge.textContent="メン限";
+  archiveDateLine.appendChild(memberBadge);
+}
+
 $("#archiveTitle").textContent=archive.title;
 document.title=`${archive.title}｜歌枠らいぶらりゐ`;
 $("#meta").textContent=jpDaijiCount(archive.songs.filter(s=>s.type==="song").length);
