@@ -1,6 +1,170 @@
 const ARCHIVES = [
 
 {
+"date": "2025-03-12",
+"membersOnly": false,
+"title": "【 歌枠 】格好イイ曲たくさんやりたい日～！【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "fqdF-3i6A0I",
+"songs": [
+{
+"title": "開始",
+"time": 77,
+"type": "talk"
+},
+{
+"title": "ヴァンパイア",
+"artist": "Janne Da Arc",
+"time": 528,
+"type": "song"
+},
+{
+"title": "2℃目の彼女",
+"artist": "シド",
+"time": 1026,
+"type": "song"
+},
+{
+"title": "御手紙",
+"artist": "シド",
+"time": 1448,
+"type": "song"
+},
+{
+"title": "眩暈",
+"artist": "シド",
+"time": 1719,
+"type": "song"
+},
+{
+"title": "ダイヤモンドヴァージン",
+"artist": "Janne Da Arc",
+"time": 2371,
+"type": "song"
+},
+{
+"title": "蝶",
+"artist": "Acid Black Cherry",
+"time": 2868,
+"type": "song"
+},
+{
+"title": "黒猫 〜Adult Black Cat〜",
+"artist": "Acid Black Cherry",
+"time": 3655,
+"type": "song"
+},
+{
+"title": "イエス",
+"artist": "Acid Black Cherry",
+"time": 4154,
+"type": "song"
+},
+{
+"title": "女々しくて",
+"artist": "ゴールデンボンバー",
+"time": 4755,
+"type": "song"
+},
+{
+"title": "毒グモ女（萌え燃え編）",
+"artist": "ゴールデンボンバー",
+"time": 5175,
+"type": "song"
+},
+{
+"title": "誘惑",
+"artist": "GLAY",
+"time": 6719,
+"type": "song"
+},
+{
+"title": "Driver’s High",
+"artist": "L'Arc～en～Ciel",
+"time": 7152,
+"type": "song"
+},
+{
+"title": "STAY AWAY",
+"artist": "L'Arc～en～Ciel",
+"time": 7398,
+"type": "song"
+},
+{
+"title": "HONEY",
+"artist": "L'Arc～en～Ciel",
+"time": 7765,
+"type": "song"
+},
+{
+"title": "cosmetic",
+"artist": "シド",
+"time": 8218,
+"type": "song"
+},
+{
+"title": "蜜指〜ミツユビ〜",
+"artist": "シド",
+"time": 8560,
+"type": "song"
+},
+{
+"title": "乱舞のメロディ",
+"artist": "シド",
+"time": 8871,
+"type": "song"
+}
+]
+},
+{
+"date": "2025-04-07",
+"membersOnly": false,
+"title": "【 歌枠 】アカペラでまつたり寝落ち出来さうな感じのやつ【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "TAfIKWAK9TI",
+"songs": [
+{
+"title": "開始",
+"time": 77,
+"type": "talk"
+},
+{
+"title": "薄ら氷心中",
+"artist": "林原めぐみ",
+"time": 931,
+"type": "song"
+},
+{
+"title": "きゅうくらりん",
+"artist": "いよわ feat.可不",
+"time": 1254,
+"type": "song"
+},
+{
+"title": "食虫植物",
+"artist": "理芽",
+"time": 5722,
+"type": "song"
+},
+{
+"title": "恋愛サーキュレーション",
+"artist": "千石撫子（花澤香菜）",
+"time": 6026,
+"type": "song"
+},
+{
+"title": "『んっあっあっ。』",
+"artist": "SLAVE.V-V-R",
+"time": 6245,
+"type": "song"
+},
+{
+"title": "女の子は誰でも",
+"artist": "東京事変",
+"time": 6472,
+"type": "song"
+}
+]
+},
+{
 "date": "2025-05-27",
 "membersOnly": false,
 "title": "【 歌枠 】ゆるりと！久しぶりのお唄です【 甘萬つもり｜#個人Vtuber 】",
