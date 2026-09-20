@@ -1,6 +1,187 @@
 const ARCHIVES = [
 
 {
+"date": "2025-05-27",
+"membersOnly": false,
+"title": "【 歌枠 】ゆるりと！久しぶりのお唄です【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "w12eCnqkCNE",
+"songs": [
+{
+"title": "開始",
+"time": 54,
+"type": "talk"
+},
+{
+"title": "ズルい女",
+"artist": "シャ乱Q",
+"time": 724,
+"type": "song"
+},
+{
+"title": "ノスタルジックJ-pop",
+"artist": "大森靖子",
+"time": 1456,
+"type": "song"
+},
+{
+"title": "Shocking Party",
+"artist": "A-RISE",
+"time": 1735,
+"type": "song"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 2227,
+"type": "song"
+},
+{
+"title": "小学館",
+"artist": "相対性理論",
+"time": 2659,
+"type": "song"
+},
+{
+"title": "チャイナアドバイス",
+"artist": "相対性理論",
+"time": 2974,
+"type": "song"
+},
+{
+"title": "ペペロンチーノ・キャンディ",
+"artist": "相対性理論",
+"time": 3634,
+"type": "song"
+},
+{
+"title": "気になるあの娘",
+"artist": "相対性理論",
+"time": 3861,
+"type": "song"
+},
+{
+"title": "ユメクイ",
+"artist": "大塚愛",
+"time": 4323,
+"type": "song"
+},
+{
+"title": "ネコに風前",
+"artist": "大塚愛",
+"time": 4719,
+"type": "song"
+},
+{
+"title": "左耳",
+"artist": "クリープハイプ",
+"time": 5235,
+"type": "song"
+},
+{
+"title": "ダーリン",
+"artist": "須田景凪",
+"time": 5641,
+"type": "song"
+},
+{
+"title": "スキスキ絶頂症",
+"artist": "koyori(電ポルp)",
+"time": 5894,
+"type": "song"
+},
+{
+"title": "からくりピエロ",
+"artist": "40mP",
+"time": 7457,
+"type": "song"
+},
+{
+"title": "遭難",
+"artist": "東京事変",
+"time": 7953,
+"type": "song"
+},
+{
+"title": "アフタートーク",
+"time": 8159,
+"type": "talk"
+}
+]
+},
+{
+"date": "2025-06-03",
+"membersOnly": false,
+"title": "【 歌枠 】みきとPさん楽曲縛り！チル・・・【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "qxzrfVexP74",
+"songs": [
+{
+"title": "開始",
+"time": 112,
+"type": "talk"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 1382,
+"type": "song"
+},
+{
+"title": "小夜子",
+"artist": "みきとP",
+"time": 1831,
+"type": "song"
+},
+{
+"title": "夕立のりぼん",
+"artist": "みきとP",
+"time": 2279,
+"type": "song"
+},
+{
+"title": "バレリーコ",
+"artist": "みきとP",
+"time": 2720,
+"type": "song"
+},
+{
+"title": "僕は初音ミクとキスをした",
+"artist": "みきとP",
+"time": 3129,
+"type": "song"
+},
+{
+"title": "刹那プラス",
+"artist": "みきとP",
+"time": 4517,
+"type": "song"
+},
+{
+"title": "世田谷ナイトサファリ",
+"artist": "みきとP",
+"time": 4899,
+"type": "song"
+},
+{
+"title": "心臓デモクラシー",
+"artist": "みきとP",
+"time": 5360,
+"type": "song"
+},
+{
+"title": "絆創膏",
+"artist": "みきとP",
+"time": 5930,
+"type": "song"
+},
+{
+"title": "サリシノハラ",
+"artist": "みきとP",
+"time": 6507,
+"type": "song"
+}
+]
+},
+{
 "date": "2025-06-17",
 "membersOnly": false,
 "title": "【 歌枠 】低音ハスキヰ給仕による椎名林檎/東京事変縛り【 甘萬つもり｜#個人Vtuber 】",
