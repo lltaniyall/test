@@ -1,6 +1,357 @@
 const ARCHIVES = [
 
 {
+"date": "2025-01-18",
+"membersOnly": false,
+"title": "【歌枠】眠れない人間たちにアカペラ聞いてもらふ会【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "0YqFWYTD4uI",
+"songs": [
+{
+"title": "開始",
+"time": 115,
+"type": "talk"
+},
+{
+"title": "月のワルツ",
+"artist": "諫山実生",
+"time": 1035,
+"type": "song"
+},
+{
+"title": "暖炉",
+"artist": "シド",
+"time": 1378,
+"type": "song"
+},
+{
+"title": "月華-tsukihana-",
+"artist": "北出菜奈",
+"time": 1639,
+"type": "song"
+},
+{
+"title": "あした地球がこなごなになっても",
+"artist": "でんぱ組.inc",
+"time": 2431,
+"type": "song"
+},
+{
+"title": "ギブス",
+"artist": "椎名林檎",
+"time": 2831,
+"type": "song"
+},
+{
+"title": "冬の幻",
+"artist": "Acid Black Cherry",
+"time": 3238,
+"type": "song"
+},
+{
+"title": "イエス",
+"artist": "Acid Black Cherry",
+"time": 3387,
+"type": "song"
+},
+{
+"title": "ずうっといっしょ！",
+"artist": "キタニタツヤ",
+"time": 4587,
+"type": "song"
+},
+{
+"title": "愛して愛して愛して",
+"artist": "Kikuo",
+"time": 4803,
+"type": "song"
+},
+{
+"title": "リンゴの唄",
+"artist": "並木路子",
+"time": 5350,
+"type": "song"
+},
+{
+"title": "部屋とYシャツと私",
+"artist": "平松愛理",
+"time": 5814,
+"type": "song"
+},
+{
+"title": "年下の男の子",
+"artist": "キャンディーズ",
+"time": 6853,
+"type": "song"
+},
+{
+"title": "プロポーズ",
+"artist": "内緒のピアス",
+"time": 7189,
+"type": "song"
+},
+{
+"title": "ドミノ倒シ",
+"artist": "すこっぷ",
+"time": 8065,
+"type": "song"
+},
+{
+"title": "食虫植物",
+"artist": "理芽",
+"time": 8399,
+"type": "song"
+},
+{
+"title": "薄ら氷心中",
+"artist": "林原めぐみ",
+"time": 8657,
+"type": "song"
+},
+{
+"title": "ド屑",
+"artist": "なきそ",
+"time": 9449,
+"type": "song"
+},
+{
+"title": "粉雪",
+"artist": "レミオロメン",
+"time": 9891,
+"type": "song"
+},
+{
+"title": "ワインレッドの心",
+"artist": "安全地帯",
+"time": 10362,
+"type": "song"
+}
+]
+},
+{
+"date": "2024-12-26",
+"membersOnly": false,
+"title": "【 歌枠 】ボカロ歌ひたいなあ、の、気分！！！【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "DclFULwhsIA",
+"songs": [
+{
+"title": "開始",
+"time": 146,
+"type": "talk"
+},
+{
+"title": "ずうっといっしょ！",
+"artist": "キタニタツヤ",
+"time": 898,
+"type": "song"
+},
+{
+"title": "きゅうくらりん",
+"artist": "いよわ feat.可不",
+"time": 1519,
+"type": "song"
+},
+{
+"title": "東京テディベア",
+"artist": "Neru",
+"time": 2048,
+"type": "song"
+},
+{
+"title": "magnet",
+"artist": "minato",
+"time": 2371,
+"type": "song"
+},
+{
+"title": "ロミオとシンデレラ",
+"artist": "doriko",
+"time": 3080,
+"type": "song"
+},
+{
+"title": "カゲロウデイズ",
+"artist": "じん(自然の敵P)",
+"time": 4633,
+"type": "song"
+},
+{
+"title": "天ノ弱",
+"artist": "164",
+"time": 4966,
+"type": "song"
+},
+{
+"title": "恋愛裁判",
+"artist": "40mP",
+"time": 5285,
+"type": "song"
+},
+{
+"title": "悪ノ召使",
+"artist": "mothy_悪ノP",
+"time": 5402,
+"type": "song"
+},
+{
+"title": "キリトリセン",
+"artist": "40mP",
+"time": 5528,
+"type": "song"
+},
+{
+"title": "テレキャスタービーボーイ",
+"artist": "すりぃ",
+"time": 5693,
+"type": "song"
+},
+{
+"title": "シザーハンズ",
+"artist": "Nem",
+"time": 6108,
+"type": "song"
+},
+{
+"title": "ローリンガール",
+"artist": "wowaka",
+"time": 6634,
+"type": "song"
+},
+{
+"title": "ハッピーシンセサイザ",
+"artist": "EasyPop(BETTI)",
+"time": 6921,
+"type": "song"
+},
+{
+"title": "え？ああ、そう。",
+"artist": "蝶々P",
+"time": 7284,
+"type": "song"
+},
+{
+"title": "心拍数♯0822",
+"artist": "蝶々P",
+"time": 7587,
+"type": "song"
+},
+{
+"title": "Just Be Friends",
+"artist": "Dixie Flatline",
+"time": 7952,
+"type": "song"
+},
+{
+"title": "心做し",
+"artist": "蝶々P",
+"time": 8482,
+"type": "song"
+},
+{
+"title": "88",
+"artist": "LM.C",
+"time": 9178,
+"type": "song"
+}
+]
+},
+{
+"date": "2025-01-27",
+"membersOnly": false,
+"title": "【 歌枠 】一週間頑張るためのカラオケ【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "enpv1DRuzvQ",
+"songs": [
+{
+"title": "開始",
+"time": 147,
+"type": "talk"
+},
+{
+"title": "Black Cherry",
+"artist": "Acid Black Cherry",
+"time": 802,
+"type": "song"
+},
+{
+"title": "ダイヤモンドヴァージン",
+"artist": "Janne Da Arc",
+"time": 1565,
+"type": "song"
+},
+{
+"title": "バラライカ",
+"artist": "月島きらり starring 久住小春 ",
+"time": 2385,
+"type": "song"
+},
+{
+"title": "プレイバックPart2",
+"artist": "山口百恵",
+"time": 2715,
+"type": "song"
+},
+{
+"title": "シャボン玉",
+"artist": "モーニング娘。",
+"time": 4220,
+"type": "song"
+},
+{
+"title": "ズルい女",
+"artist": "シャ乱Q",
+"time": 4613,
+"type": "song"
+},
+{
+"title": "Bunny Girl",
+"artist": "AKASAKI",
+"time": 5103,
+"type": "song"
+},
+{
+"title": "ギブス",
+"artist": "椎名林檎",
+"time": 5545,
+"type": "song"
+},
+{
+"title": "おやすみ泣き声、さよなら歌姫",
+"artist": "クリープハイプ",
+"time": 6762,
+"type": "song"
+},
+{
+"title": "ずうっといっしょ！",
+"artist": "キタニタツヤ",
+"time": 7489,
+"type": "song"
+},
+{
+"title": "Overdose",
+"artist": "なとり",
+"time": 7800,
+"type": "song"
+},
+{
+"title": "怪獣の花唄",
+"artist": "Vaundy",
+"time": 7993,
+"type": "song"
+},
+{
+"title": "歌うたいのバラッド",
+"artist": "斉藤和義",
+"time": 8308,
+"type": "song"
+},
+{
+"title": "歌舞伎町の女王",
+"artist": "椎名林檎",
+"time": 9260,
+"type": "song"
+}
+]
+},
+{
 "date": "2025-02-24",
 "membersOnly": false,
 "title": "【 歌枠 】明日からヴヰチユーバア3年生ツで本当ですか？【 甘萬つもり｜#個人Vtuber 】",
