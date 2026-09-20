@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>歌枠の記録｜歌枠らいぶらりゐ</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <a class="logo" href="../">歌枠らいぶらりゐ</a>
+  <nav><a href="./">ARCHIVE</a><a href="../songs/">SONGS</a></nav>
+</header>
+
+<main class="archiveIndexPage">
+  <section class="archiveIndexHero">
+    <div class="archiveIndexHeroInner">
+      <p class="eyebrow">LIVE ARCHIVE</p>
+      <h1>歌枠の記録</h1>
+      <div class="pageTitleRule" aria-hidden="true"><span>◆</span></div>
+      <p class="archiveLead">これまでの歌枠を、配信日ごとにまとめてゐます。</p>
+    </div>
+  </section>
+
+  <section class="section archiveIndexSection">
+    <div class="archiveControls" aria-label="歌枠の並び替えと日付絞り込み">
+      <div class="archiveControlBar">
+        <label class="archiveSortControl" for="archiveSort">
+          <span class="archiveControlCaption">並び順</span>
+          <select id="archiveSort">
+            <option value="desc">新しい順</option>
+            <option value="asc">古い順</option>
+          </select>
+        </label>
+
+        <button id="archiveFilterToggle" class="archiveFilterToggle" type="button" aria-expanded="false" aria-controls="archiveFilterPanel">
+          日付で絞り込む<span id="archiveFilterToggleMark" class="archiveFilterToggleMark" aria-hidden="true">＋</span>
+        </button>
+
+        <p id="archiveResultCount" class="archiveResultCount" aria-live="polite"></p>
+      </div>
+
+      <div id="archiveFilterPanel" class="archiveFilterPanel" hidden>
+        <div class="archiveFilterModes" role="radiogroup" aria-label="日付の絞り込み方法">
+          <label class="archiveFilterMode"><input type="radio" name="archiveFilterMode" value="ymd" checked> 年月日から</label>
+          <label class="archiveFilterMode"><input type="radio" name="archiveFilterMode" value="range"> 期間から</label>
+          <button id="archiveFilterClear" class="archiveFilterClear archiveFilterClearShared" type="button">絞り込みを解除</button>
+        </div>
+
+        <div class="archiveFilterFields" data-filter-group="ymd">
+          <label class="archiveFilterField">
+            <span>年</span>
+            <select id="archiveYear"><option value="">年を選ぶ</option></select>
+          </label>
+          <label class="archiveFilterField">
+            <span>月</span>
+            <select id="archiveMonth" disabled><option value="">すべての月</option></select>
+          </label>
+          <label class="archiveFilterField">
+            <span>日</span>
+            <select id="archiveDay" disabled><option value="">すべての日</option></select>
+          </label>
+        </div>
+
+        <div class="archiveFilterFields" data-filter-group="range" hidden>
+          <label class="archiveFilterField">
+            <span>開始日</span>
+            <input id="archiveStartDate" type="date">
+          </label>
+          <span class="archiveRangeDash" aria-hidden="true">〜</span>
+          <label class="archiveFilterField">
+            <span>終了日</span>
+            <input id="archiveEndDate" type="date">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div id="archiveCards" class="cards archiveIndexCards"></div>
+    <p id="archiveNoResults" class="archiveNoResults" hidden>該当する歌枠がありません。</p>
+  </section>
+</main>
+
+<footer><b>歌枠らいぶらりゐ</b><span>歌枠の記録</span></footer>
+
+<script src="../data/archives.js"></script>
+<script>
+const root = document.getElementById("archiveCards");
+const noResults = document.getElementById("archiveNoResults");
+const resultCount = document.getElementById("archiveResultCount");
+const sortSelect = document.getElementById("archiveSort");
+const filterToggle = document.getElementById("archiveFilterToggle");
+const filterToggleMark = document.getElementById("archiveFilterToggleMark");
+const filterPanel = document.getElementById("archiveFilterPanel");
+const filterModeInputs = [...document.querySelectorAll('input[name="archiveFilterMode"]')];
+const ymdFields = document.querySelector('[data-filter-group="ymd"]');
+const rangeFields = document.querySelector('[data-filter-group="range"]');
+const yearSelect = document.getElementById("archiveYear");
+const monthSelect = document.getElementById("archiveMonth");
+const daySelect = document.getElementById("archiveDay");
+const startDateInput = document.getElementById("archiveStartDate");
+const endDateInput = document.getElementById("archiveEndDate");
+const clearFilter = document.getElementById("archiveFilterClear");
+
+const simpleKanji = "〇一二三四五六七八九";
+const daiji = ["","壱","弐","参","肆","伍","陸","漆","捌","玖"];
+
+function formatArchiveDate(value){
+  const [y,m,d] = value.split("-").map(Number);
+  const year = String(y).split("").map(n => simpleKanji[Number(n)]).join("");
+  const jpNumber = n => n < 10 ? simpleKanji[n]
+    : n === 10 ? "十"
+    : n < 20 ? "十" + simpleKanji[n - 10]
+    : simpleKanji[Math.floor(n / 10)] + "十" + (n % 10 ? simpleKanji[n % 10] : "");
+  return `${year}年 ${jpNumber(m)}月 ${jpNumber(d)}日`;
+}
+
+function formatDaijiCount(n){
+  n = Math.max(0, Math.floor(Number(n) || 0));
+  if(n === 0) return "〇曲";
+  if(n < 10) return daiji[n] + "曲";
+  if(n < 20) return "拾" + (n % 10 ? daiji[n % 10] : "") + "曲";
+  if(n < 100){
+    const tens = Math.floor(n / 10);
+    const ones = n % 10;
+    return daiji[tens] + "拾" + (ones ? daiji[ones] : "") + "曲";
+  }
+  return String(n).split("").map(x => daiji[Number(x)] || "〇").join("") + "曲";
+}
+
+const archives = [...ARCHIVES].filter(a => /^\d{4}-\d{2}-\d{2}$/.test(a.date));
+
+function dateParts(value){
+  const [year, month, day] = value.split("-").map(Number);
+  return {year, month, day};
+}
+
+function uniqueSorted(values){
+  return [...new Set(values)].sort((a,b) => a - b);
+}
+
+function fillSelect(select, values, firstLabel, formatter){
+  const current = select.value;
+  select.innerHTML = `<option value="">${firstLabel}</option>` + values.map(value =>
+    `<option value="${value}">${formatter(value)}</option>`
+  ).join("");
+  if(values.map(String).includes(current)) select.value = current;
+}
+
+function populateYears(){
+  const years = uniqueSorted(archives.map(a => dateParts(a.date).year)).reverse();
+  fillSelect(yearSelect, years, "年を選ぶ", y => `${y}年`);
+}
+
+function populateMonths(){
+  const year = Number(yearSelect.value);
+  const months = year
+    ? uniqueSorted(archives.filter(a => dateParts(a.date).year === year).map(a => dateParts(a.date).month))
+    : [];
+  fillSelect(monthSelect, months, "すべての月", m => `${m}月`);
+  monthSelect.disabled = !year;
+  if(!year){
+    monthSelect.value = "";
+    daySelect.value = "";
+  }
+}
+
+function populateDays(){
+  const year = Number(yearSelect.value);
+  const month = Number(monthSelect.value);
+  const days = year && month
+    ? uniqueSorted(archives.filter(a => {
+        const p = dateParts(a.date);
+        return p.year === year && p.month === month;
+      }).map(a => dateParts(a.date).day))
+    : [];
+  fillSelect(daySelect, days, "すべての日", d => `${d}日`);
+  daySelect.disabled = !(year && month);
+  if(!(year && month)) daySelect.value = "";
+}
+
+function activeMode(){
+  return filterModeInputs.find(input => input.checked)?.value || "ymd";
+}
+
+function hasActiveFilter(){
+  if(activeMode() === "range") return Boolean(startDateInput.value || endDateInput.value);
+  return Boolean(yearSelect.value || monthSelect.value || daySelect.value);
+}
+
+function matchesFilter(archive){
+  if(activeMode() === "range"){
+    const start = startDateInput.value;
+    const end = endDateInput.value;
+    if(start && archive.date < start) return false;
+    if(end && archive.date > end) return false;
+    return true;
+  }
+
+  const {year,month,day} = dateParts(archive.date);
+  if(yearSelect.value && year !== Number(yearSelect.value)) return false;
+  if(monthSelect.value && month !== Number(monthSelect.value)) return false;
+  if(daySelect.value && day !== Number(daySelect.value)) return false;
+  return true;
+}
+
+function archiveCard(a){
+  const count = a.songs.filter(s => s.type === "song").length;
+  return `<a class="card archiveIndexCard" href="./${a.date}/">
+    <span class="card-date">${formatArchiveDate(a.date)}</span>
+    <h3>${a.title}</h3>
+    <p class="card-meta">${formatDaijiCount(count)}</p>
+    <span class="archiveCardArrow" aria-hidden="true">↗</span>
+  </a>`;
+}
+
+function renderArchives(){
+  const direction = sortSelect.value === "asc" ? 1 : -1;
+  const visible = archives
+    .filter(matchesFilter)
+    .sort((a,b) => a.date.localeCompare(b.date) * direction);
+
+  root.innerHTML = visible.map(archiveCard).join("");
+  noResults.hidden = visible.length !== 0;
+
+  if(hasActiveFilter()){
+    resultCount.innerHTML = `全${archives.length}件中 <strong>${visible.length}件表示</strong>`;
+  }else{
+    resultCount.innerHTML = `<strong>全${archives.length}件</strong>`;
+  }
+}
+
+function setFilterMode(mode){
+  ymdFields.hidden = mode !== "ymd";
+  rangeFields.hidden = mode !== "range";
+  renderArchives();
+}
+
+filterToggle.addEventListener("click", () => {
+  const isOpen = filterToggle.getAttribute("aria-expanded") === "true";
+  filterToggle.setAttribute("aria-expanded", String(!isOpen));
+  filterPanel.hidden = isOpen;
+  filterToggleMark.textContent = isOpen ? "＋" : "−";
+});
+
+sortSelect.addEventListener("change", renderArchives);
+filterModeInputs.forEach(input => input.addEventListener("change", () => setFilterMode(input.value)));
+
+yearSelect.addEventListener("change", () => {
+  monthSelect.value = "";
+  daySelect.value = "";
+  populateMonths();
+  populateDays();
+  renderArchives();
+});
+
+monthSelect.addEventListener("change", () => {
+  daySelect.value = "";
+  populateDays();
+  renderArchives();
+});
+
+daySelect.addEventListener("change", renderArchives);
+startDateInput.addEventListener("change", renderArchives);
+endDateInput.addEventListener("change", renderArchives);
+
+clearFilter.addEventListener("click", () => {
+  yearSelect.value = "";
+  monthSelect.value = "";
+  daySelect.value = "";
+  startDateInput.value = "";
+  endDateInput.value = "";
+  populateMonths();
+  populateDays();
+  renderArchives();
+});
+
+populateYears();
+populateMonths();
+populateDays();
+setFilterMode("ymd");
+</script>
+</body>
+</html>

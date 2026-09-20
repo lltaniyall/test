@@ -1,0 +1,3674 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root{
+  --text:#352b38;
+  --muted:#7b6d7d;
+  --main:#74557B;
+  --deep:#5d4164;
+  --accent:#9a6d91;
+  --rose:#cba9bd;
+  --softrose:#dcc8d5;
+  --gold:#c3a46d;
+  --line:rgba(116,85,123,.24);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+body{
+  margin:0;
+  max-width:100%;
+  overflow-x:hidden;
+  color:var(--text);
+  font-family:"Noto Serif JP","Shippori Mincho",serif;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.055;
+  background-image:url("./assets/asanoha.png");
+  background-size:120px 207.846px;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,input{
+  font:inherit;
+}
+
+header{
+  height:72px;
+  padding:0 7vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:20;
+  backdrop-filter:blur(14px);
+}
+
+.logo{
+  font:600 1.05rem "Playfair Display",serif;
+  letter-spacing:.18em;
+}
+
+nav{
+  display:flex;
+  gap:1.5rem;
+}
+
+nav a{
+  font:600 .68rem "Playfair Display",serif;
+  letter-spacing:.13em;
+  color:var(--muted);
+}
+
+.hero{
+  padding:10vw 9vw 8vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.eyebrow{
+  font:600 .68rem "Playfair Display",serif;
+  letter-spacing:.22em;
+}
+
+.hero h1{
+  font:600 clamp(3.4rem,9vw,8rem)/.92 "Shippori Mincho",serif;
+  letter-spacing:.04em;
+  margin:1rem 0 1.7rem;
+  position:relative;
+  z-index:1;
+}
+
+.hero h1 em{
+  font-style:normal;
+  font-family:"Playfair Display",serif;
+  letter-spacing:.02em;
+}
+
+.hero p{
+  color:var(--muted);
+  line-height:2.1;
+  max-width:700px;
+  position:relative;
+  z-index:1;
+}
+
+.section{
+  padding:7vw 9vw;
+  border-top:1px solid var(--line);
+  position:relative;
+}
+
+.section h2{
+  font:600 clamp(2rem,4vw,3.8rem) "Shippori Mincho",serif;
+  letter-spacing:.03em;
+  margin:.5rem 0 2rem;
+}
+
+.section:nth-of-type(even)::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+}
+
+.heroActions{
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+  margin-top:1.2rem;
+  position:relative;
+  z-index:2;
+}
+
+.primaryButton,.ghostButton{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.95rem 1.2rem;
+  border:1px solid var(--line);
+  font:600 .72rem "Noto Serif JP",serif;
+  letter-spacing:.08em;
+}
+
+.primaryButton{
+  background:var(--main);
+  border-color:var(--main);
+}
+
+.primaryButton:hover,.ghostButton:hover{
+  border-color:var(--accent);
+  background:var(--accent);
+}
+
+.sectionHead{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:2rem;
+  margin-bottom:2rem;
+}
+
+.sectionHead h2{
+  margin-bottom:0;
+}
+
+.textLink,.backlink{
+  color:var(--muted);
+  font:600 .68rem "Playfair Display",serif;
+  letter-spacing:.12em;
+}
+
+.backlink{
+  display:inline-block;
+  margin-bottom:2rem;
+}
+
+.textLink:hover,.backlink:hover{
+  color:var(--accent);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+
+#archiveCards{
+  grid-template-columns:1fr;
+}
+
+.card{
+  display:block;
+  border:1px solid var(--line);
+  background:linear-gradient(135deg,rgba(255,250,244,.9),rgba(169,93,132,.055));
+  padding:2rem;
+  min-height:185px;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+}
+
+.card:hover{
+  border-color:var(--accent);
+  transform:translateY(-2px);
+  transition:.18s;
+}
+
+.card-date{
+  color:var(--accent);
+  font:600 .72rem "Playfair Display",serif;
+  letter-spacing:.13em;
+}
+
+.card h3{
+  font-size:1.35rem;
+  margin:1rem 0;
+}
+
+.card-meta,.muted{
+  color:var(--muted);
+  font-size:.78rem;
+}
+
+.latestList,.rankingTable,.historyList,.artistSongList,.songTableWrap{
+  border-top:1px solid var(--line);
+}
+
+.latestRow{
+  display:grid;
+  grid-template-columns:70px 135px 1fr 28px;
+  gap:1rem;
+  align-items:center;
+  padding:1.25rem .6rem;
+  border-bottom:1px solid var(--line);
+}
+
+.latestRow:hover,.rankingRow:hover,.historyCard:hover,.artistSongCard:hover{
+  background:rgba(169,93,132,.075);
+}
+
+.latestNumber,.rankNumber{
+  color:var(--main);
+  font:600 .8rem "Playfair Display",serif;
+}
+
+.latestDate{
+  color:var(--accent);
+  font:600 .72rem "Playfair Display",serif;
+  letter-spacing:.06em;
+}
+
+.latestArrow,.songArrow,.artistSongArrow{
+  color:var(--accent);
+}
+
+.rankingHead,.rankingRow{
+  display:grid;
+  grid-template-columns:80px minmax(0,1.4fr) minmax(0,1fr) 90px;
+  gap:1rem;
+  align-items:center;
+}
+
+.rankingHead{
+  padding:.85rem .6rem;
+  border-bottom:1px solid var(--line);
+  color:var(--muted);
+  font:600 .62rem "Playfair Display",serif;
+  letter-spacing:.1em;
+}
+
+.rankingHead span:last-child,.rankingCount{
+  text-align:right;
+}
+
+.rankingRow{
+  padding:1.1rem .6rem;
+  border-bottom:1px solid var(--line);
+}
+
+.rankingSong{
+  font-weight:600;
+}
+
+.rankingArtist{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.rankingSong span,.rankingArtist span,.rankingCount{
+  color:var(--accent);
+}
+
+.rankingSong:hover,.rankingArtist:hover{
+  color:var(--cream);
+}
+
+.socialGrid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+
+.socialGrid>.socialCard:last-child:nth-child(odd){
+  grid-column:1/-1;
+  width:calc(50% - .5rem);
+  justify-self:center;
+}
+
+.socialCard{
+  min-height:145px;
+  padding:1.5rem;
+  border:1px solid var(--line);
+  background:rgba(255,250,244,.72);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  grid-template-rows:auto 1fr;
+  gap:.6rem 1rem;
+}
+
+.socialCard:hover{
+  border-color:var(--accent);
+}
+
+.socialIndex{
+  color:var(--main);
+  font:600 .65rem "Playfair Display",serif;
+}
+
+.socialCard strong{
+  font:600 clamp(1.3rem,3vw,2.2rem) "Playfair Display",serif;
+}
+
+.socialCard small{
+  grid-column:2;
+  color:var(--muted);
+  font:600 .62rem "Playfair Display",serif;
+  letter-spacing:.1em;
+}
+
+.socialArrow{
+  grid-column:3;
+  grid-row:1/span 2;
+  align-self:center;
+  color:var(--accent);
+}
+
+.socialCardDisabled{
+  opacity:.5;
+}
+
+.socialNote{
+  color:var(--muted);
+  font-size:.75rem;
+}
+
+.toolbar{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:2rem;
+  align-items:end;
+  margin-bottom:3rem;
+}
+
+.search span{
+  display:block;
+  color:var(--accent);
+  font-size:.7rem;
+  letter-spacing:.15em;
+  margin-bottom:.7rem;
+}
+
+.search input{
+  width:100%;
+  background:transparent;
+  color:var(--text);
+  border:0;
+  border-bottom:1px solid var(--line);
+  padding:.9rem 0;
+  font-size:1.15rem;
+  outline:0;
+}
+
+.search input:focus{
+  border-color:var(--accent);
+}
+
+.stats{
+  display:flex;
+  align-items:baseline;
+  gap:.6rem;
+}
+
+.stats strong{
+  font:600 2.1rem "Playfair Display";
+  color:var(--accent);
+}
+
+.stats span{
+  color:var(--muted);
+  font-size:.65rem;
+}
+
+.songTableHead,.songDbRow{
+  display:grid;
+  grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) 120px;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+}
+
+.sortBtn{
+  padding:1rem;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  text-align:left;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.sortBtn:hover,.sortBtn.active{
+  color:var(--cream);
+}
+
+.countHead,.songCount{
+  text-align:right;
+}
+
+.songTitleLink,.songArtist,.songCount{
+  padding:1.1rem 1rem;
+}
+
+.songTitleLink{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  font-weight:600;
+}
+
+.songArtist,.songCount{
+  color:var(--muted);
+}
+
+.songTitleLink:hover,.artistLink:hover{
+  color:var(--accent);
+}
+
+.artistLink{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.playerHead{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:2rem;
+  margin-bottom:2rem;
+}
+
+.playerHead h2,#archiveTitle{
+  margin:.5rem 0;
+  font:600 clamp(1.8rem,3vw,2.8rem) "Shippori Mincho",serif;
+  line-height:1.3;
+  letter-spacing:.02em;
+}
+
+.share{
+  background:var(--main);
+  color:#fff;
+  border:1px solid var(--main);
+  padding:.95rem 1.2rem;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.share:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+}
+
+.playerLayout{
+  display:grid;
+  grid-template-columns:minmax(0,1.8fr) minmax(280px,.8fr);
+  gap:1rem;
+  align-items:start;
+}
+
+.playerLayout > *{
+  min-width:0;
+}
+
+.video{
+  aspect-ratio:16/9;
+  background:#000;
+}
+
+.video iframe,#player{
+  width:100%;
+  height:100%;
+}
+
+.setlist{
+  border:1px solid var(--line);
+  min-height:0;
+  overflow-y:auto;
+  overflow-x:hidden;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+}
+
+.setlistHead{
+  position:sticky;
+  top:0;
+  z-index:2;
+  display:flex;
+  justify-content:flex-start;
+  padding:1rem;
+  border-bottom:1px solid var(--line);
+  background:rgba(244,238,245,.96);
+  color:var(--accent);
+  font-size:.68rem;
+  letter-spacing:.1em;
+}
+
+.track{
+  width:100%;
+  display:grid;
+  grid-template-columns:78px 1fr;
+  align-items:center;
+  padding:1rem;
+  border:0;
+  border-bottom:1px solid var(--line);
+  background:transparent;
+  color:var(--muted);
+  text-align:left;
+  cursor:pointer;
+}
+
+.track:hover,.track.active{
+  color:var(--text);
+}
+
+.time{
+  color:var(--main);
+  font-family:"Noto Serif JP","Shippori Mincho",serif;
+  font-size:.7rem;
+  font-weight:600;
+  line-height:1.35;
+  letter-spacing:.02em;
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1;
+  white-space:nowrap;
+  align-self:center;
+}
+
+.trackArtist{
+  color:var(--muted);
+  font-size:.82em;
+}
+
+.historyHero{
+  padding-top:6vw;
+}
+
+.historyTitle{
+  font:600 clamp(2.4rem,5.2vw,5rem)/1.05 "Shippori Mincho",serif;
+  margin:1rem 0 2rem;
+}
+
+.historyMeta{
+  display:flex;
+  gap:3rem;
+  flex-wrap:wrap;
+}
+
+.historyMeta div{
+  display:flex;
+  flex-direction:column;
+  gap:.45rem;
+}
+
+.historyMeta span{
+  color:var(--accent);
+  font-size:.65rem;
+  letter-spacing:.12em;
+}
+
+.historyMeta i{
+  font-style:normal;
+  color:var(--accent);
+}
+
+.historyArtistLink{
+  color:inherit;
+  text-decoration:none;
+  transition:color .18s ease;
+}
+
+.historyArtistLink::after{
+  content:" ↗";
+  color:var(--accent);
+  font-size:.66em;
+  font-weight:400;
+}
+
+.historyArtistLink:hover{
+  color:var(--main);
+}
+
+.historyCard{
+  display:grid;
+  grid-template-columns:150px 1fr 110px;
+  gap:1rem;
+  align-items:center;
+  padding:1.2rem 1rem;
+  border-bottom:1px solid var(--line);
+}
+
+.historyDate{
+  color:var(--accent);
+  font-size:.75rem;
+}
+
+.historyArchiveTitle{
+  font-weight:600;
+}
+
+.historyListen{
+  text-align:right;
+  color:var(--muted);
+  font-size:.68rem;
+}
+
+.artistSongCard{
+  display:grid;
+  grid-template-columns:1fr 180px 28px;
+  gap:1rem;
+  align-items:center;
+  padding:1.15rem 1rem;
+  border-bottom:1px solid var(--line);
+}
+
+.artistSongTitle{
+  font-weight:600;
+}
+
+.artistSongCount{
+  text-align:right;
+  color:var(--muted);
+  font-size:.7rem;
+}
+
+.toast{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:100;
+  max-width:min(420px,calc(100vw - 32px));
+  padding:.95rem 1.1rem;
+  border:1px solid var(--line);
+  box-shadow:0 14px 40px rgba(53,47,56,.18);
+  font-size:.82rem;
+  opacity:0;
+  transform:translateY(14px);
+  pointer-events:none;
+  transition:.2s;
+}
+
+.toast::before{
+  content:"✓";
+  margin-right:.55rem;
+  color:var(--accent);
+  font-weight:700;
+}
+
+.toast.error::before{
+  content:"!";
+  color:var(--accent);
+}
+
+.toast.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+footer{
+  padding:3rem 9vw;
+  display:flex;
+  gap:1.5rem;
+  font-size:.72rem;
+}
+
+@media (max-width:760px){
+  header{
+    height:64px;
+    padding:0 4.5vw;
+    gap:12px;
+    overflow:hidden;
+  }
+
+  .logo{
+    flex:0 0 auto;
+    white-space:nowrap;
+    font-size:.92rem;
+    letter-spacing:.12em;
+  }
+
+  nav{
+    min-width:0;
+    gap:.56rem;
+    margin-left:auto;
+  }
+
+  nav a{
+    white-space:nowrap;
+    font-size:.52rem;
+    letter-spacing:.08em;
+  }
+
+  .hero{
+    padding:20vw 7vw 14vw;
+  }
+
+  .hero h1{
+    font-size:15vw;
+  }
+
+  .hero::after{
+    opacity:.07;
+    width:55vw;
+  }
+
+  .section{
+    padding:14vw 6vw;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .toolbar{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    display:none;
+  }
+
+  .heroActions{
+    flex-direction:column;
+  }
+
+  .sectionHead{
+    align-items:start;
+    flex-direction:column;
+    gap:.8rem;
+  }
+
+  .latestRow{
+    grid-template-columns:24px 74px minmax(0,1fr) 14px;
+    column-gap:.375rem;
+    padding:1rem .1rem;
+  }
+
+  .latestDate{
+    font-size:.72rem;
+    letter-spacing:.035em;
+    white-space:nowrap;
+  }
+
+  .latestTitle{
+    min-width:0;
+    font-size:.78rem !important;
+    line-height:1.5;
+  }
+
+  .rankingHead,.rankingRow{
+    grid-template-columns:42px minmax(0,1fr) 68px;
+  }
+
+  .rankingHead span:nth-child(3),.rankingArtist{
+    display:none;
+  }
+
+  .socialGrid{
+    grid-template-columns:1fr;
+  }
+
+  .socialGrid>.socialCard:last-child:nth-child(odd){
+    grid-column:auto;
+    width:100%;
+  }
+
+  .songTableHead,.songDbRow{
+    grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 72px;
+  }
+
+  .sortBtn,.songTitleLink,.songArtist,.songCount{
+    padding:.95rem .6rem;
+  }
+
+  .playerHead{
+    align-items:start;
+    flex-direction:column;
+  }
+
+  .playerLayout{
+    grid-template-columns:1fr;
+  }
+
+  #archiveTitle{
+    font-size:clamp(1.55rem,7vw,2.15rem);
+  }
+
+  .historyCard{
+    grid-template-columns:105px 1fr;
+  }
+
+  .historyListen{
+    grid-column:2;
+    text-align:left;
+  }
+
+  .artistSongCard{
+    grid-template-columns:1fr 95px 22px;
+    padding:.95rem .6rem;
+  }
+
+  .toast{
+    right:16px;
+    bottom:16px;
+    left:16px;
+    max-width:none;
+  }
+
+  footer{
+    flex-wrap:wrap;
+  }
+}
+
+header{
+  border-bottom:1px solid rgba(109,76,97,.20);
+  box-shadow:0 8px 30px rgba(90,59,84,.05);
+}
+
+.logo{
+  color:var(--deep);
+}
+
+
+nav a:hover{
+  color:var(--accent);
+}
+
+.hero{
+  min-height:64vh;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  left:-62px;
+  top:18%;
+  width:210px;
+  height:210px;
+  border-radius:50%;
+  opacity:.20;
+  background-image:url("./assets/asanoha.png");
+  background-size:86px auto;
+  border:1px solid rgba(109,76,97,.18);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  right:-54px;
+  top:-42px;
+  width:min(38vw,440px);
+  aspect-ratio:1;
+  border-radius:50%;
+  opacity:.18;
+  background-image:url("./assets/asanoha.png");
+  background-size:92px auto;
+  border:1px solid rgba(109,76,97,.22);
+  transform:none;
+}
+
+.hero h1{
+  color:var(--deep);
+  text-shadow:0 1px 0 rgba(255,255,255,.45);
+}
+
+.hero h1 em{
+  color:var(--accent);
+}
+
+.eyebrow{
+  color:var(--accent);
+}
+
+.section:nth-of-type(even)::before{
+  height:4px;
+  opacity:.55;
+  background:linear-gradient(90deg,transparent,var(--rose),var(--main),var(--rose),transparent);
+}
+
+.primaryButton,.share{
+  border-color:var(--deep);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),0 5px 14px rgba(90,59,84,.12);
+}
+
+.primaryButton:hover,.share:hover{
+  background:var(--accent);
+}
+
+.ghostButton{
+  color:var(--deep);
+  border-color:rgba(109,76,97,.34);
+}
+
+.ghostButton:hover{
+  color:#fff;
+  background:var(--accent);
+}
+
+.card,.socialCard{
+  box-shadow:0 8px 28px rgba(90,59,84,.045);
+}
+
+.card::after{
+  width:110px;
+  height:110px;
+  right:-38px;
+  bottom:-38px;
+  border:0;
+  transform:none;
+  opacity:.11;
+  background-image:url("./assets/asanoha.png");
+  background-size:70px auto;
+}
+
+.card-date,.latestDate,.historyDate,.time{
+  color:var(--accent);
+}
+
+.latestNumber,.rankNumber,.socialIndex{
+  color:var(--rose);
+}
+
+.rankingSong span,.rankingArtist span,.rankingCount,.songArrow,.artistSongArrow,.latestArrow{
+  color:var(--accent);
+}
+
+.rankingRow,.latestRow,.historyCard,.artistSongCard{
+  background:rgba(255,250,245,.30);
+}
+
+.rankingRow:hover,.latestRow:hover,.historyCard:hover,.artistSongCard:hover{
+  background:rgba(204,170,173,.13);
+}
+
+.socialCard{
+  position:relative;
+  overflow:hidden;
+}
+
+.socialCard::after{
+  content:"";
+  position:absolute;
+  right:-32px;
+  bottom:-36px;
+  width:120px;
+  height:120px;
+  opacity:.065;
+  background-image:url("./assets/asanoha.png");
+  background-size:64px auto;
+}
+
+.songTableWrap,.latestList,.rankingTable,.historyList,.artistSongList{
+  background:rgba(255,250,245,.30);
+}
+
+.songDbRow:hover{
+  background:rgba(204,170,173,.11);
+}
+
+.sortBtn:hover,.sortBtn.active,.songTitleLink:hover,.artistLink:hover{
+  color:var(--accent);
+}
+
+.track:hover,.track.active{
+  background:rgba(204,170,173,.15);
+}
+
+.video{
+  box-shadow:0 14px 36px rgba(90,59,84,.12);
+}
+
+footer{
+  position:relative;
+  overflow:hidden;
+  color:#d8c5cd;
+  border-top:0;
+}
+
+footer::after{
+  content:"";
+  position:absolute;
+  right:-25px;
+  bottom:-65px;
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  opacity:.16;
+  background-image:url("./assets/asanoha.png");
+  background-size:80px auto;
+  filter:brightness(3);
+}
+
+footer b{
+  color:#fff7f0;
+}
+
+.toast{
+  color:#fffaf5;
+  border-color:rgba(255,255,255,.15);
+}
+
+@media (max-width:760px){
+  .hero::before{
+    width:145px;
+    height:145px;
+    left:-70px;
+    opacity:.13;
+  }
+
+  .hero::after{
+    width:62vw;
+    right:-26vw;
+    top:1%;
+    opacity:.12;
+  }
+}
+
+.hero::after{
+  background-color:rgba(203,169,189,.20);
+}
+
+.primaryButton,.share{
+  background:linear-gradient(180deg,#806087,#684a70);
+}
+
+.rankingRow:hover,.latestRow:hover,.historyCard:hover,.artistSongCard:hover,
+.songDbRow:hover,.track:hover,.track.active{
+  background:rgba(203,169,189,.15);
+}
+
+footer{
+  background:#5d4164;
+}
+
+.toast{
+  background:rgba(93,65,100,.97);
+}
+
+:root{
+  --bg:#ddd1df;
+  --surface:#eee5ef;
+  --surface2:#d8c9dc;
+  --cream:#f8f1f5;
+}
+
+body{
+  background:radial-gradient(circle at 84% 7%,rgba(154,109,145,.22),transparent 30%),
+    radial-gradient(circle at 4% 62%,rgba(116,85,123,.16),transparent 27%),
+    linear-gradient(180deg,#e8dfea 0%,#ddd1df 52%,#d5c6da 100%);
+}
+
+header{
+  background:rgba(238,229,239,.92);
+}
+
+.hero{
+  background:linear-gradient(90deg,rgba(239,230,240,.80),rgba(221,209,223,.56)),
+    radial-gradient(circle at 76% 42%,rgba(203,169,189,.25),transparent 34%);
+}
+
+.section{
+  background:rgba(239,230,240,.48);
+}
+
+.section:nth-of-type(even){
+  background:rgba(222,209,225,.54);
+}
+
+.card,.socialCard{
+  background:rgba(244,236,242,.68);
+}
+
+.rankingRow,.latestRow,.historyCard,.artistSongCard,
+.songTableWrap,.latestList,.rankingTable,.historyList,.artistSongList{
+  background:rgba(239,230,240,.38);
+}
+
+.setlist{
+  background:rgba(238,229,239,.92);
+}
+
+.ghostButton{
+  background:rgba(244,236,242,.68);
+}
+
+.hero-v7{
+  position:relative;
+  min-height:680px;
+  padding:84px clamp(24px,5vw,72px) 56px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  align-items:center;
+  isolation:isolate;
+  border-bottom:1px solid rgba(116,85,123,.22);
+  background:radial-gradient(circle at 50% 15%,rgba(255,255,255,.16),transparent 30%),
+    linear-gradient(180deg,rgba(232,223,234,.88),rgba(221,209,223,.80));
+}
+
+.hero-v7::before{
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  background-size:118px auto;
+  opacity:.10;
+}
+
+.hero-v7::after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(195,164,109,.55);
+  box-shadow:inset 0 0 0 6px rgba(116,85,123,.035);
+  pointer-events:none;
+}
+
+.heroPattern{
+  position:absolute;
+  z-index:-1;
+  width:min(32vw,430px);
+  height:min(32vw,430px);
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid rgba(195,164,109,.48);
+  box-shadow:0 18px 55px rgba(93,65,100,.10);
+}
+
+.heroPattern::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(45deg,#625870 25%,transparent 25%,transparent 75%,#625870 75%),
+    linear-gradient(45deg,#625870 25%,transparent 25%,transparent 75%,#625870 75%);
+  background-position:0 0,30px 30px;
+  background-size:60px 60px;
+  opacity:.44;
+}
+
+.heroPattern::after{
+  position:absolute;
+  inset:0;
+  background-image:url("./assets/asanoha.png");
+  background-size:96px auto;
+  opacity:.22;
+  mix-blend-mode:multiply;
+}
+
+.heroPattern-left{
+  left:-150px;
+  top:90px;
+}
+
+.heroPattern-right{
+  right:-160px;
+  bottom:44px;
+}
+
+.heroCenter{
+  width:min(860px,100%);
+  margin:0 auto;
+  text-align:center;
+  position:relative;
+}
+
+.heroEyebrow{
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  margin-bottom:22px;
+  font-family:"Playfair Display","Times New Roman",serif;
+  letter-spacing:.28em;
+  font-size:.78rem;
+  color:#625870;
+}
+
+.heroEyebrow i{
+  color:var(--gold);
+  font-style:normal;
+  font-size:.7em;
+}
+
+.heroTitleFrame{
+  position:relative;
+  width:min(640px,100%);
+  margin:0 auto;
+  padding:44px clamp(24px,5vw,56px) 38px;
+  background:linear-gradient(180deg,rgba(248,241,245,.82),rgba(238,229,239,.70));
+  border:1px solid rgba(195,164,109,.62);
+  box-shadow:0 24px 70px rgba(93,65,100,.10),
+    inset 0 0 0 6px rgba(116,85,123,.028);
+}
+
+.heroTitleFrame::before,.heroTitleFrame::after{
+  content:"◆";
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--gold);
+  font-size:.72rem;
+}
+
+.heroTitleFrame::before{
+  left:14px;
+}
+
+.heroTitleFrame::after{
+  right:14px;
+}
+
+.heroKissa{
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+}
+
+.hero-v7 h1{
+  margin:0;
+  color:var(--deep);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-weight:600;
+  font-size:clamp(3rem,8vw,6rem);
+  letter-spacing:.22em;
+  text-indent:.22em;
+  line-height:1.08;
+}
+
+.heroOfficial{
+  margin-top:10px;
+  font-family:"Playfair Display","Times New Roman",serif;
+  letter-spacing:.38em;
+  text-indent:.38em;
+  color:#625870;
+  font-size:.95rem;
+}
+
+.heroRule{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin:24px auto 20px;
+  width:min(280px,72%);
+  color:var(--gold);
+}
+
+.heroRule::before,.heroRule::after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,transparent,rgba(195,164,109,.9));
+}
+
+.heroRule::after{
+  background:linear-gradient(90deg,rgba(195,164,109,.9),transparent);
+}
+
+.heroRule span{
+  font-size:.7rem;
+}
+
+.heroCatchcopy{
+  margin:0;
+  color:var(--text);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  letter-spacing:.12em;
+  line-height:1.9;
+}
+
+
+.hero-v7 .heroActions{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:14px;
+  margin:28px auto 0;
+  width:min(940px,100%);
+}
+
+.hero-v7 .heroActions a:nth-child(1),
+.hero-v7 .heroActions a:nth-child(2),
+.hero-v7 .heroActions a:nth-child(3){
+  grid-column:span 2;
+}
+
+.hero-v7 .heroActions a:nth-child(4){
+  grid-column:2 / span 2;
+}
+
+.hero-v7 .heroActions a:nth-child(5){
+  grid-column:4 / span 2;
+}
+
+.hero-v7 .heroActions a{
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:0;
+  letter-spacing:.08em;
+  border:1px solid rgba(195,164,109,.65);
+  box-shadow:inset 0 0 0 4px rgba(255,255,255,.05);
+}
+
+.hero-v7 .primaryButton{
+  background:linear-gradient(180deg,#74557B,#5d4164);
+}
+
+.hero-v7 .ghostButton{
+  background:rgba(248,241,245,.68);
+  color:#5d4164;
+}
+
+
+@media (max-width:900px){
+  .hero-v7{
+    grid-template-columns:1fr;
+    min-height:auto;
+    padding-top:62px;
+  }
+
+  .heroPattern{
+    width:280px;
+    height:280px;
+    opacity:.70;
+  }
+
+  .heroPattern-left{
+    left:-160px;
+    top:50px;
+  }
+
+  .heroPattern-right{
+    right:-150px;
+    bottom:10px;
+  }
+}
+
+@media (max-width:640px){
+  .hero-v7{
+    padding:50px 18px 38px;
+  }
+
+  .hero-v7::after{
+    inset:10px;
+  }
+
+  .heroPattern{
+    width:220px;
+    height:220px;
+    opacity:.44;
+    box-shadow:0 12px 36px rgba(93,65,100,.06);
+  }
+
+  .heroPattern-left{
+    left:-138px;
+    top:42px;
+  }
+
+  .heroPattern-right{
+    right:-126px;
+    bottom:42px;
+  }
+
+  .heroTitleFrame{
+    padding:34px 22px 30px;
+  }
+
+  .hero-v7 h1{
+    font-size:clamp(2.7rem,16vw,4.6rem);
+    letter-spacing:.14em;
+    text-indent:.14em;
+  }
+
+  .hero-v7 .heroActions{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    margin-top:22px;
+  }
+
+  .hero-v7 .heroActions a:nth-child(1),
+  .hero-v7 .heroActions a:nth-child(2),
+  .hero-v7 .heroActions a:nth-child(3),
+  .hero-v7 .heroActions a:nth-child(4){
+    grid-column:auto;
+  }
+
+  .hero-v7 .heroActions a:nth-child(5){
+    grid-column:1 / -1;
+  }
+
+  .hero-v7 .heroActions a{
+    min-height:62px;
+  }
+}
+
+.heroPattern::after{
+  content:none !important;
+  display:none !important;
+}
+
+.heroPattern,
+.heroPattern-left,
+.heroPattern-right{
+  background:none !important;
+  background-image:none !important;
+}
+
+.heroPattern::before,
+.heroPattern-left::before,
+.heroPattern-right::before{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(45deg,#625870 25%,transparent 25%,transparent 75%,#625870 75%),
+    linear-gradient(45deg,#625870 25%,transparent 25%,transparent 75%,#625870 75%) !important;
+  background-position:0 0,30px 30px !important;
+  background-size:60px 60px !important;
+  opacity:.44 !important;
+}
+
+.heroPattern::after,
+.heroPattern-left::after,
+.heroPattern-right::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+  background-image:none !important;
+}
+
+.hero-v7::before{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+  background-image:none !important;
+}
+
+.heroPattern-left{
+  display:none !important;
+}
+
+.heroKissa{
+  margin-bottom:18px;
+  font-size:clamp(.95rem,1.8vw,1.2rem);
+  letter-spacing:.42em;
+  text-indent:.42em;
+  color:#625870;
+}
+
+.heroLibraryTitle{
+  margin:0;
+  color:var(--deep);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-weight:600;
+}
+
+.heroOfficial{
+  display:none !important;
+}
+
+@media (max-width:640px){
+  .heroLibraryTitle{
+    font-size:clamp(2rem,11vw,3.5rem) !important;
+    letter-spacing:.08em !important;
+    text-indent:.08em !important;
+  }
+}
+
+@media (max-width:640px){
+  .heroLibraryTitle{
+    font-size:clamp(1.55rem,8vw,2.65rem) !important;
+    letter-spacing:.04em !important;
+    text-indent:.04em !important;
+  }
+}
+
+.heroLibraryTitle{
+  white-space:nowrap !important;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+  font-size:clamp(1.75rem,4.15vw,3.55rem) !important;
+  letter-spacing:.045em !important;
+  text-indent:0 !important;
+  line-height:1.2 !important;
+}
+
+.heroCatchcopy{
+  display:none !important;
+}
+
+.heroRule{
+  margin-bottom:0 !important;
+}
+
+@media (max-width:640px){
+  .heroLibraryTitle{
+    font-size:clamp(1.35rem,7.2vw,2.35rem) !important;
+    letter-spacing:.015em !important;
+  }
+}
+
+.heroEyebrow{
+  display:none !important;
+}
+
+.heroRule-top{
+  margin:0 auto 22px !important;
+}
+
+.heroRule-top::before,
+.heroRule-top::after{
+  opacity:1;
+}
+
+.hero-v7 .heroActions .primaryButton,
+.hero-v7 .heroActions .ghostButton{
+  color:#f8f1f5 !important;
+  background:linear-gradient(180deg,#74557B 0%,#625870 100%) !important;
+  border:1px solid rgba(195,164,109,.72) !important;
+  box-shadow:inset 0 0 0 4px rgba(248,241,245,.045),
+    0 8px 22px rgba(93,65,100,.10) !important;
+  transition:transform .22s ease,
+    background .22s ease,
+    box-shadow .22s ease;
+}
+
+.hero-v7 .heroActions .ghostButton:first-of-type{
+  background:linear-gradient(180deg,#806887 0%,#6d5976 100%) !important;
+}
+
+.hero-v7 .heroActions .primaryButton:hover,
+.hero-v7 .heroActions .ghostButton:hover{
+  color:#fffaf7 !important;
+  background:linear-gradient(180deg,#806087 0%,#684d70 100%) !important;
+  transform:translateY(-2px);
+  box-shadow:inset 0 0 0 4px rgba(248,241,245,.07),
+    0 12px 28px rgba(93,65,100,.16) !important;
+}
+
+.section h2,
+.sectionTitle,
+.sectionHeader h2{
+  font-size:clamp(1.55rem,3vw,2.35rem) !important;
+  line-height:1.35 !important;
+  letter-spacing:.08em !important;
+}
+
+@media (max-width:640px){
+  .section h2,
+    .sectionTitle,
+    .sectionHeader h2{
+    font-size:clamp(1.35rem,6vw,1.8rem) !important;
+    letter-spacing:.05em !important;
+  }
+}
+
+#explore .card{
+  padding:22px 24px !important;
+  min-height:150px !important;
+  background:linear-gradient(135deg,rgba(248,241,245,.82),rgba(216,201,220,.72)) !important;
+  border:1px solid rgba(98,88,112,.34) !important;
+  box-shadow:0 8px 22px rgba(93,65,100,.07) !important;
+}
+
+#explore .card h3{
+  font-size:clamp(1.15rem,2vw,1.45rem) !important;
+  color:#625870 !important;
+  margin-bottom:8px !important;
+}
+
+#explore .card p{
+  font-size:.88rem !important;
+  line-height:1.65 !important;
+}
+
+#explore .card .button,
+#explore .card a[class*="Button"],
+#explore .card > a{
+  min-height:44px !important;
+  padding:10px 18px !important;
+  font-size:.82rem !important;
+  letter-spacing:.06em !important;
+  background:linear-gradient(180deg,#8f7895,#75647f) !important;
+  color:#fffaf7 !important;
+  border:1px solid rgba(195,164,109,.58) !important;
+  box-shadow:none !important;
+}
+
+@media (max-width:640px){
+  #explore .card{
+    padding:14px 18px !important;
+    min-height:112px !important;
+  }
+
+  #explore .card h3{
+    font-size:1.08rem !important;
+    margin:7px 0 5px !important;
+  }
+
+  #explore .card p{
+    font-size:.78rem !important;
+    line-height:1.5 !important;
+  }
+}
+
+#explore .card{
+  position:relative;
+  overflow:hidden;
+}
+
+#explore .card::after{
+  content:"" !important;
+  position:absolute !important;
+  pointer-events:none !important;
+  background-image:url("./assets/asanoha.png") !important;
+  background-repeat:repeat !important;
+  opacity:.62 !important;
+  z-index:0 !important;
+}
+
+#explore .card > *{
+  position:relative;
+  z-index:1;
+}
+
+#explore .card::after{
+  right:-12px !important;
+  bottom:-10px !important;
+  width:62% !important;
+  height:100% !important;
+  background-size:62px auto !important;
+  background-position:right bottom !important;
+  -webkit-mask-image:linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(0,0,0,.10) 18%,
+    rgba(0,0,0,.32) 40%,
+    rgba(0,0,0,.66) 66%,
+    #000 100%
+  ) !important;
+  mask-image:linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(0,0,0,.10) 18%,
+    rgba(0,0,0,.32) 40%,
+    rgba(0,0,0,.66) 66%,
+    #000 100%
+  ) !important;
+}
+
+#socials .socialGrid,
+#socials .snsGrid,
+#socials [class*="social"][class*="Grid"]{
+  display:grid !important;
+  grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  gap:14px !important;
+  max-width:820px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+#socials .socialLink,
+#socials .snsLink,
+#socials a[class*="social"],
+#socials a[class*="sns"]{
+  min-height:48px !important;
+  padding:11px 16px !important;
+  font-size:.86rem !important;
+}
+
+#socials .socialGrid > :last-child:nth-child(3n + 1),
+#socials .snsGrid > :last-child:nth-child(3n + 1),
+#socials [class*="social"][class*="Grid"] > :last-child:nth-child(3n + 1){
+  grid-column:2 !important;
+}
+
+#socials .socialGrid > :nth-last-child(2):nth-child(3n + 1),
+#socials .snsGrid > :nth-last-child(2):nth-child(3n + 1),
+#socials [class*="social"][class*="Grid"] > :nth-last-child(2):nth-child(3n + 1){
+  grid-column:1 / 2 !important;
+  transform:translateX(50%) !important;
+}
+
+#socials .socialGrid > :last-child:nth-child(3n + 2),
+#socials .snsGrid > :last-child:nth-child(3n + 2),
+#socials [class*="social"][class*="Grid"] > :last-child:nth-child(3n + 2){
+  transform:translateX(50%) !important;
+}
+
+@media (max-width:640px){
+  #socials .socialGrid,
+    #socials .snsGrid,
+    #socials [class*="social"][class*="Grid"]{
+    grid-template-columns:1fr !important;
+    max-width:360px !important;
+  }
+
+  #socials .socialGrid > *,
+    #socials .snsGrid > *,
+    #socials [class*="social"][class*="Grid"] > *{
+    grid-column:auto !important;
+    transform:none !important;
+  }
+}
+
+#socials .socialsGrid{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  gap:12px !important;
+  max-width:760px !important;
+  margin:24px auto 0 !important;
+}
+
+#socials .socialCard{
+  flex:0 1 calc((100% - 24px) / 3) !important;
+  width:auto !important;
+  min-width:0 !important;
+  min-height:96px !important;
+  padding:16px 18px !important;
+  transform:none !important;
+  box-sizing:border-box !important;
+}
+
+#socials .socialCard .socialName{
+  font-size:clamp(1.05rem,1.8vw,1.35rem) !important;
+  line-height:1.15 !important;
+  letter-spacing:.01em !important;
+}
+
+#socials .socialCard .socialSub,
+#socials .socialCard .socialMeta,
+#socials .socialCard small{
+  font-size:.66rem !important;
+  letter-spacing:.12em !important;
+}
+
+#socials .socialCard .socialUrl,
+#socials .socialCard .urlSetting{
+  font-size:.72rem !important;
+  line-height:1.25 !important;
+}
+
+#socials .socialsGrid > *{
+  grid-column:auto !important;
+  transform:none !important;
+}
+
+@media (max-width:760px){
+  #socials .socialsGrid{
+    max-width:560px !important;
+  }
+
+  #socials .socialCard{
+    flex-basis:calc((100% - 12px) / 2) !important;
+  }
+}
+
+@media (max-width:480px){
+  #socials .socialsGrid{
+    max-width:340px !important;
+  }
+
+  #socials .socialCard{
+    flex-basis:100% !important;
+    min-height:88px !important;
+  }
+}
+
+#socials .socialGrid{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  gap:12px !important;
+  max-width:760px !important;
+  margin:24px auto 0 !important;
+}
+
+#socials .socialGrid > *{
+  flex:0 1 calc((100% - 24px) / 3) !important;
+  width:auto !important;
+  min-width:0 !important;
+  min-height:96px !important;
+  padding:16px 18px !important;
+  grid-column:auto !important;
+  transform:none !important;
+  box-sizing:border-box !important;
+}
+
+#socials .socialGrid h3{
+  font-size:clamp(1.05rem,1.8vw,1.35rem) !important;
+  line-height:1.15 !important;
+}
+
+#socials .socialGrid p,
+#socials .socialGrid small,
+#socials .socialGrid span{
+  font-size:.70rem !important;
+}
+
+@media (max-width:760px){
+  #socials .socialGrid > *{
+    flex-basis:calc((100% - 12px) / 2) !important;
+  }
+}
+
+@media (max-width:480px){
+  #socials .socialGrid > *{
+    flex-basis:100% !important;
+  }
+}
+
+#socials .socialGrid > *,
+#socials .socialsGrid > *{
+  min-height:82px !important;
+  padding:13px 16px !important;
+  border:1px solid rgba(98,88,112,.34) !important;
+  background:linear-gradient(
+    135deg,
+    rgba(248,241,245,.82),
+    rgba(216,201,220,.72)
+  ) !important;
+  box-shadow:0 8px 22px rgba(93,65,100,.07) !important;
+  border-radius:inherit;
+  overflow:hidden !important;
+}
+
+#socials .socialGrid h3,
+#socials .socialsGrid .socialName,
+#socials .socialsGrid h3,
+#socials .socialsGrid .socialName{
+  font-size:clamp(1rem,1.6vw,1.18rem) !important;
+  line-height:1.2 !important;
+  color:#625870 !important;
+  letter-spacing:.02em !important;
+  margin-bottom:5px !important;
+}
+
+#socials .socialGrid p,
+#socials .socialGrid small,
+#socials .socialGrid span,
+#socials .socialsGrid p,
+#socials .socialsGrid small,
+#socials .socialsGrid span{
+  font-size:.66rem !important;
+  line-height:1.45 !important;
+}
+
+#socials .socialGrid > *,
+#socials .socialsGrid > *{
+  position:relative !important;
+}
+
+#socials .socialGrid > *::after,
+#socials .socialsGrid > *::after{
+  content:"" !important;
+  position:absolute !important;
+  right:-12px !important;
+  bottom:-10px !important;
+  width:58% !important;
+  height:100% !important;
+  background-image:url("./assets/asanoha.png") !important;
+  background-repeat:repeat !important;
+  background-size:62px auto !important;
+  background-position:right bottom !important;
+  opacity:.34 !important;
+  pointer-events:none !important;
+  -webkit-mask-image:linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(0,0,0,.08) 20%,
+    rgba(0,0,0,.32) 46%,
+    rgba(0,0,0,.68) 72%,
+    #000 100%
+  ) !important;
+  mask-image:linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(0,0,0,.08) 20%,
+    rgba(0,0,0,.32) 46%,
+    rgba(0,0,0,.68) 72%,
+    #000 100%
+  ) !important;
+  z-index:0 !important;
+}
+
+#socials .socialGrid > * > *,
+#socials .socialsGrid > * > *{
+  position:relative !important;
+  z-index:1 !important;
+}
+
+#socials .socialIndex{
+  display:none !important;
+}
+
+#socials .socialCard{
+  grid-template-columns:1fr auto !important;
+  grid-template-rows:auto 1fr !important;
+  column-gap:12px !important;
+}
+
+#socials .socialCard strong{
+  grid-column:1 !important;
+  grid-row:1 !important;
+}
+
+#socials .socialCard small{
+  grid-column:1 !important;
+  grid-row:2 !important;
+}
+
+#socials .socialArrow{
+  grid-column:2 !important;
+  grid-row:1 / span 2 !important;
+}
+
+.archiveSocialSection{
+  padding-top:44px !important;
+}
+
+#socials.section,
+.archiveSocialSection{
+  padding-top:26px !important;
+  padding-bottom:28px !important;
+}
+
+#socials .socialGrid,
+#socials .socialsGrid{
+  margin-top:10px !important;
+}
+
+.archiveSocialSection{
+  margin-top:8px !important;
+}
+
+#socials .eyebrow{
+  margin-bottom:3px !important;
+}
+
+#socials h2{
+  margin-bottom:0 !important;
+}
+
+@media (min-width:761px){
+  #socials.section,
+    .archiveSocialSection{
+    padding-top:20px !important;
+    padding-bottom:24px !important;
+  }
+}
+
+#socials .socialGrid .socialCard strong,
+#socials .socialsGrid .socialCard strong,
+#socials .socialCard .socialName,
+#socials .socialGrid .socialCard h3,
+#socials .socialsGrid .socialCard h3{
+  font-size:.92rem !important;
+  line-height:1.2 !important;
+  letter-spacing:.02em !important;
+  font-weight:700 !important;
+}
+
+#socials .socialGrid .socialCard small,
+#socials .socialsGrid .socialCard small,
+#socials .socialGrid .socialCard span:not(.socialArrow),
+#socials .socialsGrid .socialCard span:not(.socialArrow){
+  font-size:.62rem !important;
+  line-height:1.35 !important;
+}
+
+#socials .socialGrid .socialArrow,
+#socials .socialsGrid .socialArrow{
+  font-size:.72rem !important;
+}
+
+#socials #socialLinks{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  align-items:stretch !important;
+  gap:12px !important;
+  width:100% !important;
+  max-width:820px !important;
+  margin:10px auto 0 !important;
+  grid-template-columns:none !important;
+}
+
+#socials #socialLinks > .socialCard{
+  flex:0 0 calc(33.333333% - 8px) !important;
+  width:calc(33.333333% - 8px) !important;
+  max-width:calc(33.333333% - 8px) !important;
+  min-width:0 !important;
+  grid-column:auto !important;
+  justify-self:auto !important;
+  transform:none !important;
+  box-sizing:border-box !important;
+}
+
+@media (max-width:760px){
+  #socials #socialLinks{
+    max-width:560px !important;
+  }
+
+  #socials #socialLinks > .socialCard{
+    flex-basis:calc(50% - 6px) !important;
+    width:calc(50% - 6px) !important;
+    max-width:calc(50% - 6px) !important;
+  }
+}
+
+@media (max-width:480px){
+  #socials #socialLinks{
+    max-width:340px !important;
+  }
+
+  #socials #socialLinks > .socialCard{
+    flex-basis:100% !important;
+    width:100% !important;
+    max-width:100% !important;
+  }
+}
+
+/* =========================================================
+   FINAL LAYOUT OVERRIDES
+   ========================================================= */
+
+/* The current design uses a normal-flow header on every page. */
+body > header{
+  position:relative !important;
+  z-index:20;
+}
+
+/* ---------- TOP sections ---------- */
+#latest,
+#ranking,
+#explore,
+#socials{
+  position:relative;
+  isolation:isolate;
+}
+
+#latest .sectionHead,
+#ranking .sectionHead,
+#explore > .eyebrow,
+#socials > .eyebrow{
+  position:relative;
+}
+
+#latest .sectionHead::after,
+#ranking .sectionHead::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-13px;
+  width:86px;
+  height:1px;
+  background:linear-gradient(90deg,#C3A46D,rgba(195,164,109,0));
+  pointer-events:none;
+}
+
+#latest .sectionHead::before,
+#ranking .sectionHead::before{
+  content:"◆";
+  position:absolute;
+  left:88px;
+  bottom:-19px;
+  color:#C3A46D;
+  font-size:8px;
+  line-height:1;
+  opacity:.78;
+  pointer-events:none;
+}
+
+#explore > h2,
+#socials > h2{
+  position:relative;
+  display:inline-block;
+}
+
+#explore > h2::after,
+#socials > h2::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  width:78px;
+  height:1px;
+  background:linear-gradient(90deg,#C3A46D,rgba(195,164,109,0));
+  pointer-events:none;
+}
+
+#explore > h2::before,
+#socials > h2::before{
+  content:"◆";
+  position:absolute;
+  left:80px;
+  bottom:-15px;
+  color:#C3A46D;
+  font-size:8px;
+  line-height:1;
+  opacity:.78;
+  pointer-events:none;
+}
+
+#latest::after,
+#explore::after,
+#ranking::after,
+#socials::after{
+  content:"";
+  display:block;
+  position:absolute;
+  top:8px;
+  width:min(38vw,520px);
+  height:260px;
+  background:url("./assets/asanoha.png") repeat;
+  background-size:82px auto;
+  pointer-events:none;
+  z-index:-1;
+}
+
+#latest::after,
+#explore::after{
+  right:-36px;
+  background-position:right top;
+  opacity:.105;
+  -webkit-mask-image:linear-gradient(250deg,#000 0%,rgba(0,0,0,.68) 32%,rgba(0,0,0,.18) 70%,transparent 100%);
+  mask-image:linear-gradient(250deg,#000 0%,rgba(0,0,0,.68) 32%,rgba(0,0,0,.18) 70%,transparent 100%);
+}
+
+#ranking::after,
+#socials::after{
+  left:-36px;
+  background-position:left top;
+  opacity:.095;
+  -webkit-mask-image:linear-gradient(110deg,#000 0%,rgba(0,0,0,.68) 32%,rgba(0,0,0,.18) 70%,transparent 100%);
+  mask-image:linear-gradient(110deg,#000 0%,rgba(0,0,0,.68) 32%,rgba(0,0,0,.18) 70%,transparent 100%);
+}
+
+#latest > *,
+#ranking > *,
+#explore > *,
+#socials > *{
+  position:relative;
+  z-index:1;
+}
+
+#latest.section{
+  padding-top:38px !important;
+  padding-bottom:42px !important;
+}
+#ranking.section{
+  padding-top:38px !important;
+  padding-bottom:44px !important;
+}
+#explore.section{
+  padding-top:36px !important;
+  padding-bottom:42px !important;
+}
+#socials.section{
+  padding-top:24px !important;
+  padding-bottom:26px !important;
+}
+
+#latest .sectionHead,
+#ranking .sectionHead{
+  margin-bottom:24px !important;
+}
+#explore > h2{margin-bottom:22px !important;}
+#socials > h2{margin-bottom:12px !important;}
+#latest .latestList,
+#ranking .rankingList,
+#ranking .rankingTable{margin-bottom:0 !important;}
+
+#socials #socialLinks > .socialCard{
+  min-height:108px !important;
+  padding:20px 22px !important;
+}
+#socials #socialLinks > .socialCard strong,
+#socials #socialLinks > .socialCard .socialName,
+#socials #socialLinks > .socialCard h3{
+  font-size:1.02rem !important;
+  line-height:1.2 !important;
+}
+#socials #socialLinks > .socialCard small{font-size:.66rem !important;}
+#socials #socialLinks > .socialCard::after{
+  width:62% !important;
+  height:100% !important;
+  opacity:.36 !important;
+}
+
+/* ---------- Shared subpage title ornament ---------- */
+.pageTitleRule{
+  width:min(280px,72%);
+  height:18px;
+  margin:20px 0 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  color:var(--gold);
+}
+.pageTitleRule::before,
+.pageTitleRule::after{
+  content:"";
+  display:block;
+  height:1px;
+  flex:1;
+}
+.pageTitleRule::before{background:linear-gradient(90deg,transparent,rgba(195,164,109,.9));}
+.pageTitleRule::after{background:linear-gradient(90deg,rgba(195,164,109,.9),transparent);}
+.pageTitleRule span{
+  color:var(--gold);
+  font-size:.7rem;
+  line-height:1;
+}
+
+/* ---------- Archive index ---------- */
+.archiveIndexPage{
+  background:linear-gradient(180deg,rgba(232,223,234,.74),rgba(221,209,223,.78) 55%,rgba(213,198,218,.76));
+}
+.archiveIndexHero{
+  position:relative;
+  overflow:hidden;
+  padding:72px 9vw 62px;
+  border-bottom:1px solid rgba(116,85,123,.22);
+  background:rgba(244,238,245,.44);
+}
+.archiveIndexHero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("./assets/asanoha.png");
+  background-size:220px auto;
+  opacity:.025;
+  pointer-events:none;
+}
+.archiveIndexHero::after{
+  content:"";
+  position:absolute;
+  width:330px;
+  height:330px;
+  right:-72px;
+  top:-96px;
+  background:url("./assets/asanoha.png") center/210px auto repeat;
+  opacity:.075;
+  -webkit-mask-image:radial-gradient(circle at center,#000 20%,rgba(0,0,0,.78) 50%,transparent 74%);
+  mask-image:radial-gradient(circle at center,#000 20%,rgba(0,0,0,.78) 50%,transparent 74%);
+  pointer-events:none;
+}
+.archiveIndexHeroInner{position:relative;z-index:1;max-width:1040px;}
+.archiveIndexHero .eyebrow{margin:0 0 12px;}
+.archiveIndexHero h1{
+  margin:0;
+  color:var(--main);
+  font:600 clamp(2.35rem,5vw,4.6rem) "Shippori Mincho",serif;
+  letter-spacing:.07em;
+  line-height:1.15;
+}
+.archiveLead{
+  margin:0;
+  color:var(--muted);
+  font-size:.86rem;
+  letter-spacing:.05em;
+  line-height:2;
+}
+.archiveIndexSection{
+  position:relative;
+  overflow:hidden;
+  padding-top:52px !important;
+  padding-bottom:64px !important;
+}
+.archiveIndexSection::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  left:-100px;
+  top:34px;
+  background:url("./assets/asanoha.png") center/190px auto repeat;
+  opacity:.045;
+  -webkit-mask-image:radial-gradient(circle at center,#000 18%,rgba(0,0,0,.62) 46%,transparent 72%);
+  mask-image:radial-gradient(circle at center,#000 18%,rgba(0,0,0,.62) 46%,transparent 72%);
+  pointer-events:none;
+}
+.archiveIndexCards{position:relative;z-index:1;gap:14px !important;}
+.archiveIndexCard{
+  min-height:138px;
+  padding:22px 26px 20px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  grid-template-rows:auto 1fr auto;
+  align-items:start;
+  background:linear-gradient(110deg,rgba(244,238,245,.93),rgba(232,223,234,.82));
+  border-color:rgba(116,85,123,.24);
+  box-shadow:0 9px 22px rgba(93,65,100,.055);
+}
+.archiveIndexCard::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:44%;
+  height:100%;
+  border:0;
+  transform:none;
+  background:url("./assets/asanoha.png") right bottom/150px auto repeat;
+  opacity:.10;
+  -webkit-mask-image:linear-gradient(110deg,transparent 0%,rgba(0,0,0,.08) 28%,#000 100%);
+  mask-image:linear-gradient(110deg,transparent 0%,rgba(0,0,0,.08) 28%,#000 100%);
+  pointer-events:none;
+}
+.archiveIndexCard:hover{
+  border-color:rgba(195,164,109,.72);
+  transform:translateY(-2px);
+  box-shadow:0 12px 26px rgba(93,65,100,.09);
+}
+.archiveIndexCard .card-date{
+  grid-column:1;
+  position:relative;
+  z-index:1;
+  color:var(--accent);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.09em;
+  white-space:nowrap;
+}
+.archiveIndexCard h3{
+  grid-column:1;
+  position:relative;
+  z-index:1;
+  align-self:center;
+  margin:12px 0 10px;
+  color:var(--text);
+  font-size:1.16rem;
+  line-height:1.55;
+}
+.archiveIndexCard .card-meta{
+  grid-column:1;
+  position:relative;
+  z-index:1;
+  margin:0;
+  color:var(--main);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.12em;
+}
+.archiveCardArrow{
+  grid-column:2;
+  grid-row:1/4;
+  align-self:center;
+  position:relative;
+  z-index:2;
+  padding-left:28px;
+  color:var(--gold);
+  font-size:.86rem;
+}
+
+/* ---------- Archive detail ---------- */
+.setlist{
+  background:rgba(244,238,245,.76) !important;
+  border-color:rgba(116,85,123,.25) !important;
+}
+.share{
+  padding:7px 12px !important;
+  min-height:30px !important;
+  font-size:.66rem !important;
+  letter-spacing:.07em !important;
+}
+
+/* ---------- Song database ---------- */
+.songsIndexPage{
+  position:relative;
+  z-index:1;
+  background:linear-gradient(180deg,rgba(232,223,234,.74),rgba(221,209,223,.78) 55%,rgba(213,198,218,.76));
+}
+.songsPageHero{
+  position:relative;
+  overflow:hidden;
+  min-height:0 !important;
+  padding:72px 9vw 62px !important;
+  background:rgba(244,238,245,.44) !important;
+  border-bottom:1px solid rgba(116,85,123,.22) !important;
+  text-align:left;
+}
+.songsPageHero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("./assets/asanoha.png");
+  background-size:220px auto;
+  opacity:.025;
+  pointer-events:none;
+}
+.songsPageHero::after{
+  content:"";
+  position:absolute;
+  width:330px;
+  height:330px;
+  right:-72px;
+  top:-96px;
+  background:url("./assets/asanoha.png") center/210px auto repeat;
+  opacity:.075;
+  -webkit-mask-image:radial-gradient(circle at center,#000 20%,rgba(0,0,0,.78) 50%,transparent 74%);
+  mask-image:radial-gradient(circle at center,#000 20%,rgba(0,0,0,.78) 50%,transparent 74%);
+  pointer-events:none;
+}
+.songsPageHeroInner{
+  position:relative;
+  z-index:1;
+  max-width:1040px;
+}
+
+/* SONG DATABASE eyebrow: match LIVE ARCHIVE exactly */
+.songsPageHero .eyebrow{
+  color:var(--accent) !important;
+}
+.songsPageHero h1{
+  margin:0 !important;
+  color:var(--main) !important;
+  font:600 clamp(2.35rem,5vw,4.6rem) "Shippori Mincho","Noto Serif JP",serif !important;
+  letter-spacing:.07em !important;
+  text-indent:0 !important;
+  line-height:1.15 !important;
+}
+.songsLead{
+  margin:0;
+  color:var(--muted) !important;
+  font-size:.86rem;
+  letter-spacing:.05em;
+  line-height:2;
+}
+.songsIndexPage > section:nth-child(2){
+  position:relative;
+  overflow:hidden;
+  padding-top:48px !important;
+  padding-bottom:62px !important;
+}
+.songsIndexPage input[type="search"],
+.songsIndexPage input[type="text"]{
+  border:0 !important;
+  border-bottom:1px solid rgba(116,85,123,.38) !important;
+  background:transparent !important;
+  color:#3f3343 !important;
+  padding:11px 2px !important;
+}
+.songsIndexPage input:focus{
+  outline:none !important;
+  border-bottom-color:#C3A46D !important;
+}
+
+/* ---------- Song history ---------- */
+.historyTitleRule,
+.artistTitleRule{
+  width:220px;
+  max-width:68%;
+  margin:13px 0 20px;
+}
+#historyList a{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(110deg,rgba(244,238,245,.93),rgba(232,223,234,.82)) !important;
+  border-color:rgba(116,85,123,.22) !important;
+  transition:transform .18s ease,border-color .18s ease,background .18s ease;
+}
+#historyList a:hover{
+  transform:translateY(-1px);
+  border-color:rgba(195,164,109,.68) !important;
+  background:rgba(244,238,245,.96) !important;
+}
+#historyList .historyCard{
+  grid-template-columns:220px minmax(0,1fr) 72px !important;
+  column-gap:18px !important;
+}
+#historyList .historyDate{
+  min-width:220px !important;
+  color:#9A6D91 !important;
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  letter-spacing:.06em;
+  white-space:nowrap !important;
+}
+#historyList .historyListen{
+  white-space:nowrap !important;
+  text-align:right !important;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:640px){
+  main,
+  .hero,
+  .section,
+  footer{
+    max-width:100%;
+  }
+
+  #latest,
+  #ranking,
+  #explore,
+  #socials{
+    overflow:hidden;
+  }
+
+  #latest.section,
+  #ranking.section,
+  #explore.section{
+    padding-top:30px !important;
+    padding-bottom:34px !important;
+  }
+  #socials.section{
+    padding-top:22px !important;
+    padding-bottom:24px !important;
+  }
+  #latest::after,
+  #ranking::after,
+  #explore::after,
+  #socials::after{
+    width:58vw;
+    height:180px;
+    background-size:70px auto;
+    opacity:.07;
+  }
+
+  #latest::after,
+  #explore::after{
+    right:-10px;
+  }
+
+  #ranking::after,
+  #socials::after{
+    left:-10px;
+  }
+
+  .pageTitleRule{
+    width:min(250px,76%);
+    margin:17px 0 15px;
+  }
+
+  .archiveIndexHero{padding:34px 7vw 24px;}
+  .archiveIndexHero .eyebrow{margin:0 0 7px; font-size:.68rem;}
+  .archiveIndexHero h1{font-size:clamp(1.7rem,8.4vw,2.45rem); line-height:1.16;}
+  .archiveLead{font-size:.74rem; line-height:1.7;}
+  .pageTitleRule{margin:12px 0 11px;}
+
+  .archiveIndexHero::after{
+    width:230px;
+    height:230px;
+    right:-85px;
+    top:-72px;
+    background-size:155px auto;
+  }
+  .archiveIndexHero h1{font-size:clamp(1.7rem,8.4vw,2.45rem); line-height:1.16;}
+  .archiveIndexSection{
+    padding-top:30px !important;
+    padding-bottom:38px !important;
+  }
+  .archiveIndexCard{
+    min-height:118px;
+    padding:17px 16px 16px;
+  }
+  .archiveIndexCard::after{
+    width:58%;
+    background-size:125px auto;
+  }
+  .archiveIndexCard h3{font-size:.94rem; line-height:1.42;}
+  .archiveIndexCard .card-date{font-size:.68rem;}
+  .archiveIndexCard .card-meta{font-size:.72rem;}
+  .archiveCardArrow{font-size:.78rem;}
+  .archiveCardArrow{padding-left:12px;}
+
+  .share{
+    padding:7px 11px !important;
+    font-size:.64rem !important;
+  }
+
+  .songsPageHero{
+    padding-top:48px !important;
+    padding-bottom:40px !important;
+  }
+  .songsPageHero::after{
+    width:230px;
+    height:230px;
+    right:-85px;
+    top:-72px;
+    background-size:155px auto;
+  }
+  .songsIndexPage > section:nth-child(2){
+    padding-top:36px !important;
+    padding-bottom:42px !important;
+  }
+
+  #historyList .historyCard{
+    grid-template-columns:1fr auto !important;
+    row-gap:7px !important;
+  }
+  #historyList .historyDate{
+    grid-column:1 / -1 !important;
+    min-width:0 !important;
+    white-space:nowrap !important;
+  }
+  #historyList .historyArchiveTitle{grid-column:1 !important;}
+  #historyList .historyListen{
+    grid-column:2 !important;
+    align-self:center !important;
+  }
+  .artistTitleRule{width:190px;}
+}
+
+@media (max-width:480px){
+  #socials #socialLinks > .socialCard{
+    min-height:82px !important;
+    padding:13px 16px !important;
+  }
+
+  #socials #socialLinks > .socialCard strong{
+    font-size:.88rem !important;
+  }
+
+  #socials #socialLinks > .socialCard small{
+    font-size:.58rem !important;
+  }
+
+  #socials #socialLinks > .socialCard .socialArrow{
+    font-size:.66rem !important;
+  }
+}
+/* =========================================================
+   TOP HERO — 霞モチーフ / Practice 03 採用版
+   承認済み練習画像の連続した霞を、透明PNGアセットとして左右に配置
+   ========================================================= */
+.heroCenter{
+  position:relative;
+  z-index:3;
+}
+
+.heroKasumiAsset{
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  opacity:1;
+}
+
+.heroKasumi-left{
+  left:-36px;
+  top:122px;
+  width:min(43vw,760px);
+  aspect-ratio:760 / 475;
+  background-image:url("./assets/hero-kasumi-left.png");
+}
+
+.heroKasumi-right{
+  right:-34px;
+  top:228px;
+  width:min(42vw,762px);
+  aspect-ratio:762 / 455;
+  background-image:url("./assets/hero-kasumi-right.png");
+}
+
+.heroPattern{
+  z-index:0;
+}
+
+@media (max-width:1180px){
+  .heroKasumi-left{
+    left:-150px;
+    top:130px;
+    width:570px;
+  }
+
+  .heroKasumi-right{
+    right:-155px;
+    top:240px;
+    width:565px;
+  }
+}
+
+@media (max-width:900px){
+  .heroKasumi-left{
+    left:-230px;
+    top:126px;
+    width:520px;
+    opacity:.72;
+  }
+
+  .heroKasumi-right{
+    right:-235px;
+    top:250px;
+    width:510px;
+    opacity:.72;
+  }
+}
+
+@media (max-width:640px){
+  .heroKasumiAsset{
+    display:none;
+  }
+}
+
+
+@media (max-width:390px){
+  header{
+    padding-left:14px;
+    padding-right:14px;
+    gap:8px;
+  }
+  .logo{
+    font-size:.84rem;
+    letter-spacing:.09em;
+  }
+  nav{gap:.42rem;}
+  nav a{
+    font-size:.48rem;
+    letter-spacing:.055em;
+  }
+}
+
+
+/* =========================================================
+   MOBILE ARCHIVE DETAIL POLISH
+   1) 詳細ページ上部をコンパクト化
+   2) ご案内カードをスマホで1列・左揃え固定
+   3) フッター日付の圧縮
+   ========================================================= */
+.archiveDetailPage{
+  background:linear-gradient(180deg,rgba(232,223,234,.74),rgba(221,209,223,.78) 55%,rgba(213,198,218,.76));
+}
+
+.archiveDetailSection{
+  position:relative;
+  overflow:hidden;
+  padding-top:42px !important;
+  padding-bottom:34px !important;
+}
+
+.archiveDetailSection::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("./assets/asanoha.png");
+  background-size:220px auto;
+  opacity:.025;
+  pointer-events:none;
+}
+
+.archiveDetailSection > *{
+  position:relative;
+  z-index:1;
+}
+
+.archiveDetailSection .backlink{
+  margin-bottom:18px;
+  font-size:.74rem;
+  letter-spacing:.08em;
+}
+
+.archiveDetailSection .playerHead{
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:18px;
+}
+
+.archiveDetailSection #dateLabel{
+  margin:0 0 10px;
+  color:var(--accent);
+  font:600 .78rem "Shippori Mincho","Noto Serif JP",serif;
+  letter-spacing:.09em;
+}
+
+.archiveDetailSection #archiveTitle{
+  margin:0 0 10px;
+  color:var(--text);
+  font:600 clamp(2rem,4.8vw,3rem) "Shippori Mincho","Noto Serif JP",serif;
+  line-height:1.28;
+  letter-spacing:.03em;
+}
+
+.archiveDetailSection #meta{
+  margin:0;
+  color:var(--accent);
+  font-size:.8rem;
+  letter-spacing:.08em;
+}
+
+.archiveDetailSection .share{
+  align-self:flex-start;
+  white-space:nowrap;
+}
+
+.archiveDetailSection .playerLayout{
+  gap:14px;
+}
+
+.archiveSocialSection .socialGrid{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:12px !important;
+  max-width:none !important;
+  margin:10px 0 0 !important;
+}
+
+.archiveSocialSection .socialGrid > .socialCard{
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  flex:0 0 100% !important;
+  margin:0 !important;
+  transform:none !important;
+  justify-self:stretch !important;
+}
+
+footer #footDate{
+  font-size:.7rem;
+  letter-spacing:.05em;
+}
+
+@media (max-width:640px){
+  .archiveDetailSection{
+    padding-top:28px !important;
+    padding-bottom:24px !important;
+  }
+
+  .archiveDetailSection .backlink{
+    margin-bottom:14px;
+    font-size:.67rem;
+  }
+
+  .archiveDetailSection .playerHead{
+    gap:10px;
+    margin-bottom:14px;
+  }
+
+  .archiveDetailSection #dateLabel{
+    margin-bottom:8px;
+    font-size:.7rem;
+    line-height:1.45;
+  }
+
+  .archiveDetailSection #archiveTitle{
+    margin-bottom:8px;
+    font-size:clamp(1.62rem,7.2vw,2.25rem) !important;
+    line-height:1.34 !important;
+    letter-spacing:.02em;
+  }
+
+  .archiveDetailSection #meta{
+    font-size:.72rem;
+  }
+
+  .archiveDetailSection .share{
+    padding:6px 11px !important;
+    min-height:0 !important;
+    font-size:.62rem !important;
+    letter-spacing:.06em !important;
+  }
+
+  .archiveDetailSection .playerLayout{
+    gap:12px;
+  }
+
+  .archiveSocialSection{
+    padding-top:20px !important;
+    padding-bottom:24px !important;
+  }
+
+  .archiveSocialSection .socialGrid{
+    gap:10px !important;
+    max-width:none !important;
+  }
+
+  .archiveSocialSection .socialGrid > .socialCard{
+    min-height:84px !important;
+    padding:13px 15px !important;
+  }
+
+  footer #footDate{
+    font-size:.64rem;
+    letter-spacing:.03em;
+  }
+}
+
+/* =========================================================
+   MOBILE ARCHIVE DETAIL — specificity fix
+   既存の #socials + !important 指定より強く上書きする
+   ========================================================= */
+@media (max-width:760px){
+  /* 詳細ページ上部を確実にコンパクト化 */
+  main.archiveDetailPage > section.archiveDetailSection{
+    padding:24px 6vw 22px !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection .backlink{
+    margin-bottom:12px !important;
+    font-size:.63rem !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection .playerHead{
+    gap:8px !important;
+    margin-bottom:12px !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection #dateLabel{
+    margin-bottom:7px !important;
+    font-size:.67rem !important;
+    line-height:1.4 !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection #archiveTitle{
+    margin-bottom:7px !important;
+    font-size:clamp(1.42rem,6.3vw,1.9rem) !important;
+    line-height:1.34 !important;
+    letter-spacing:.015em !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection #meta{
+    font-size:.68rem !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection .share{
+    margin-top:2px !important;
+    padding:6px 10px !important;
+    font-size:.60rem !important;
+  }
+
+  /* アーカイブ詳細の「ご案内」は必ず1列・全幅 */
+  #socials.archiveSocialSection .socialGrid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) !important;
+    width:100% !important;
+    max-width:none !important;
+    gap:10px !important;
+    margin:10px 0 0 !important;
+    justify-content:stretch !important;
+  }
+
+  #socials.archiveSocialSection .socialGrid > .socialCard,
+  #socials.archiveSocialSection .socialGrid > :last-child,
+  #socials.archiveSocialSection .socialGrid > :nth-last-child(2),
+  #socials.archiveSocialSection .socialGrid > :last-child:nth-child(3n + 1),
+  #socials.archiveSocialSection .socialGrid > :nth-last-child(2):nth-child(3n + 1),
+  #socials.archiveSocialSection .socialGrid > :last-child:nth-child(3n + 2){
+    grid-column:1 !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    flex:0 0 100% !important;
+    transform:none !important;
+    margin:0 !important;
+    justify-self:stretch !important;
+  }
+
+  #socials.archiveSocialSection .socialGrid > .socialCard{
+    min-height:82px !important;
+    padding:12px 15px !important;
+  }
+
+  footer span#footDate{
+    font-size:.58rem !important;
+    letter-spacing:.025em !important;
+    white-space:nowrap !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE SONG DATABASE POLISH
+   3列構成は維持し、スマホ向けに幅配分と文字組みを最適化
+   ========================================================= */
+.countLabelMobile{display:none;}
+
+@media (max-width:640px){
+  /* 上部をアーカイブ一覧と同程度にコンパクト化 */
+  .songsIndexPage .songsPageHero{
+    padding:34px 7vw 24px !important;
+  }
+
+  .songsIndexPage .songsPageHero .eyebrow{
+    margin:0 0 7px !important;
+    font-size:.68rem !important;
+  }
+
+  .songsIndexPage .songsPageHero h1{
+    margin:0 !important;
+    font-size:clamp(1.7rem,8.4vw,2.45rem) !important;
+    line-height:1.16 !important;
+    letter-spacing:.055em !important;
+  }
+
+  .songsIndexPage .songsPageHero .pageTitleRule{
+    margin:12px 0 11px !important;
+  }
+
+  .songsIndexPage .songsLead{
+    font-size:.74rem !important;
+    line-height:1.7 !important;
+    letter-spacing:.035em !important;
+  }
+
+  .songsIndexPage > section:nth-child(2){
+    padding-top:30px !important;
+    padding-bottom:38px !important;
+  }
+
+  .songsIndexPage .toolbar{
+    margin-bottom:26px !important;
+    gap:1rem !important;
+  }
+
+  .songsIndexPage .search span{
+    margin-bottom:.5rem !important;
+    font-size:.66rem !important;
+  }
+
+  .songsIndexPage .search input{
+    padding:9px 1px !important;
+    font-size:.94rem !important;
+  }
+
+  /* 曲名 / 歌手名 / 回数 の3列は維持 */
+  .songsIndexPage .songTableHead,
+  .songsIndexPage .songDbRow{
+    grid-template-columns:minmax(0,1.28fr) minmax(0,1fr) 42px !important;
+  }
+
+  .songsIndexPage .sortBtn,
+  .songsIndexPage .songTitleLink,
+  .songsIndexPage .songArtist,
+  .songsIndexPage .songCount{
+    min-width:0 !important;
+    padding:.82rem .35rem !important;
+  }
+
+  .songsIndexPage .sortBtn{
+    font-size:.62rem !important;
+    line-height:1.3 !important;
+    letter-spacing:.025em !important;
+  }
+
+  .songsIndexPage .sortBtn.active{
+    color:var(--main) !important;
+    font-weight:700 !important;
+    background:rgba(154,109,145,.055) !important;
+  }
+
+  .songsIndexPage .songTitleLink,
+  .songsIndexPage .artistLink{
+    justify-content:flex-start !important;
+    align-items:flex-start !important;
+    gap:.32rem !important;
+  }
+
+  .songsIndexPage .songTitleLink{
+    font-size:.84rem !important;
+    line-height:1.5 !important;
+  }
+
+  .songsIndexPage .songArtist{
+    font-size:.78rem !important;
+    line-height:1.5 !important;
+  }
+
+  .songsIndexPage .songCount{
+    font-size:.8rem !important;
+    line-height:1.5 !important;
+    text-align:right !important;
+  }
+
+  .songsIndexPage .songArrow{
+    flex:0 0 auto !important;
+    font-size:.72rem !important;
+    line-height:1.5 !important;
+  }
+
+  .songsIndexPage .countLabelDesktop{display:none !important;}
+  .songsIndexPage .countLabelMobile{display:inline !important;}
+  .songsIndexPage .countHead{white-space:nowrap !important;}
+}
+
+@media (max-width:390px){
+  .songsIndexPage .songTableHead,
+  .songsIndexPage .songDbRow{
+    grid-template-columns:minmax(0,1.32fr) minmax(0,1fr) 38px !important;
+  }
+
+  .songsIndexPage .sortBtn,
+  .songsIndexPage .songTitleLink,
+  .songsIndexPage .songArtist,
+  .songsIndexPage .songCount{
+    padding-left:.28rem !important;
+    padding-right:.28rem !important;
+  }
+
+  .songsIndexPage .songTitleLink{font-size:.81rem !important;}
+  .songsIndexPage .songArtist{font-size:.76rem !important;}
+}
+
+/* =========================================================
+   MOBILE HISTORY / ARTIST HERO COMPACT
+   歌唱履歴・歌手別ページの上部だけをスマホ向けに圧縮
+   ========================================================= */
+@media (max-width:640px){
+  .historyHero{
+    padding:30px 6vw 28px !important;
+  }
+
+  .historyHero .backlink{
+    margin-bottom:18px !important;
+    font-size:.66rem !important;
+    letter-spacing:.07em !important;
+  }
+
+  .historyHero .eyebrow{
+    margin:0 0 8px !important;
+    font-size:.66rem !important;
+    line-height:1.35 !important;
+  }
+
+  .historyHero .historyTitle{
+    margin:8px 0 18px !important;
+    font-size:clamp(2.15rem,10vw,3.1rem) !important;
+    line-height:1.05 !important;
+    letter-spacing:.02em !important;
+  }
+
+  .historyHero .historyMeta{
+    gap:2rem !important;
+  }
+
+  .historyHero .historyMeta div{
+    gap:.28rem !important;
+  }
+
+  .historyHero .historyMeta span{
+    font-size:.62rem !important;
+    letter-spacing:.10em !important;
+  }
+
+  .historyHero .historyMeta strong{
+    font-size:1rem !important;
+    line-height:1.35 !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE LONG TEXT REFINEMENT
+   - 歌手別の曲名欄は回数列を必要最小限にして横幅を確保
+   - 歌唱履歴の長い曲名は段階的に縮小（下限あり）
+   ========================================================= */
+@media (max-width:640px){
+  .artistSongCard{
+    grid-template-columns:minmax(0,1fr) auto 22px !important;
+    column-gap:.65rem !important;
+  }
+
+  .artistSongTitle{
+    min-width:0 !important;
+  }
+
+  .artistSongCount{
+    min-width:2.2em !important;
+    width:auto !important;
+    white-space:nowrap !important;
+  }
+
+  .historyHero .historyTitle.is-long{
+    font-size:clamp(1.95rem,8.6vw,2.65rem) !important;
+    line-height:1.08 !important;
+  }
+
+  .historyHero .historyTitle.is-very-long{
+    font-size:clamp(1.80rem,7.6vw,2.35rem) !important;
+    line-height:1.10 !important;
+  }
+}
+
+
+/* =========================================================
+   PC HISTORY / ARTIST HERO HEIGHT MATCH
+   「歌の目録」上部と同程度の縦寸法に統一
+   ========================================================= */
+@media (min-width:641px){
+  .historyHero{
+    min-height:0 !important;
+    padding:72px 9vw 62px !important;
+    box-sizing:border-box;
+  }
+
+  .historyHero .backlink{
+    margin-bottom:22px;
+  }
+
+  .historyHero .eyebrow{
+    margin-bottom:8px;
+  }
+
+  .historyHero .historyTitle{
+    margin:8px 0 20px;
+  }
+
+  .historyHero .historyMeta{
+    gap:3rem;
+  }
+}
+
+
+/* =========================================================
+   ARCHIVE INDEX FILTER / SORT
+   カードレイアウトは維持し、操作部だけを追加
+   ========================================================= */
+.archiveControls{
+  position:relative;
+  z-index:2;
+  margin:0 0 18px;
+}
+
+.archiveControlBar{
+  display:grid;
+  grid-template-columns:auto auto minmax(180px,1fr);
+  gap:12px;
+  align-items:center;
+  padding:12px 14px;
+  border:1px solid rgba(116,85,123,.22);
+  background:rgba(244,238,245,.72);
+}
+
+.archiveSortControl{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  min-width:0;
+}
+
+.archiveControlCaption,
+.archiveFilterField > span{
+  color:var(--accent);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-size:.66rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  white-space:nowrap;
+}
+
+.archiveControlBar select,
+.archiveFilterPanel select,
+.archiveFilterPanel input[type="date"]{
+  min-height:34px;
+  border:1px solid rgba(116,85,123,.24);
+  border-radius:0;
+  background:rgba(255,250,252,.68);
+  color:var(--text);
+  padding:6px 28px 6px 9px;
+  font-family:"Noto Serif JP","Shippori Mincho",serif;
+  font-size:.72rem;
+  outline:none;
+}
+
+.archiveControlBar select:focus,
+.archiveFilterPanel select:focus,
+.archiveFilterPanel input[type="date"]:focus{
+  border-color:rgba(195,164,109,.8);
+  box-shadow:0 0 0 1px rgba(195,164,109,.18);
+}
+
+.archiveFilterToggle,
+.archiveFilterClear{
+  min-height:34px;
+  border:1px solid rgba(116,85,123,.24);
+  border-radius:0;
+  background:rgba(255,250,252,.56);
+  color:var(--main);
+  padding:6px 11px;
+  cursor:pointer;
+  font-family:"Noto Serif JP","Shippori Mincho",serif;
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.07em;
+  transition:border-color .18s ease,background .18s ease,color .18s ease;
+}
+
+.archiveFilterToggle:hover,
+.archiveFilterClear:hover{
+  border-color:rgba(195,164,109,.72);
+  background:rgba(255,250,252,.88);
+  color:var(--deep);
+}
+
+.archiveFilterToggleMark{
+  display:inline-block;
+  margin-left:.45em;
+  color:var(--gold);
+}
+
+.archiveResultCount{
+  justify-self:end;
+  margin:0;
+  color:var(--muted);
+  font-size:.68rem;
+  letter-spacing:.06em;
+  white-space:nowrap;
+}
+
+.archiveResultCount strong{
+  color:var(--main);
+  font-weight:600;
+}
+
+.archiveFilterPanel{
+  margin-top:8px;
+  padding:14px;
+  border:1px solid rgba(116,85,123,.20);
+  background:rgba(238,228,240,.76);
+}
+
+.archiveFilterPanel[hidden],
+.archiveFilterFields[hidden],
+.archiveNoResults[hidden]{
+  display:none !important;
+}
+
+.archiveFilterModes{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:12px;
+}
+
+.archiveFilterMode{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--muted);
+  font-size:.69rem;
+  cursor:pointer;
+}
+
+.archiveFilterMode input{
+  accent-color:var(--main);
+}
+
+.archiveFilterFields{
+  display:flex;
+  align-items:end;
+  gap:10px;
+}
+
+.archiveFilterField{
+  display:grid;
+  gap:5px;
+  min-width:0;
+}
+
+.archiveFilterField select,
+.archiveFilterField input{
+  width:100%;
+  min-width:0;
+}
+
+.archiveFilterFields[data-filter-group="ymd"] .archiveFilterField{
+  width:138px;
+}
+
+.archiveFilterFields[data-filter-group="range"] .archiveFilterField{
+  width:175px;
+}
+
+.archiveRangeDash{
+  align-self:center;
+  padding-top:18px;
+  color:var(--gold);
+}
+
+.archiveFilterClear{
+  margin-left:auto;
+}
+
+.archiveNoResults{
+  position:relative;
+  z-index:2;
+  margin:18px 0 0;
+  padding:28px 20px;
+  border:1px solid rgba(116,85,123,.18);
+  background:rgba(244,238,245,.58);
+  color:var(--muted);
+  text-align:center;
+  font-size:.78rem;
+  letter-spacing:.06em;
+}
+
+@media (max-width:640px){
+  .archiveControls{
+    margin-bottom:12px;
+  }
+
+  .archiveControlBar{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:8px;
+    padding:10px;
+    align-items:end;
+  }
+
+  .archiveSortControl{
+    display:grid;
+    gap:4px;
+  }
+
+  .archiveControlCaption{
+    font-size:.6rem;
+  }
+
+  .archiveSortControl select,
+  .archiveFilterToggle{
+    width:100%;
+    height:44px;
+    min-height:44px;
+    box-sizing:border-box;
+    font-size:.67rem;
+  }
+
+  .archiveFilterToggle{
+    align-self:end;
+    padding:6px 10px;
+  }
+
+  .archiveResultCount{
+    grid-column:1 / -1;
+    justify-self:end;
+    padding-top:2px;
+    font-size:.62rem;
+  }
+
+  .archiveFilterPanel{
+    padding:12px 10px;
+  }
+
+  .archiveFilterModes{
+    gap:14px;
+    margin-bottom:10px;
+  }
+
+  .archiveFilterMode{
+    font-size:.65rem;
+  }
+
+  .archiveFilterFields{
+    display:grid;
+    gap:8px;
+  }
+
+  .archiveFilterFields[data-filter-group="ymd"]{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .archiveFilterFields[data-filter-group="range"]{
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  }
+
+  .archiveFilterFields[data-filter-group="ymd"] .archiveFilterField,
+  .archiveFilterFields[data-filter-group="range"] .archiveFilterField{
+    width:auto;
+  }
+
+  .archiveFilterField > span{
+    font-size:.58rem;
+  }
+
+  .archiveFilterPanel select,
+  .archiveFilterPanel input[type="date"]{
+    min-height:38px;
+    padding-left:7px;
+    padding-right:6px;
+    font-size:.65rem;
+  }
+
+  .archiveRangeDash{
+    padding-top:18px;
+  }
+
+  .archiveFilterClear{
+    grid-column:1 / -1;
+    width:100%;
+    margin:2px 0 0;
+    min-height:36px;
+    font-size:.64rem;
+  }
+
+  .archiveNoResults{
+    margin-top:12px;
+    padding:22px 14px;
+    font-size:.7rem;
+  }
+}
+
+@media (max-width:390px){
+  .archiveFilterFields[data-filter-group="range"]{
+    grid-template-columns:1fr;
+  }
+
+  .archiveRangeDash{
+    display:none;
+  }
+}
+
+
+/* =========================================================
+   ARCHIVE FILTER LAYOUT FIX
+   - PC: 絞り込み解除をモード選択の右側へ
+   - Mobile: date inputs / panel width overflow を解消
+   ========================================================= */
+.archiveControls,
+.archiveControlBar,
+.archiveFilterPanel,
+.archiveFilterFields,
+.archiveFilterField,
+.archiveFilterPanel select,
+.archiveFilterPanel input[type="date"],
+.archiveControlBar select{
+  box-sizing:border-box;
+  min-width:0;
+}
+
+.archiveFilterPanel{
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
+}
+
+.archiveFilterModes{
+  width:100%;
+}
+
+.archiveFilterClearShared{
+  margin-left:8px;
+  min-height:30px;
+  padding:5px 10px;
+  font-size:.65rem;
+  white-space:nowrap;
+}
+
+.archiveFilterFields .archiveFilterField{
+  min-width:0;
+}
+
+.archiveFilterPanel select,
+.archiveFilterPanel input[type="date"]{
+  display:block;
+  width:100%;
+  max-width:100%;
+}
+
+@media (max-width:640px){
+  .archiveFilterPanel{
+    padding:12px 10px !important;
+  }
+
+  .archiveFilterModes{
+    display:grid !important;
+    grid-template-columns:auto auto !important;
+    gap:9px 14px !important;
+    align-items:center !important;
+  }
+
+  .archiveFilterClearShared{
+    grid-column:1 / -1 !important;
+    width:100% !important;
+    margin:0 !important;
+    min-height:36px !important;
+    font-size:.64rem !important;
+  }
+
+  .archiveFilterFields[data-filter-group="range"]{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:8px !important;
+  }
+
+  .archiveFilterFields[data-filter-group="range"] .archiveFilterField{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  .archiveFilterFields[data-filter-group="range"] input[type="date"]{
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    padding:7px 9px !important;
+  }
+
+  .archiveRangeDash{
+    display:none !important;
+  }
+}
+
+@media (max-width:420px){
+  .archiveFilterFields[data-filter-group="ymd"]{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  }
+
+  .archiveFilterFields[data-filter-group="ymd"] .archiveFilterField:first-child{
+    grid-column:1 / -1;
+  }
+}
+
+
+/* =========================================================
+   PC HISTORY / ARTIST COMPACT v2
+   - 大見出しを下段の「歌唱履歴 / 歌った曲」と同じサイズへ
+   - ヘッダー→戻るリンク、ヒーロー下端→次見出しの余白を半分へ
+   ========================================================= */
+@media (min-width:641px){
+  .historyHero{
+    padding-top:36px !important;
+    padding-bottom:62px !important;
+  }
+
+  .historyHero .backlink{
+    margin-bottom:22px !important;
+  }
+
+  .historyHero .historyTitle{
+    font-size:clamp(1.55rem,3vw,2.35rem) !important;
+    line-height:1.35 !important;
+    letter-spacing:.08em !important;
+    margin:8px 0 18px !important;
+  }
+
+  .historyContentSection{
+    padding-top:3.5vw !important;
+  }
+}

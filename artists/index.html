@@ -1,0 +1,101 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>歌手別｜歌枠らいぶらりゐ</title><link rel="stylesheet" href="../style.css"></head><body>
+<header><a class="logo" href="../">歌枠らいぶらりゐ</a><nav><a href="../archive/">ARCHIVE</a><a href="../songs/">SONGS</a></nav></header>
+
+<main>
+<section class="section historyHero">
+  <a class="backlink" href="../songs/">← 歌の目録へ</a>
+  <p class="eyebrow">ARTIST SONGS</p>
+  <h1 id="artistTitle" class="historyTitle">ARTIST</h1>
+  <div class="historyMeta">
+    <div><span>曲数</span><strong><i id="songTotal">0</i>曲</strong></div>
+    <div><span>歌った回数</span><strong><i id="performanceTotal">0</i>回</strong></div>
+  </div>
+</section>
+
+<section class="section historyContentSection">
+  <p class="eyebrow">SONG LIST</p>
+  <h2>歌った曲</h2><div class="pageTitleRule artistTitleRule" aria-hidden="true"><span>◆</span></div>
+  <div class="artistSongList" id="artistSongList"></div>
+  <p id="notFound" class="muted" hidden>このアーティストの楽曲が見つかりませんでした。</p>
+</section>
+</main>
+
+<footer><b>歌枠らいぶらりゐ</b><span>歌手別</span></footer>
+
+<script src="../data/archives.js"></script>
+<script>
+const params = new URLSearchParams(location.search);
+const artist = params.get("artist") || "";
+
+document.title = artist ? `${artist} 歌手別｜歌枠らいぶらりゐ` : "歌手別｜歌枠らいぶらりゐ";
+
+const artistTitleEl = document.getElementById("artistTitle");
+artistTitleEl.textContent = artist || "ARTIST";
+
+function fitMobileArtistTitle(){
+  artistTitleEl.classList.remove("is-long","is-very-long");
+  if(window.innerWidth > 640) return;
+
+  const lineCount = () => {
+    const style = getComputedStyle(artistTitleEl);
+    const lh = parseFloat(style.lineHeight);
+    if(!Number.isFinite(lh) || lh <= 0) return 1;
+    return Math.round(artistTitleEl.getBoundingClientRect().height / lh);
+  };
+
+  // 通常サイズで3行以上なら一段階だけ縮小。
+  if(lineCount() >= 3){
+    artistTitleEl.classList.add("is-long");
+  }
+
+  // 一段階縮小しても4行以上なら、もう一段階だけ縮小。
+  requestAnimationFrame(() => {
+    if(lineCount() >= 4){
+      artistTitleEl.classList.add("is-very-long");
+    }
+  });
+}
+
+requestAnimationFrame(fitMobileArtistTitle);
+window.addEventListener("resize", fitMobileArtistTitle);
+
+const map = new Map();
+
+ARCHIVES.forEach(archive => {
+  archive.songs
+    .filter(song => song.type === "song" && (song.artist || "未登録") === artist)
+    .forEach(song => {
+      if(!map.has(song.title)){
+        map.set(song.title, {title:song.title, count:0});
+      }
+      map.get(song.title).count++;
+    });
+});
+
+const songs = [...map.values()].sort((a,b) =>
+  new Intl.Collator("ja", {numeric:true, sensitivity:"base"}).compare(a.title,b.title)
+);
+
+document.getElementById("songTotal").textContent = songs.length;
+document.getElementById("performanceTotal").textContent =
+  songs.reduce((sum,s)=>sum+s.count,0);
+
+const root = document.getElementById("artistSongList");
+const nf = document.getElementById("notFound");
+
+if(!songs.length){
+  nf.hidden = false;
+}else{
+  root.innerHTML = songs.map(song => {
+    const p = new URLSearchParams({song:song.title, artist});
+    return `
+      <a class="artistSongCard" href="../songs/history/?${p.toString()}">
+        <div class="artistSongTitle">${song.title}</div>
+        <div class="artistSongCount">${song.count}回</div>
+        <div class="artistSongArrow">↗</div>
+      </a>
+    `;
+  }).join("");
+}
+</script>
+</body></html>

@@ -1,0 +1,117 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>歌唱履歴｜歌枠らいぶらりゐ</title><link rel="stylesheet" href="../../style.css"></head><body>
+<header><a class="logo" href="../../">歌枠らいぶらりゐ</a><nav><a href="../../archive/">ARCHIVE</a><a href="../">SONGS</a></nav></header>
+
+<main>
+<section class="section historyHero">
+  <a class="backlink" href="../">← 歌の目録へ</a>
+  <p class="eyebrow">PERFORMANCE HISTORY</p>
+  <h1 id="songTitle" class="historyTitle">SONG</h1>
+  <div class="historyMeta">
+    <div><span>歌手名</span><strong><a id="artistName" class="historyArtistLink" href="../../artists/">-</a></strong></div>
+    <div><span>歌った回数</span><strong><i id="totalCount">0</i>回</strong></div>
+  </div>
+</section>
+
+<section class="section historyContentSection">
+  <p class="eyebrow">ARCHIVES</p>
+  <h2>歌唱履歴</h2><div class="pageTitleRule historyTitleRule" aria-hidden="true"><span>◆</span></div>
+  <div id="historyList" class="historyList"></div>
+  <p id="notFound" class="muted" hidden>該当する歌唱履歴が見つかりませんでした。</p>
+</section>
+</main>
+
+<footer><b>歌枠らいぶらりゐ</b><span>歌唱履歴</span></footer>
+
+<script src="../../data/archives.js"></script>
+<script>
+function formatHistoryDate(value){
+  const k="〇一二三四五六七八九";
+  const [y,m,d]=value.split("-").map(Number);
+  const n=x=>x<10?k[x]:x===10?"十":x<20?"十"+k[x-10]:
+    k[Math.floor(x/10)]+"十"+(x%10?k[x%10]:"");
+  return String(y).split("").map(x=>k[Number(x)]).join("")+"年 "+n(m)+"月 "+n(d)+"日";
+}
+
+const params = new URLSearchParams(location.search);
+const songName = params.get("song") || "";
+const artistName = params.get("artist") || "";
+
+document.title = songName ? `${songName} 歌唱履歴｜歌枠らいぶらりゐ` : "歌唱履歴｜歌枠らいぶらりゐ";
+const songTitleEl = document.getElementById("songTitle");
+songTitleEl.textContent = songName || "SONG";
+const artistNameEl = document.getElementById("artistName");
+artistNameEl.textContent = artistName || "未登録";
+if(artistName){
+  const artistParams = new URLSearchParams({artist: artistName});
+  artistNameEl.href = `../../artists/?${artistParams.toString()}`;
+}else{
+  artistNameEl.removeAttribute("href");
+}
+
+function fitMobileHistoryTitle(){
+  songTitleEl.classList.remove("is-long","is-very-long");
+  if(window.innerWidth > 640) return;
+
+  const lineCount = () => {
+    const style = getComputedStyle(songTitleEl);
+    const lh = parseFloat(style.lineHeight);
+    if(!Number.isFinite(lh) || lh <= 0) return 1;
+    return Math.round(songTitleEl.getBoundingClientRect().height / lh);
+  };
+
+  // 通常サイズで3行以上なら、一段だけ縮小。
+  if(lineCount() >= 3){
+    songTitleEl.classList.add("is-long");
+  }
+
+  // 一段縮小後も4行以上なら、もう一段だけ縮小。
+  requestAnimationFrame(() => {
+    if(lineCount() >= 4){
+      songTitleEl.classList.add("is-very-long");
+    }
+  });
+}
+
+requestAnimationFrame(fitMobileHistoryTitle);
+window.addEventListener("resize", fitMobileHistoryTitle);
+
+const performances = [];
+
+ARCHIVES.forEach(archive => {
+  archive.songs
+    .filter(song =>
+      song.type === "song" &&
+      song.title === songName &&
+      (song.artist || "未登録") === artistName
+    )
+    .forEach(song => {
+      performances.push({
+        date: archive.date,
+        archiveTitle: archive.title,
+        time: song.time
+      });
+    });
+});
+
+performances.sort((a,b) => b.date.localeCompare(a.date));
+document.getElementById("totalCount").textContent = performances.length;
+
+const root = document.getElementById("historyList");
+const nf = document.getElementById("notFound");
+
+if(!performances.length){
+  nf.hidden = false;
+} else {
+  root.innerHTML = performances.map(p => `
+    <a class="historyCard" href="../../archive/${p.date}/?t=${p.time}">
+      <div class="historyDate">${formatHistoryDate(p.date)}</div>
+      <div class="historyArchiveTitle">${p.archiveTitle}</div>
+      <div class="historyListen">視聴 ↗</div>
+    </a>
+  `).join("");
+}
+</script>
+
+
+
+</body></html>

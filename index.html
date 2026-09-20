@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>歌枠らいぶらりゐ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="logo" href="./">歌枠らいぶらりゐ</a>
+  <nav>
+    <a href="#latest">LATEST</a>
+    <a href="#ranking">RANKING</a>
+    <a href="./archive/">ARCHIVE</a>
+    <a href="./songs/">SONGS</a>
+  </nav>
+</header>
+
+<main>
+  
+<section class="hero homeHero hero-v7">
+  <div class="heroPattern heroPattern-left" aria-hidden="true"></div>
+  <div class="heroPattern heroPattern-right" aria-hidden="true"></div>
+  <div class="heroKasumiAsset heroKasumi-left" aria-hidden="true"></div>
+  <div class="heroKasumiAsset heroKasumi-right" aria-hidden="true"></div>
+  <div class="heroCenter">
+    <div class="heroTitleFrame">
+      <div class="heroRule heroRule-top" aria-hidden="true"><span>◆</span></div>
+      <div class="heroKissa">喫茶〇〇</div>
+      <h1 class="heroLibraryTitle">歌枠らいぶらりゐ</h1>
+      <div class="heroRule" aria-hidden="true"><span>◆</span></div>
+      <p class="heroCatchcopy">キャッチコピー</p>
+    </div>
+
+    <div class="heroActions">
+      <a href="#latest" class="primaryButton">この頃の歌枠 ↓</a>
+      <a href="#ranking" class="ghostButton">よく歌う曲 ↓</a>
+      <a href="#explore" class="ghostButton">歌をさがす ↓</a>
+      <a href="./archive/" class="ghostButton">歌枠の記録 ↗</a>
+      <a href="./songs/" class="ghostButton">歌の目録 ↗</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+  <section class="section" id="latest">
+    <div class="sectionHead">
+      <div>
+        <p class="eyebrow">LATEST</p>
+        <h2>この頃の歌枠</h2>
+      </div>
+      <a class="textLink" href="./archive/">ALL ARCHIVES ↗</a>
+    </div>
+    <div id="latestList" class="latestList"></div>
+  </section>
+
+
+
+  <section class="section" id="ranking">
+    <div class="sectionHead">
+      <div>
+        <p class="eyebrow">FREQUENTLY SUNG</p>
+        <h2>よく歌う曲</h2>
+      </div>
+      <a class="textLink" href="./songs/">ALL SONGS ↗</a>
+    </div>
+
+    <div class="rankingTable">
+      <div class="rankingHead">
+        <span>RANK</span>
+        <span>SONG</span>
+        <span>ARTIST</span>
+        <span>COUNT</span>
+      </div>
+      <div id="rankingList"></div>
+    </div>
+  </section>
+
+
+
+
+  <section class="section" id="explore">
+    <p class="eyebrow">EXPLORE</p>
+    <h2>歌をさがす</h2>
+    <div class="cards">
+      <a class="card" href="./archive/">
+        <span class="card-date">ARCHIVE</span>
+        <h3>配信日からさがす</h3>
+        <p class="card-meta">日ごとに分かれた歌枠ページへ</p>
+      </a>
+      <a class="card" href="./songs/">
+        <span class="card-date">SONG DATABASE</span>
+        <h3>曲名からさがす</h3>
+        <p class="card-meta">過去に歌った曲を横断検索</p>
+      </a>
+    </div>
+  </section>
+
+
+
+  <section class="section" id="socials">
+    <p class="eyebrow">LINKS</p>
+    <h2>ご案内</h2>
+    <div id="socialLinks" class="socialGrid"></div>
+    <p id="socialNote" class="socialNote" hidden>
+      SNSのURLは <code>data/site-config.js</code> に設定すると有効になります。
+    </p>
+  </section>
+</main>
+
+<footer><b>歌枠らいぶらりゐ</b><span>表紙</span></footer>
+
+<script src="./data/archives.js"></script>
+<script src="./data/site-config.js"></script>
+<script>
+const collator = new Intl.Collator("ja", {numeric:true, sensitivity:"base"});
+
+function escapeHtml(value){
+  return String(value).replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[c]));
+}
+
+function makeSongHistoryUrl(title, artist){
+  const p = new URLSearchParams({song:title, artist});
+  return `./songs/history/?${p.toString()}`;
+}
+
+function makeArtistUrl(artist){
+  return `./artists/?artist=${encodeURIComponent(artist)}`;
+}
+
+// Latest 5 archives
+const latestArchives = [...ARCHIVES]
+  .sort((a,b) => b.date.localeCompare(a.date))
+  .slice(0,5);
+
+document.getElementById("latestList").innerHTML = latestArchives.map((archive, index) => `
+  <a class="latestRow" href="./archive/${archive.date}/">
+    <span class="latestNumber">${String(index + 1).padStart(2,"0")}</span>
+    <span class="latestDate">${archive.date.replaceAll("-",".")}</span>
+    <strong class="latestTitle">${escapeHtml(archive.title)}</strong>
+    <span class="latestArrow">↗</span>
+  </a>
+`).join("");
+
+// Song ranking TOP 10
+const songMap = new Map();
+
+ARCHIVES.forEach(archive => {
+  archive.songs
+    .filter(song => song.type === "song")
+    .forEach(song => {
+      const artist = song.artist || "未登録";
+      const key = `${song.title}|||${artist}`;
+
+      if(!songMap.has(key)){
+        songMap.set(key, {
+          title: song.title,
+          artist,
+          count: 0
+        });
+      }
+
+      songMap.get(key).count++;
+    });
+});
+
+const ranking = [...songMap.values()]
+  .sort((a,b) =>
+    (b.count - a.count) ||
+    collator.compare(a.title, b.title) ||
+    collator.compare(a.artist, b.artist)
+  )
+  .slice(0,10);
+
+document.getElementById("rankingList").innerHTML = ranking.map((item, index) => `
+  <div class="rankingRow">
+    <span class="rankNumber">${String(index + 1).padStart(2,"0")}</span>
+    <a class="rankingSong" href="${makeSongHistoryUrl(item.title,item.artist)}">
+      ${escapeHtml(item.title)} <span>↗</span>
+    </a>
+    <a class="rankingArtist" href="${makeArtistUrl(item.artist)}">
+      ${escapeHtml(item.artist)} <span>↗</span>
+    </a>
+    <strong class="rankingCount">${item.count}</strong>
+  </div>
+`).join("");
+
+// Socials: add/remove items only in data/site-config.js
+const socials = Array.isArray(SITE_CONFIG?.socials) ? SITE_CONFIG.socials : [];
+
+let hasUnsetSocial = false;
+document.getElementById("socialLinks").innerHTML = socials.map((item, index) => {
+  const label = item.label || `LINK ${index + 1}`;
+  const sub = item.sub || "SOCIAL";
+  const url = item.url || "";
+  const enabled = /^https?:\/\//i.test(url);
+
+  if(!enabled) hasUnsetSocial = true;
+
+  return enabled
+    ? `<a class="socialCard" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
+         <strong>${escapeHtml(label)}</strong>
+         <small>${escapeHtml(sub)}</small>
+         <span class="socialArrow">↗</span>
+       </a>`
+    : `<div class="socialCard socialCardDisabled" aria-disabled="true">
+         <strong>${escapeHtml(label)}</strong>
+         <small>${escapeHtml(sub)}</small>
+         <span class="socialArrow">URL SETTING</span>
+       </div>`;
+}).join("");
+
+document.getElementById("socialNote").hidden = !hasUnsetSocial;
+</script>
+</body>
+</html>

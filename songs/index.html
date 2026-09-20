@@ -1,0 +1,148 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>歌の目録｜歌枠らいぶらりゐ</title><link rel="stylesheet" href="../style.css">
+<script>
+function formatDaijiSongTotal(n){
+  const d=["","壱","弐","参","肆","伍","陸","漆","捌","玖"];
+  n=Math.max(0,Math.floor(Number(n)||0));
+  if(n===0)return "〇曲";
+  if(n<10)return d[n]+"曲";
+  if(n<20)return "拾"+(n%10?d[n%10]:"")+"曲";
+  if(n<100)return d[Math.floor(n/10)]+"拾"+(n%10?d[n%10]:"")+"曲";
+  return String(n).split("").map(x=>d[Number(x)]||"〇").join("")+"曲";
+}
+</script>
+
+</head><body>
+<header><a class="logo" href="../">歌枠らいぶらりゐ</a><nav><a href="../archive/">ARCHIVE</a><a href="./">SONGS</a></nav></header>
+<main class="songsIndexPage songsFixed">
+<section class="hero songsPageHero archiveIndexHero">
+  <div class="archiveIndexHeroInner songsPageHeroInner">
+    <p class="eyebrow">SONG DATABASE</p>
+    <h1>歌の目録</h1><div class="pageTitleRule" aria-hidden="true"><span>◆</span></div>
+    <p class="archiveLead songsLead">これまでに歌った曲を、曲名や歌手名からさがせます。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="toolbar">
+    <label class="search"><span>SEARCH</span><input id="search" type="search" placeholder="曲名・歌手名からさがす…"></label>
+    <div class="stats"><strong id="count">〇曲</strong></div>
+  </div>
+
+  <div class="songTableWrap">
+    <div class="songTableHead">
+      <button class="sortBtn" data-key="title">曲名 <span class="sortMark">↕</span></button>
+      <button class="sortBtn" data-key="artist">歌手名 <span class="sortMark">↕</span></button>
+      <button class="sortBtn countHead" data-key="count"><span class="countLabelDesktop">歌った回数</span><span class="countLabelMobile">回数</span> <span class="sortMark">↕</span></button>
+    </div>
+    <div id="songList"></div>
+  </div>
+  <p id="empty" hidden>該当する曲がありません。</p>
+</section>
+</main>
+<footer><b>歌枠らいぶらりゐ</b><span>歌の目録</span></footer>
+
+<script src="../data/archives.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const collator = new Intl.Collator("ja", {numeric:true, sensitivity:"base"});
+let sortKey = "title";
+let sortDir = "asc";
+
+function buildSongData(){
+  const map = new Map();
+
+  ARCHIVES.forEach(archive => {
+    archive.songs
+      .filter(song => song.type === "song")
+      .forEach(song => {
+        const artist = song.artist || "未登録";
+        const key = `${song.title}|||${artist}`;
+
+        if(!map.has(key)){
+          map.set(key, {
+            title: song.title,
+            artist,
+            count: 0
+          });
+        }
+
+        map.get(key).count++;
+      });
+  });
+
+  return [...map.values()];
+}
+
+const songData = buildSongData();
+
+function compare(a,b){
+  let result = 0;
+
+  if(sortKey === "count"){
+    result = a.count - b.count;
+  } else {
+    result = collator.compare(a[sortKey], b[sortKey]);
+  }
+
+  return sortDir === "asc" ? result : -result;
+}
+
+function makeHistoryUrl(item){
+  const p = new URLSearchParams({
+    song: item.title,
+    artist: item.artist
+  });
+  return `./history/?${p.toString()}`;
+}
+
+function render(){
+  const q = $("#search").value.trim().toLowerCase();
+
+  const filtered = songData
+    .filter(item => (`${item.title} ${item.artist}`).toLowerCase().includes(q))
+    .sort(compare);
+
+  $("#count").textContent = formatDaijiSongTotal(filtered.length);
+  $("#empty").hidden = filtered.length > 0;
+
+  $("#songList").innerHTML = filtered.map(item => `
+    <div class="songDbRow">
+      <a class="songTitleLink" href="${makeHistoryUrl(item)}">${item.title}<span class="songArrow">↗</span></a>
+      <a class="songArtist artistLink" href="../artists/?artist=${encodeURIComponent(item.artist)}">${item.artist}<span class="songArrow">↗</span></a>
+      <div class="songCount">${item.count}</div>
+    </div>
+  `).join("");
+
+  document.querySelectorAll(".sortBtn").forEach(btn => {
+    const mark = btn.querySelector(".sortMark");
+
+    if(btn.dataset.key === sortKey){
+      mark.textContent = sortDir === "asc" ? "↑" : "↓";
+      btn.classList.add("active");
+    } else {
+      mark.textContent = "↕";
+      btn.classList.remove("active");
+    }
+  });
+}
+
+document.querySelectorAll(".sortBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const key = btn.dataset.key;
+
+    if(sortKey === key){
+      sortDir = sortDir === "asc" ? "desc" : "asc";
+    } else {
+      sortKey = key;
+      sortDir = "asc";
+    }
+
+    render();
+  });
+});
+
+$("#search").addEventListener("input", render);
+render();
+</script>
+
+</body></html>
