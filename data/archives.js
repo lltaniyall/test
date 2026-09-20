@@ -1,6 +1,236 @@
 const ARCHIVES = [
 
 {
+"date": "2025-06-17",
+"membersOnly": false,
+"title": "【 歌枠 】低音ハスキヰ給仕による椎名林檎/東京事変縛り【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "-bo2X1m2FFk",
+"songs": [
+{
+"title": "開始",
+"time": 102,
+"type": "talk"
+},
+{
+"title": "丸の内サディスティック",
+"artist": "椎名林檎",
+"time": 775,
+"type": "song"
+},
+{
+"title": "ギブス",
+"artist": "椎名林檎",
+"time": 1160,
+"type": "song"
+},
+{
+"title": "カプチーノ",
+"artist": "椎名林檎",
+"time": 1704,
+"type": "song"
+},
+{
+"title": "薄ら氷心中",
+"artist": "椎名林檎",
+"time": 2272,
+"type": "song"
+},
+{
+"title": "浴室",
+"artist": "椎名林檎",
+"time": 2689,
+"type": "song"
+},
+{
+"title": "長く短い祭",
+"artist": "椎名林檎",
+"time": 3377,
+"type": "song"
+},
+{
+"title": "流行",
+"artist": "椎名林檎",
+"time": 3641,
+"type": "song"
+},
+{
+"title": "歌舞伎町の女王",
+"artist": "椎名林檎",
+"time": 3927,
+"type": "song"
+},
+{
+"title": "熱愛発覚中",
+"artist": "椎名林檎と中田ヤスタカ",
+"time": 4510,
+"type": "song"
+},
+{
+"title": "罪と罰",
+"artist": "椎名林檎",
+"time": 4863,
+"type": "song"
+},
+{
+"title": "いろはにほへと",
+"artist": "椎名林檎",
+"time": 5909,
+"type": "song"
+},
+{
+"title": "真夜中は純潔",
+"artist": "椎名林檎",
+"time": 6144,
+"type": "song"
+},
+{
+"title": "本能",
+"artist": "椎名林檎",
+"time": 6430,
+"type": "song"
+},
+{
+"title": "ここでキスして。",
+"artist": "椎名林檎",
+"time": 6814,
+"type": "song"
+},
+{
+"title": "獣ゆく細道",
+"artist": "椎名林檎と宮本浩次",
+"time": 7653,
+"type": "song"
+},
+{
+"title": "公然の秘密",
+"artist": "椎名林檎",
+"time": 7892,
+"type": "song"
+},
+{
+"title": "透明人間",
+"artist": "東京事変",
+"time": 8297,
+"type": "song"
+},
+{
+"title": "閃光少女",
+"artist": "東京事変",
+"time": 8721,
+"type": "song"
+},
+{
+"title": "群青日和",
+"artist": "東京事変",
+"time": 9018,
+"type": "song"
+},
+{
+"title": "修羅場",
+"artist": "東京事変",
+"time": 9671,
+"type": "song"
+},
+{
+"title": "遭難",
+"artist": "東京事変",
+"time": 9953,
+"type": "song"
+}
+]
+},
+{
+"date": "2025-06-25",
+"membersOnly": false,
+"title": "【 歌枠 】♡♡どろどろこつてりなラヴソング♡♡【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "lGRpCwA8CKk",
+"songs": [
+{
+"title": "開始",
+"time": 133,
+"type": "talk"
+},
+{
+"title": "ダーリン",
+"artist": "須田景凪",
+"time": 1217,
+"type": "song"
+},
+{
+"title": "スキスキ絶頂症",
+"artist": "koyori(電ポルp)",
+"time": 1585,
+"type": "song"
+},
+{
+"title": "薄ら氷心中",
+"artist": "林原めぐみ",
+"time": 2055,
+"type": "song"
+},
+{
+"title": "プロポーズ",
+"artist": "内緒のピアス",
+"time": 2762,
+"type": "song"
+},
+{
+"title": "月華-tsukihana-",
+"artist": "北出菜奈",
+"time": 3279,
+"type": "song"
+},
+{
+"title": "妄想日記",
+"artist": "シド",
+"time": 4245,
+"type": "song"
+},
+{
+"title": "妄想日記2",
+"artist": "シド",
+"time": 4475,
+"type": "song"
+},
+{
+"title": "お呪い",
+"artist": "なきそ",
+"time": 5020,
+"type": "song"
+},
+{
+"title": "キャットラビング",
+"artist": "香椎モイミ feat. 可不",
+"time": 5561,
+"type": "song"
+},
+{
+"title": "愛を伝えたいだとか",
+"artist": "あいみょん",
+"time": 5868,
+"type": "song"
+},
+{
+"title": "愛して愛して愛して",
+"artist": "Kikuo",
+"time": 6122,
+"type": "song"
+},
+{
+"title": "Black Cherry",
+"artist": "Acid Black Cherry",
+"time": 6771,
+"type": "song"
+},
+{
+"title": "部屋とYシャツと私",
+"artist": "平松愛理",
+"time": 7384,
+"type": "song"
+}
+]
+},
+{
 "date": "2025-08-14",
 "membersOnly": true,
 "title": "【 歌枠 】平成夏ソングた～～くさん♡久しぶりの歌枠！【 甘萬つもり｜#個人Vtuber 】",
