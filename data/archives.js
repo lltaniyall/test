@@ -1,6 +1,430 @@
 const ARCHIVES = [
 
 {
+"date": "2025-08-14",
+"membersOnly": true,
+"title": "【 歌枠 】平成夏ソングた～～くさん♡久しぶりの歌枠！【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "TuZ_r70PhcQ",
+"songs": [
+{
+"title": "開始",
+"time": 94,
+"type": "talk"
+},
+{
+"title": "HOT LIMIT",
+"artist": "T.M.Revolution",
+"time": 704,
+"type": "song"
+},
+{
+"title": "イケナイ太陽",
+"artist": "ORANGE RANGE",
+"time": 1044,
+"type": "song"
+},
+{
+"title": "チュッ! 夏パ〜ティ",
+"artist": "三人祭",
+"time": 1753,
+"type": "song"
+},
+{
+"title": "まっさらブルージーンズ",
+"artist": "℃-ute",
+"time": 2198,
+"type": "song"
+},
+{
+"title": "Yeah! めっちゃホリディ",
+"artist": "松浦亜弥",
+"time": 2471,
+"type": "song"
+},
+{
+"title": "シャカビーチ～Laka Laka La～",
+"artist": "UVERworld",
+"time": 2781,
+"type": "song"
+},
+{
+"title": "SHAMROCK",
+"artist": "UVERworld",
+"time": 3032,
+"type": "song"
+},
+{
+"title": "キセキ",
+"artist": "GReeeeN",
+"time": 3726,
+"type": "song"
+},
+{
+"title": "A Perfect Sky",
+"artist": "BONNIE PINK",
+"time": 4240,
+"type": "song"
+},
+{
+"title": "カブトムシ",
+"artist": "aiko",
+"time": 5647,
+"type": "song"
+},
+{
+"title": "花火",
+"artist": "aiko",
+"time": 6039,
+"type": "song"
+},
+{
+"title": "PEACH",
+"artist": "大塚愛",
+"time": 6282,
+"type": "song"
+},
+{
+"title": "SMILY",
+"artist": "大塚愛",
+"time": 6641,
+"type": "song"
+},
+{
+"title": "夢見る15歳",
+"artist": "スマイレージ",
+"time": 7093,
+"type": "song"
+},
+{
+"title": "​​​​恋のダンスサイト",
+"artist": "モーニング娘。",
+"time": 7419,
+"type": "song"
+},
+{
+"title": "ハッピーサマーウェディング",
+"artist": "モーニング娘。",
+"time": 7822,
+"type": "song"
+},
+{
+"title": "ミュージック・アワー",
+"artist": "ポルノグラフィティ",
+"time": 8226,
+"type": "song"
+},
+{
+"title": "secret base 〜君がくれたもの〜",
+"artist": "ZONE",
+"time": 8439,
+"type": "song"
+},
+{
+"title": "夏祭り",
+"artist": "Whiteberry",
+"time": 8816,
+"type": "song"
+}
+]
+},
+{
+"date": "2025-08-20",
+"membersOnly": false,
+"title": "【 歌枠 】はあ？誕生日？まうめでたくなんかないんだからね【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "9nB5h-5zH0w",
+"songs": [
+{
+"title": "開始",
+"time": 99,
+"type": "talk"
+},
+{
+"title": "Ready Steady Go",
+"artist": "L'Arc～en～Ciel",
+"time": 1022,
+"type": "song"
+},
+{
+"title": "プロポーズ",
+"artist": "内緒のピアス",
+"time": 1423,
+"type": "song"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 2159,
+"type": "song"
+},
+{
+"title": "スキスキ絶頂症",
+"artist": "koyori(電ポルp)",
+"time": 2473,
+"type": "song"
+},
+{
+"title": "偏食",
+"artist": "香椎モイミ",
+"time": 2783,
+"type": "song"
+},
+{
+"title": "僕は初音ミクとキスをした",
+"artist": "みきとP",
+"time": 3519,
+"type": "song"
+},
+{
+"title": "神っぽいな",
+"artist": "ピノキオピー",
+"time": 3814,
+"type": "song"
+},
+{
+"title": "ダーリン",
+"artist": "須田景凪",
+"time": 4103,
+"type": "song"
+},
+{
+"title": "ワインレッドの心",
+"artist": "安全地帯",
+"time": 6774,
+"type": "song"
+},
+{
+"title": "カプチーノ",
+"artist": "椎名林檎",
+"time": 7078,
+"type": "song"
+},
+{
+"title": "薄ら氷心中",
+"artist": "林原めぐみ",
+"time": 7372,
+"type": "song"
+}
+]
+},
+{
+"date": "2025-09-02",
+"membersOnly": false,
+"title": "【 歌枠 】リクエストが欲しいカラオケボツクス【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "2hbnmwrQsNw",
+"songs": [
+{
+"title": "開始",
+"time": 116,
+"type": "talk"
+},
+{
+"title": "ダーリン",
+"artist": "須田景凪",
+"time": 835,
+"type": "song"
+},
+{
+"title": "ギブス",
+"artist": "椎名林檎",
+"time": 1237,
+"type": "song"
+},
+{
+"title": "酔いどれ知らず",
+"artist": "Kanaria",
+"time": 1886,
+"type": "song"
+},
+{
+"title": "怪獣の花唄",
+"artist": "Vaundy",
+"time": 2249,
+"type": "song"
+},
+{
+"title": "プロポーズ",
+"artist": "内緒のピアス",
+"time": 2890,
+"type": "song"
+},
+{
+"title": "初恋サイダー",
+"artist": "Buono!",
+"time": 3216,
+"type": "song"
+},
+{
+"title": "夜もすがら君想ふ",
+"artist": "西沢さんP",
+"time": 3588,
+"type": "song"
+},
+{
+"title": "ロマンスの神様",
+"artist": "広瀬香美",
+"time": 4319,
+"type": "song"
+},
+{
+"title": "月華-tsukihana-",
+"artist": "北出菜奈",
+"time": 4819,
+"type": "song"
+},
+{
+"title": "女の子は誰でも",
+"artist": "東京事変",
+"time": 5338,
+"type": "song"
+},
+{
+"title": "大きな愛でもてなして",
+"artist": "℃-ute",
+"time": 5668,
+"type": "song"
+},
+{
+"title": "あした地球がこなごなになっても",
+"artist": "でんぱ組.inc",
+"time": 6123,
+"type": "song"
+},
+{
+"title": "黒毛和牛上塩タン焼680円",
+"artist": "大塚愛",
+"time": 7064,
+"type": "song"
+},
+{
+"title": "御手紙",
+"artist": "シド",
+"time": 7370,
+"type": "song"
+},
+{
+"title": "fancy baby doll",
+"artist": "田村ゆかり",
+"time": 7692,
+"type": "song"
+},
+{
+"title": "クイーンオブハート",
+"artist": "奏音69",
+"time": 8069,
+"type": "song"
+},
+{
+"title": "プラネタリウム",
+"artist": "大塚愛",
+"time": 8389,
+"type": "song"
+}
+]
+},
+{
+"date": "2025-09-09",
+"membersOnly": false,
+"title": "【 歌枠 】結局ボカロがアガるつてワケ♡【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "sm43ynUf_u4",
+"songs": [
+{
+"title": "開始",
+"time": 83,
+"type": "talk"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 933,
+"type": "song"
+},
+{
+"title": "Fire◎Flower",
+"artist": "halyosy",
+"time": 2048,
+"type": "song"
+},
+{
+"title": "シニカルナイトプラン",
+"artist": "Ayase",
+"time": 2474,
+"type": "song"
+},
+{
+"title": "カンタレラ",
+"artist": "黒うさP",
+"time": 2946,
+"type": "song"
+},
+{
+"title": "スイートマジック",
+"artist": "Junky",
+"time": 3614,
+"type": "song"
+},
+{
+"title": "ワールドイズマイン",
+"artist": "supercell",
+"time": 3905,
+"type": "song"
+},
+{
+"title": "flos",
+"artist": "R Sound Design",
+"time": 4338,
+"type": "song"
+},
+{
+"title": "絶え間なく藍色",
+"artist": "獅子志司",
+"time": 4773,
+"type": "song"
+},
+{
+"title": "うつけ論争",
+"artist": "獅子志司",
+"time": 5109,
+"type": "song"
+},
+{
+"title": "コールボーイ",
+"artist": "syudou",
+"time": 5724,
+"type": "song"
+},
+{
+"title": "アイデンティティ",
+"artist": "Kanaria",
+"time": 6064,
+"type": "song"
+},
+{
+"title": "ピエロ",
+"artist": "KEI",
+"time": 6279,
+"type": "song"
+},
+{
+"title": "チェリーハント",
+"artist": "69P",
+"time": 7200,
+"type": "song"
+},
+{
+"title": "『んっあっあっ。』",
+"artist": "SLAVE.V-V-R",
+"time": 7681,
+"type": "song"
+},
+{
+"title": "え？あぁ、そう。",
+"artist": "蝶々P",
+"time": 8128,
+"type": "song"
+}
+]
+},
+{
 "date": "2025-10-07",
 "membersOnly": false,
 "title": "【 アカペラ歌枠 】睡眠導入♡子守歌代はりになりますやうに【 甘萬つもり｜#個人Vtuber 】",
