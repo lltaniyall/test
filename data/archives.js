@@ -1,6 +1,267 @@
 const ARCHIVES = [
 
 {
+"date": "2025-02-24",
+"membersOnly": false,
+"title": "【 歌枠 】明日からヴヰチユーバア3年生ツで本当ですか？【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "OoOhYKtM_JE",
+"songs": [
+{
+"title": "開始",
+"time": 106,
+"type": "talk"
+},
+{
+"title": "歌舞伎町の女王",
+"artist": "椎名林檎",
+"time": 1359,
+"type": "song"
+},
+{
+"title": "チョコレイト・ディスコ",
+"artist": "Perfume",
+"time": 1701,
+"type": "song"
+},
+{
+"title": "HOT LIMIT",
+"artist": "T.M.Revolution",
+"time": 2335,
+"type": "song"
+},
+{
+"title": "トレモロ",
+"artist": "RADWIMPS",
+"time": 3003,
+"type": "song"
+},
+{
+"title": "25コ目の染色体",
+"artist": "RADWIMPS",
+"time": 3113,
+"type": "song"
+},
+{
+"title": "ハンマーソングと痛みの塔",
+"artist": "BUMP OF CHICKEN",
+"time": 3619,
+"type": "song"
+},
+{
+"title": "ね～え？",
+"artist": "松浦亜弥",
+"time": 4696,
+"type": "song"
+}
+]
+},
+{
+"date": "2025-02-11",
+"membersOnly": false,
+"title": "【歌枠】アカペラでまつたり【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "hZZ0UcW0rwk",
+"songs": [
+{
+"title": "開始",
+"time": 147,
+"type": "talk"
+},
+{
+"title": "あした地球がこなごなになっても",
+"artist": "でんぱ組.inc",
+"time": 1066,
+"type": "song"
+},
+{
+"title": "ルージュの伝言 ",
+"artist": "荒井由実",
+"time": 1806,
+"type": "song"
+},
+{
+"title": "サウダージ",
+"artist": "ポルノグラフィティ",
+"time": 2255,
+"type": "song"
+},
+{
+"title": "少年時代 ",
+"artist": "井上陽水",
+"time": 2588,
+"type": "song"
+},
+{
+"title": "吉原ラメント",
+"artist": "亜沙 feat.重音テト",
+"time": 2899,
+"type": "song"
+},
+{
+"title": "カブトムシ",
+"artist": "aiko",
+"time": 3234,
+"type": "song"
+},
+{
+"title": "キラキラ ",
+"artist": "aiko",
+"time": 3507,
+"type": "song"
+},
+{
+"title": "ボーイフレンド ",
+"artist": "aiko",
+"time": 3614,
+"type": "song"
+},
+{
+"title": "KissHug ",
+"artist": "aiko",
+"time": 3700,
+"type": "song"
+},
+{
+"title": "First Love ",
+"artist": "宇多田ヒカル",
+"time": 4150,
+"type": "song"
+},
+{
+"title": "ダーリン ",
+"artist": "須田景凪",
+"time": 4550,
+"type": "song"
+},
+{
+"title": "小夜子",
+"artist": "みきとP",
+"time": 6583,
+"type": "song"
+},
+{
+"title": "待つわ",
+"artist": "あみん",
+"time": 6737,
+"type": "song"
+},
+{
+"title": "ハロ／ハワユ",
+"artist": "ナノウ",
+"time": 6902,
+"type": "song"
+},
+{
+"title": "バレンタイン・キッス",
+"artist": "国生さゆり",
+"time": 7623,
+"type": "song"
+}
+]
+},
+{
+"date": "2025-03-11",
+"membersOnly": true,
+"title": "【 歌枠 】楽しいカラオケボツクス【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "1kQR4zZ8EjA",
+"songs": [
+{
+"title": "開始",
+"time": 122,
+"type": "talk"
+},
+{
+"title": "ワインレッドの心",
+"artist": "安全地帯",
+"time": 714,
+"type": "song"
+},
+{
+"title": "ゆるふわ樹海ガール",
+"artist": "石風呂",
+"time": 1321,
+"type": "song"
+},
+{
+"title": "おじゃま虫",
+"artist": "DECO*27",
+"time": 1894,
+"type": "song"
+},
+{
+"title": "DESIRE -情熱-",
+"artist": "中森明菜",
+"time": 2789,
+"type": "song"
+},
+{
+"title": "私がオバさんになっても",
+"artist": "森高千里",
+"time": 3249,
+"type": "song"
+},
+{
+"title": "月華-tsukihana-",
+"artist": "北出菜奈",
+"time": 4208,
+"type": "song"
+},
+{
+"title": "大きな愛でもてなして",
+"artist": "℃-ute",
+"time": 4757,
+"type": "song"
+},
+{
+"title": "グリズリーに襲われたら♡",
+"artist": "神宿",
+"time": 5173,
+"type": "song"
+},
+{
+"title": "ロミオとシンデレラ",
+"artist": "doriko",
+"time": 5572,
+"type": "song"
+},
+{
+"title": "キャットラビング",
+"artist": "香椎モイミ feat. 可不",
+"time": 6095,
+"type": "song"
+},
+{
+"title": "夏恋",
+"artist": "シド",
+"time": 6469,
+"type": "song"
+},
+{
+"title": "嘘",
+"artist": "シド",
+"time": 6739,
+"type": "song"
+},
+{
+"title": "妄想日記",
+"artist": "シド",
+"time": 7112,
+"type": "song"
+},
+{
+"title": "レイン",
+"artist": "シド",
+"time": 7545,
+"type": "song"
+},
+{
+"title": "汚れた指",
+"artist": "シド",
+"time": 7999,
+"type": "song"
+}
+]
+},
+{
 "date": "2025-03-12",
 "membersOnly": false,
 "title": "【 歌枠 】格好イイ曲たくさんやりたい日～！【 甘萬つもり｜#個人Vtuber 】",
