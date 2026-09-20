@@ -1,5 +1,252 @@
 const ARCHIVES = [
-
+{
+"date": "2026-03-15",
+"membersOnly": false,
+"title": "【 歌枠 】寝る前に聞きたい曲を集めてみました♡【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "5sDSCWd-6lY",
+"songs": [
+{
+"title": "開始",
+"time": 80,
+"type": "talk"
+},
+{
+"title": "君に届け",
+"artist": "flumpool",
+"time": 591,
+"type": "song"
+},
+{
+"title": "プロポーズ",
+"artist": "内緒のピアス",
+"time": 1546,
+"type": "song"
+},
+{
+"title": "僕は初音ミクとキスをした",
+"artist": "みきとP",
+"time": 2001,
+"type": "song"
+},
+{
+"title": "偏食",
+"artist": "香椎モイミ",
+"time": 2617,
+"type": "song"
+},
+{
+"title": "ピエロ",
+"artist": "KEI",
+"time": 3027,
+"type": "song"
+},
+{
+"title": "ありあまる富",
+"artist": "椎名林檎",
+"time": 3881,
+"type": "song"
+},
+{
+"title": "カプチーノ",
+"artist": "椎名林檎",
+"time": 4232,
+"type": "song"
+},
+{
+"title": "部屋とYシャツと私",
+"artist": "平松愛理",
+"time": 4631,
+"type": "song"
+},
+{
+"title": "赤いスイートピー",
+"artist": "松田聖子",
+"time": 5033,
+"type": "song"
+},
+{
+"title": "待つわ",
+"artist": "あみん",
+"time": 5639,
+"type": "song"
+},
+{
+"title": " 淋しい熱帯魚",
+"artist": "Wink",
+"time": 6099,
+"type": "song"
+},
+{
+"title": "M",
+"artist": "PRINCESS PRINCESS",
+"time": 6494,
+"type": "song"
+},
+{
+"title": "愛してない",
+"artist": "Acid Black Cherry",
+"time": 7295,
+"type": "song"
+},
+{
+"title": "ノスタルジックJpop",
+"artist": "大森靖子",
+"time": 7618,
+"type": "song"
+},
+{
+"title": "君の好きなうた",
+"artist": "UVERworld",
+"time": 7974,
+"type": "song"
+}
+]
+},
+{
+"date": "2026-05-17",
+"membersOnly": false,
+"title": "【 アカペラ歌枠 】久しぶりにチルなお唄。睡眠導入にだうぞ♡【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "PvK4VZj6bKw",
+"songs": [
+{
+"title": "開始",
+"time": 100,
+"type": "talk"
+},
+{
+"title": "恋におちて -Fall in love -",
+"artist": "小林明子",
+"time": 723,
+"type": "song"
+},
+{
+"title": "you",
+"artist": "癒月",
+"time": 1005,
+"type": "song"
+},
+{
+"title": "幸福論",
+"artist": "椎名林檎",
+"time": 1405,
+"type": "song"
+},
+{
+"title": "フォニィ",
+"artist": "ツミキ",
+"time": 1806,
+"type": "song"
+},
+{
+"title": "ダーリン",
+"artist": "須田景凪",
+"time": 2067,
+"type": "song"
+},
+{
+"title": "シャルル",
+"artist": "バルーン",
+"time": 2457,
+"type": "song"
+},
+{
+"title": "月華-tsukihana-",
+"artist": "北出菜奈",
+"time": 3244,
+"type": "song"
+},
+{
+"title": "偏食",
+"artist": "香椎モイミ",
+"time": 3632,
+"type": "song"
+},
+{
+"title": "雪の華",
+"artist": "中島美嘉",
+"time": 4278,
+"type": "song"
+},
+{
+"title": "お呪い",
+"artist": "なきそ",
+"time": 4588,
+"type": "song"
+},
+{
+"title": "たばこ",
+"artist": "コレサワ",
+"time": 4837,
+"type": "song"
+},
+{
+"title": "ドミノ倒シ",
+"artist": "すこっぷ",
+"time": 5104,
+"type": "song"
+},
+{
+"title": "夕立のりぼん",
+"artist": "みきとP",
+"time": 5534,
+"type": "song"
+},
+{
+"title": "千本桜",
+"artist": "黒うさP",
+"time": 5924,
+"type": "song"
+},
+{
+"title": "涙の温度",
+"artist": "シド",
+"time": 6369,
+"type": "song"
+},
+{
+"title": "嘘",
+"artist": "シド",
+"time": 6944,
+"type": "song"
+},
+{
+"title": "乱舞のメロディ",
+"artist": "シド",
+"time": 7252,
+"type": "song"
+},
+{
+"title": "モノクロのキス",
+"artist": "シド",
+"time": 7474,
+"type": "song"
+},
+{
+"title": "天体観測",
+"artist": "BUMP OF CHICKEN",
+"time": 8197,
+"type": "song"
+},
+{
+"title": "First Love",
+"artist": "宇多田ヒカル",
+"time": 8595,
+"type": "song"
+},
+{
+"title": "プロポーズ",
+"artist": "内緒のピアス",
+"time": 9041,
+"type": "song"
+},
+{
+"title": "glow",
+"artist": "keeno",
+"time": 9696,
+"type": "song"
+}
+]
+},
 {
 "date": "2026-07-03",
 "membersOnly": false,
