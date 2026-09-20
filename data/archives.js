@@ -74,6 +74,79 @@ const ARCHIVES = [
 ]
 },
 {
+"date": "2024-12-19",
+"membersOnly": false,
+"title": "【 歌と雑談 】見せびらかし？たいものがあるのですよ【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "Sa4_QCw-wJ8",
+"songs": [
+{
+"title": "開始",
+"time": 61,
+"type": "talk"
+},
+{
+"title": "月光花",
+"artist": "Janne Da Arc",
+"time": 904,
+"type": "song"
+},
+{
+"title": "本能",
+"artist": "椎名林檎",
+"time": 1394,
+"type": "song"
+},
+{
+"title": "獣ゆく細道",
+"artist": "椎名林檎と宮本浩次",
+"time": 1799,
+"type": "song"
+},
+{
+"title": "鬼ノ宴",
+"artist": "友成空",
+"time": 2093,
+"type": "song"
+},
+{
+"title": "年下の男の子",
+"artist": "キャンディーズ",
+"time": 2823,
+"type": "song"
+},
+{
+"title": "誘惑",
+"artist": "GLAY",
+"time": 3232,
+"type": "song"
+},
+{
+"title": "Bunny Girl",
+"artist": "AKASAKI",
+"time": 3702,
+"type": "song"
+},
+{
+"title": "モエチャッカファイア",
+"artist": "弌誠",
+"time": 3997,
+"type": "song"
+},
+{
+"title": "ダイヤモンドヴァージン",
+"artist": "Janne Da Arc",
+"time": 4201,
+"type": "song"
+},
+{
+"title": "ヴァンパイア",
+"artist": "Janne Da Arc",
+"time": 4748,
+"type": "song"
+}
+]
+},
+{
 "date": "2024-09-18",
 "membersOnly": false,
 "title": "【歌枠】二カ月ぶりツて本当？【 #個人vtuber｜甘萬つもり】",
