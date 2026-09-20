@@ -1,5 +1,115 @@
 const ARCHIVES = [
 {
+"date": "2026-02-19",
+"membersOnly": false,
+"title": "【 歌枠 】ご機嫌にカラオケがしたいのです【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "FHQ03ysiTHk",
+"songs": [
+{
+"title": "開始",
+"time": 82,
+"type": "talk"
+},
+{
+"title": "バレンタイン・キッス",
+"artist": "国生さゆり",
+"time": 839,
+"type": "song"
+},
+{
+"title": "コールボーイ",
+"artist": "syudou",
+"time": 1333,
+"type": "song"
+},
+{
+"title": "ワインレッドの心",
+"artist": "安全地帯",
+"time": 2273,
+"type": "song"
+},
+{
+"title": "2℃目の彼女",
+"artist": "シド",
+"time": 2842,
+"type": "song"
+},
+{
+"title": "汚れた指",
+"artist": "シド",
+"time": 3288,
+"type": "song"
+},
+{
+"title": "僕は初音ミクとキスをした",
+"artist": "みきとP",
+"time": 3689,
+"type": "song"
+},
+{
+"title": "雪の華",
+"artist": "中島美嘉",
+"time": 4616,
+"type": "song"
+},
+{
+"title": "浴槽とネオンテトラ",
+"artist": "REISAI",
+"time": 5263,
+"type": "song"
+},
+{
+"title": "誘惑",
+"artist": "GLAY",
+"time": 6253,
+"type": "song"
+},
+{
+"title": "KissHug",
+"artist": "aiko",
+"time": 6724,
+"type": "song"
+}
+]
+},
+{
+"date": "2026-02-25",
+"membersOnly": false,
+"title": "【 歌枠 】ヴヰチユーバア三歳になりまして、一寸だけ【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "JzW5aiGLdwI",
+"songs": [
+{
+"title": "開始",
+"time": 114,
+"type": "talk"
+},
+{
+"title": "夕立のりぼん",
+"artist": "みきとP",
+"time": 1785,
+"type": "song"
+},
+{
+"title": "酔いどれ知らず",
+"artist": "Kanaria",
+"time": 2099,
+"type": "song"
+},
+{
+"title": "シザーハンズ",
+"artist": "Nem",
+"time": 2785,
+"type": "song"
+},
+{
+"title": "歌舞伎町の女王",
+"artist": "椎名林檎",
+"time": 3222,
+"type": "song"
+}
+]
+},
+{
 "date": "2026-03-15",
 "membersOnly": false,
 "title": "【 歌枠 】寝る前に聞きたい曲を集めてみました♡【 甘萬つもり｜#個人Vtuber 】",
