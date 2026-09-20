@@ -148,10 +148,8 @@ const latestArchives = [...ARCHIVES]
 document.getElementById("latestList").innerHTML = latestArchives.map((archive, index) => `
   <a class="latestRow" href="./archive/${archive.date}/">
     <span class="latestNumber">${String(index + 1).padStart(2,"0")}</span>
-    <span class="latestDateGroup">
-      <span class="latestDate">${archive.date.replaceAll("-",".")}</span>
-      ${archive.membersOnly === true ? '<span class="memberBadge homeMemberBadge">メン限</span>' : ''}
-    </span>
+    <span class="latestDate">${archive.date.replaceAll("-",".")}</span>
+    <span class="homeMemberSlot">${archive.membersOnly === true ? '<span class="memberBadge homeMemberBadge">メン限</span>' : ''}</span>
     <strong class="latestTitle">${escapeHtml(archive.title)}</strong>
     <span class="latestArrow">↗</span>
   </a>

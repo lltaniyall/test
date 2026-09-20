@@ -274,7 +274,7 @@ nav a{
 
 .latestRow{
   display:grid;
-  grid-template-columns:70px 135px 1fr 28px;
+  grid-template-columns:70px 80px 44px 1fr 28px;
   gap:1rem;
   align-items:center;
   padding:1.25rem .6rem;
@@ -290,10 +290,10 @@ nav a{
   font:600 .8rem "Playfair Display",serif;
 }
 
-.latestDateGroup{
+.homeMemberSlot{
   display:flex;
   align-items:center;
-  gap:.45rem;
+  justify-content:center;
   min-width:0;
 }
 
@@ -303,7 +303,7 @@ nav a{
   letter-spacing:.06em;
 }
 
-.latestDateGroup .memberBadge{
+.homeMemberSlot .memberBadge{
   font-size:.72rem;
 }
 
@@ -827,7 +827,7 @@ footer{
     white-space:nowrap;
   }
 
-  .homeMemberBadge{
+  .homeMemberSlot{
     display:none !important;
   }
 
