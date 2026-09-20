@@ -1,4 +1,145 @@
 const ARCHIVES = [
+
+{
+"date": "2025-10-07",
+"membersOnly": false,
+"title": "【 アカペラ歌枠 】睡眠導入♡子守歌代はりになりますやうに【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "lDSjKxfQYwc",
+"songs": [
+{
+"title": "開始",
+"time": 68,
+"type": "talk"
+},
+{
+"title": "おやすみ泣き声、さよなら歌姫",
+"artist": "クリープハイプ",
+"time": 594,
+"type": "song"
+},
+{
+"title": "鬼ノ宴",
+"artist": "友成空",
+"time": 837,
+"type": "song"
+},
+{
+"title": "lemon",
+"artist": "米津玄師",
+"time": 1160,
+"type": "song"
+},
+{
+"title": "愛を伝えたいだとか",
+"artist": "あいみょん",
+"time": 1731,
+"type": "song"
+},
+{
+"title": "ズルい女",
+"artist": "シャ乱Q",
+"time": 2087,
+"type": "song"
+},
+{
+"title": "ボーイフレンド",
+"artist": "aiko",
+"time": 2473,
+"type": "song"
+},
+{
+"title": "黒毛和牛上塩タン焼680円",
+"artist": "大塚愛",
+"time": 2824,
+"type": "song"
+},
+{
+"title": "きゅうくらりん",
+"artist": "いよわ feat.可不",
+"time": 3065,
+"type": "song"
+},
+{
+"title": "独りんぼエンヴィー",
+"artist": "koyori(電ポルP)",
+"time": 3394,
+"type": "song"
+},
+{
+"title": "偏食",
+"artist": "香椎モイミ",
+"time": 3717,
+"type": "song"
+},
+{
+"title": "食虫植物",
+"artist": "理芽",
+"time": 4637,
+"type": "song"
+},
+{
+"title": "丸の内サディスティック",
+"artist": "椎名林檎",
+"time": 5495,
+"type": "song"
+},
+{
+"title": "ワインレッドの心",
+"artist": "安全地帯",
+"time": 5799,
+"type": "song"
+},
+{
+"title": "クリームソーダとシャンデリア",
+"artist": "神野メイ",
+"time": 6129,
+"type": "song"
+}
+]
+},
+{
+"date": "2026-02-18",
+"membersOnly": false,
+"title": "【 歌枠 】お手柔らかにお願ひします‥‥【 甘萬つもり｜#個人Vtuber 】",
+"videoId": "oVJiNTpaw8U",
+"songs": [
+{
+"title": "開始",
+"time": 78,
+"type": "talk"
+},
+{
+"title": "可愛くてごめん",
+"artist": "HoneyWorks",
+"time": 1651,
+"type": "song"
+},
+{
+"title": "ファンサ",
+"artist": "HoneyWorks",
+"time": 2001,
+"type": "song"
+},
+{
+"title": "浴槽とネオンテトラ",
+"artist": "REISAI",
+"time": 2796,
+"type": "song"
+},
+{
+"title": "モニタリング",
+"artist": "DECO*27",
+"time": 3291,
+"type": "song"
+},
+{
+"title": "透明人間",
+"artist": "東京事変",
+"time": 3605,
+"type": "song"
+}
+]
+},
 {
 "date": "2026-02-19",
 "membersOnly": false,
