@@ -8,12 +8,21 @@
 <script>
 function formatDaijiSongTotal(n){
   const d=["","壱","弐","参","肆","伍","陸","漆","捌","玖"];
+  const units=[[10000,"萬"],[1000,"阡"],[100,"陌"],[10,"拾"]];
   n=Math.max(0,Math.floor(Number(n)||0));
   if(n===0)return "〇曲";
-  if(n<10)return d[n]+"曲";
-  if(n<20)return "拾"+(n%10?d[n%10]:"")+"曲";
-  if(n<100)return d[Math.floor(n/10)]+"拾"+(n%10?d[n%10]:"")+"曲";
-  return String(n).split("").map(x=>d[Number(x)]||"〇").join("")+"曲";
+
+  let value=n;
+  let result="";
+  units.forEach(([unit,label])=>{
+    const digit=Math.floor(value/unit);
+    if(digit>0){
+      result+=d[digit]+label;
+      value%=unit;
+    }
+  });
+  if(value>0)result+=d[value];
+  return result+"曲";
 }
 </script>
 
