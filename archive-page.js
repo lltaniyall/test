@@ -1,4 +1,3 @@
-
 function jpArchiveDate(value){
   const simple = "〇一二三四五六七八九";
   const [y,m,d] = value.split("-").map(Number);
@@ -17,10 +16,12 @@ function jpDaijiCount(n){
   return String(n).split("").map(x => d[Number(x)] || "〇").join("") + "曲";
 }
 
-let player,ready=false,currentTime=0;
-const $=s=>document.querySelector(s);
+let player;
+let ready=false;
+let currentTime=0;
+const $=selector=>document.querySelector(selector);
 const date=location.pathname.split("/").filter(Boolean).pop();
-const archive=ARCHIVES.find(a=>a.date===date);
+const archive=ARCHIVES.find(item=>item.date===date);
 
 const fmt=x=>{
   x=Math.floor(x||0);
@@ -193,9 +194,9 @@ $("#share").onclick=async()=>{
   }
 };
 
-let tag=document.createElement("script");
-tag.src="https://www.youtube.com/iframe_api";
-document.head.appendChild(tag);
+const youtubeApiScript=document.createElement("script");
+youtubeApiScript.src="https://www.youtube.com/iframe_api";
+document.head.appendChild(youtubeApiScript);
 
 
 /* ご案内：各アーカイブページ下部 */
