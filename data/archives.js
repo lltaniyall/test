@@ -1,6 +1,20 @@
 const ARCHIVES = [
 
 {
+"date": "2024-05-18",
+"membersOnly": true,
+"title": "【歌枠】夕方にチル～※一部無音でごめん【 #個人vtuber ｜甘萬つもり】",
+"videoId": "bor1s7NDCjQ",
+"songs": [
+{
+"title": "チーム友達",
+"artist": "千葉雄喜",
+"time": 10314,
+"type": "song"
+}
+]
+},
+{
 "date": "2024-06-20",
 "membersOnly": false,
 "title": "【歌枠】皆はカラオケ行ツたら最初に何入れる？【#vtuber ｜甘萬つもり】",
