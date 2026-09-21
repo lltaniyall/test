@@ -1732,7 +1732,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "ネコに風前",
+"title": "ネコに風船",
 "artist": "大塚愛",
 "time": 4719,
 "type": "song"
@@ -2114,7 +2114,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "ルージュの伝言 ",
+"title": "ルージュの伝言",
 "artist": "荒井由実",
 "time": 1806,
 "type": "song"
@@ -3494,7 +3494,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "さくらんぼキッス 〜爆発だも〜ん〜（アカペラ・サビのみ）",
+"title": "さくらんぼキッス 〜爆発だも〜ん〜",
 "artist": "KOTOKO",
 "time": 7732,
 "type": "song"
