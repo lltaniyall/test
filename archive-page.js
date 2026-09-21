@@ -80,14 +80,22 @@ document.querySelectorAll(".track").forEach(b=>{
 
 const videoBox=$(".video");
 const setlistBox=$(".setlist");
+const playerLayout=$(".playerLayout");
+
+let videoColumn=null;
+if(playerLayout && videoBox){
+  videoColumn=document.createElement("div");
+  videoColumn.className="videoColumn";
+  playerLayout.insertBefore(videoColumn,videoBox);
+  videoColumn.appendChild(videoBox);
+}
 
 function getArchiveDetailHref(item){
   return `../${item.date}/`;
 }
 
 function renderArchivePager(){
-  const playerLayout=$(".playerLayout");
-  if(!playerLayout || !archive) return;
+  if(!playerLayout || !videoColumn || !archive) return;
 
   const ordered=[...ARCHIVES].sort((a,b)=>a.date.localeCompare(b.date));
   const currentIndex=ordered.findIndex(item=>item.date===archive.date);
@@ -120,7 +128,7 @@ function renderArchivePager(){
     nav.appendChild(createLink("次回のアーカイブ →", nextArchive, "next"));
   }
 
-  videoBox?.insertAdjacentElement("afterend", nav);
+  videoColumn.appendChild(nav);
 }
 
 renderArchivePager();
