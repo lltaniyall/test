@@ -3716,8 +3716,11 @@ footer #footDate{
   }
 
   .archivePagerLink{
-    min-height:0;
+    height:92px;
+    min-height:92px;
+    max-height:92px;
     padding:12px 14px;
+    overflow:hidden;
   }
 
   .archivePagerLink.next{
@@ -3726,14 +3729,22 @@ footer #footDate{
 
   .archivePagerLabel{
     font-size:.63rem;
+    white-space:nowrap;
   }
 
   .archivePagerTitle{
+    display:block;
+    width:100%;
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
     font-size:.92rem;
     line-height:1.45;
   }
 
   .archivePagerDate{
     font-size:.66rem;
+    white-space:nowrap;
   }
 }
