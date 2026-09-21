@@ -1,11 +1,129 @@
 const ARCHIVES = [
-
 {
 "date": "2024-05-18",
 "membersOnly": true,
 "title": "【歌枠】夕方にチル～※一部無音でごめん【 #個人vtuber ｜甘萬つもり】",
 "videoId": "bor1s7NDCjQ",
 "songs": [
+{
+"title": "開始",
+"time": 68,
+"type": "talk"
+},
+{
+"title": "ワインレッドの心",
+"artist": "安全地帯",
+"time": 429,
+"type": "song"
+},
+{
+"title": "マツケンサンバII",
+"artist": "松平健",
+"time": 875,
+"type": "song"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 1244,
+"type": "song"
+},
+{
+"title": "神っぽいな",
+"artist": "ピノキオピー",
+"time": 1688,
+"type": "song"
+},
+{
+"title": "ラブカ？",
+"artist": "柊キライ",
+"time": 2154,
+"type": "song"
+},
+{
+"title": "HOT LIMIT",
+"artist": "T.M.Revolution",
+"time": 2555,
+"type": "song"
+},
+{
+"title": "チーム友達",
+"artist": "千葉雄喜",
+"time": 3032,
+"type": "song"
+},
+{
+"title": "おやすみ泣き声、さよなら歌姫",
+"artist": "クリープハイプ",
+"time": 3431,
+"type": "song"
+},
+{
+"title": "Loveit?　(権利申立のため無音処理にて対応)",
+"artist": "biz×ZERA",
+"time": 3876,
+"type": "song"
+},
+{
+"title": "ダイヤモンドヴァージン",
+"artist": "Janne Da Arc",
+"time": 4289,
+"type": "song"
+},
+{
+"title": "優しい嘘",
+"artist": "AcidBlackCherry",
+"time": 4692,
+"type": "song"
+},
+{
+"title": "もってけ!セーラーふく",
+"artist": "泉こなた(平野綾),柊かがみ(加藤英美里),柊つかさ(福原香織),高良みゆき(遠藤綾)",
+"time": 5534,
+"type": "song"
+},
+{
+"title": "ハレ晴レユカイ",
+"artist": "涼宮ハルヒ(平野綾),長門有希(茅原実里),朝比奈みくる(後藤邑子)",
+"time": 5685,
+"type": "song"
+},
+{
+"title": "太陽曰く燃えよカオス",
+"artist": "後ろから這いより隊G",
+"time": 6036,
+"type": "song"
+},
+{
+"title": "ご飯はおかず",
+"artist": "放課後ティータイム",
+"time": 6222,
+"type": "song"
+},
+{
+"title": "Don'tsaylazy",
+"artist": "放課後ティータイム",
+"time": 6758,
+"type": "song"
+},
+{
+"title": "ライオン",
+"artist": "May'n/中島愛",
+"time": 7490,
+"type": "song"
+},
+{
+"title": "星間飛行",
+"artist": "ランカ・リー(中島愛)",
+"time": 7995,
+"type": "song"
+},
+{
+"title": "聖少女領域",
+"artist": "ALI PROJECT",
+"time": 8400,
+"type": "song"
+},
 {
 "title": "サウダージ",
 "artist": "ポルノグラフィティ",
