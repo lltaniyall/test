@@ -2948,8 +2948,13 @@ footer #footDate{
   }
 
   main.archiveDetailPage .archiveDetailSection .playerHead{
+    align-items:stretch !important;
     gap:8px !important;
     margin-bottom:12px !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection .share{
+    align-self:flex-end !important;
   }
 
   main.archiveDetailPage .archiveDetailSection .archiveDetailDateLine{
