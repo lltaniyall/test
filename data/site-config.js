@@ -5,7 +5,7 @@ const SITE_CONFIG = {
     profile: "プロフィール文"
   },
   socials: [
-    { label: "YouTube", sub: "VIDEOS / STREAMS", url: "" },
+    { label: "YouTube", sub: "VIDEOS / STREAMS", url: "https://www.youtube.com/@amn_tsumori?sub_confirmation=1" },
     { label: "TWITTER（現X）", sub: "TWITTER", url: "https://x.com/amn_tsumori" },
     { label: "BOOTH", sub: "SHOP", url: "https://amamam0808.booth.pm/" },
     { label: "Bluesky", sub: "SOCIAL", url: "https://bsky.app/profile/amntmr.bsky.social" },
