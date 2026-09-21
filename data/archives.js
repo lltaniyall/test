@@ -7,6 +7,30 @@ const ARCHIVES = [
 "videoId": "bor1s7NDCjQ",
 "songs": [
 {
+"title": "サウダージ",
+"artist": "ポルノグラフィティ",
+"time": 8788,
+"type": "song"
+},
+{
+"title": "ズルい女",
+"artist": "シャ乱Q",
+"time": 9024,
+"type": "song"
+},
+{
+"title": "ダブルラリアット",
+"artist": "アゴアニキ",
+"time": 9406,
+"type": "song"
+},
+{
+"title": "君の好きなうた",
+"artist": "UVERworld",
+"time": 9935,
+"type": "song"
+},
+{
 "title": "チーム友達",
 "artist": "千葉雄喜",
 "time": 10314,
