@@ -156,6 +156,17 @@ nav a{
   z-index:2;
 }
 
+.fanmadeNote{
+  margin:1.35rem auto 0;
+  max-width:760px;
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:rgba(93,65,100,.62);
+  font:500 1rem/1.8 "Shippori Mincho","Noto Serif JP",serif;
+  letter-spacing:.035em;
+}
+
 .primaryButton,.ghostButton{
   display:inline-flex;
   align-items:center;
@@ -751,6 +762,13 @@ footer{
 }
 
 @media (max-width:760px){
+  .fanmadeNote{
+    margin-top:1rem;
+    padding:0 4vw;
+    font-size:.88rem;
+    line-height:1.8;
+  }
+
   header{
     height:64px;
     padding:0 4.5vw;
