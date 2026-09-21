@@ -81,6 +81,50 @@ document.querySelectorAll(".track").forEach(b=>{
 const videoBox=$(".video");
 const setlistBox=$(".setlist");
 
+function getArchiveDetailHref(item){
+  return `../${item.date}/`;
+}
+
+function renderArchivePager(){
+  const playerLayout=$(".playerLayout");
+  if(!playerLayout || !archive) return;
+
+  const ordered=[...ARCHIVES].sort((a,b)=>a.date.localeCompare(b.date));
+  const currentIndex=ordered.findIndex(item=>item.date===archive.date);
+  if(currentIndex<0) return;
+
+  const prevArchive=currentIndex>0 ? ordered[currentIndex-1] : null;
+  const nextArchive=currentIndex<ordered.length-1 ? ordered[currentIndex+1] : null;
+  if(!prevArchive && !nextArchive) return;
+
+  const nav=document.createElement("nav");
+  nav.className="archivePager";
+  nav.setAttribute("aria-label","前後のアーカイブ");
+
+  const createLink=(label,archiveItem,direction)=>{
+    const a=document.createElement("a");
+    a.className=`archivePagerLink ${direction}`;
+    a.href=getArchiveDetailHref(archiveItem);
+    a.innerHTML=`
+      <span class="archivePagerLabel">${label}</span>
+      <span class="archivePagerTitle">${archiveItem.title}</span>
+      <span class="archivePagerDate">${jpArchiveDate(archiveItem.date)}</span>
+    `;
+    return a;
+  };
+
+  if(prevArchive){
+    nav.appendChild(createLink("← 前回のアーカイブ", prevArchive, "prev"));
+  }
+  if(nextArchive){
+    nav.appendChild(createLink("次回のアーカイブ →", nextArchive, "next"));
+  }
+
+  videoBox?.insertAdjacentElement("afterend", nav);
+}
+
+renderArchivePager();
+
 function syncSetlistHeight(){
   if(!videoBox || !setlistBox)return;
   const height=Math.round(videoBox.getBoundingClientRect().height);

@@ -3659,3 +3659,77 @@ footer #footDate{
     grid-column:1 / -1;
   }
 }
+
+
+.archivePager{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin-top:14px;
+}
+
+.archivePagerLink{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  min-height:88px;
+  padding:14px 16px;
+  border:1px solid var(--line);
+  background:linear-gradient(135deg,rgba(255,250,244,.92),rgba(169,93,132,.045));
+  transition:.18s;
+}
+
+.archivePagerLink:hover{
+  border-color:var(--accent);
+  transform:translateY(-1px);
+}
+
+.archivePagerLink.next{
+  text-align:right;
+}
+
+.archivePagerLabel{
+  color:var(--accent);
+  font:600 .68rem "Playfair Display",serif;
+  letter-spacing:.10em;
+}
+
+.archivePagerTitle{
+  color:var(--text);
+  font:600 1rem/1.5 "Shippori Mincho","Noto Serif JP",serif;
+}
+
+.archivePagerDate{
+  color:var(--muted);
+  font:.72rem/1.5 "Noto Serif JP",serif;
+}
+
+@media (max-width:760px){
+  .archivePager{
+    grid-template-columns:1fr;
+    gap:8px;
+    margin-top:12px;
+  }
+
+  .archivePagerLink{
+    min-height:0;
+    padding:12px 14px;
+  }
+
+  .archivePagerLink.next{
+    text-align:left;
+  }
+
+  .archivePagerLabel{
+    font-size:.63rem;
+  }
+
+  .archivePagerTitle{
+    font-size:.92rem;
+    line-height:1.45;
+  }
+
+  .archivePagerDate{
+    font-size:.66rem;
+  }
+}
