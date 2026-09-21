@@ -676,7 +676,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "ノスタルジックJpop",
+"title": "ノスタルジックJ-pop",
 "artist": "大森靖子",
 "time": 7618,
 "type": "song"
@@ -1169,7 +1169,7 @@ const ARCHIVES = [
 "type": "talk"
 },
 {
-"title": "Ready Steady Go",
+"title": "READY STEADY GO",
 "artist": "L'Arc～en～Ciel",
 "time": 1022,
 "type": "song"
@@ -2150,7 +2150,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "ボーイフレンド ",
+"title": "ボーイフレンド",
 "artist": "aiko",
 "time": 3614,
 "type": "song"
@@ -2162,13 +2162,13 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "First Love ",
+"title": "First Love",
 "artist": "宇多田ヒカル",
 "time": 4150,
 "type": "song"
 },
 {
-"title": "ダーリン ",
+"title": "ダーリン",
 "artist": "須田景凪",
 "time": 4550,
 "type": "song"
@@ -2495,7 +2495,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "テレキャスタービーボーイ",
+"title": "テレキャスタービーボーイ(long ver.)",
 "artist": "すりぃ",
 "time": 5693,
 "type": "song"
@@ -2519,7 +2519,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "え？ああ、そう。",
+"title": "え？あぁ、そう。",
 "artist": "蝶々P",
 "time": 7284,
 "type": "song"
@@ -3028,7 +3028,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "Loveit?　(権利申立のため無音処理にて対応)",
+"title": "Loveit?",
 "artist": "biz×ZERA",
 "time": 3876,
 "type": "song"
@@ -3161,7 +3161,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "KissHug(キー下げてもう一回)",
+"title": "KissHug",
 "artist": "aiko",
 "time": 3222,
 "type": "song"
@@ -3428,7 +3428,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "月華-tsukihana-（アカペラ・サビのみ）",
+"title": "月華-tsukihana-",
 "artist": "北出菜奈",
 "time": 1683,
 "type": "song"
@@ -3464,7 +3464,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "御手紙（アカペラ・サビのみ）",
+"title": "御手紙",
 "artist": "シド",
 "time": 4964,
 "type": "song"
@@ -3592,7 +3592,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "Ready Steady Go",
+"title": "READY STEADY GO",
 "artist": "L'Arc～en～Ciel",
 "time": 4746,
 "type": "song"
@@ -3745,7 +3745,7 @@ const ARCHIVES = [
 },
 {
 "title": "ファンサ",
-"artist": "mona(CV：夏川椎菜)【HoneyWorks】",
+"artist": "HoneyWorks",
 "time": 3726,
 "type": "song"
 }
@@ -3896,7 +3896,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "ノスタルジックJpop",
+"title": "ノスタルジックJ-pop",
 "artist": "大森靖子",
 "time": 6863,
 "type": "song"
@@ -3920,7 +3920,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "God Knows...",
+"title": "God knows...",
 "artist": "平野　綾",
 "time": 9232,
 "type": "song"
@@ -4096,7 +4096,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "overdose",
+"title": "Overdose",
 "artist": "なとり",
 "time": 2845,
 "type": "song"
@@ -4150,7 +4150,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "God Knows...",
+"title": "God knows...",
 "artist": "平野　綾",
 "time": 7058,
 "type": "song"
@@ -4296,7 +4296,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "Ready Steady Go",
+"title": "READY STEADY GO",
 "artist": "L'Arc～en～Ciel",
 "time": 1238,
 "type": "song"
@@ -4532,7 +4532,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "心拍数#0822",
+"title": "心拍数♯0822",
 "artist": "蝶々P",
 "time": 9850,
 "type": "song"
@@ -4844,6 +4844,49 @@ const ARCHIVES = [
 ]
 },
 {
+"date": "2023-03-18",
+"membersOnly": false,
+"title": "【 #見つけて新人V歌枠リレー 】 給仕の出番だ！【 甘萬つもり 】",
+"videoId": "y8urGIMamVg",
+"songs": [
+{
+"title": "開始",
+"time": 135,
+"type": "talk"
+},
+{
+"title": "吉原ラメント",
+"artist": "亜沙 feat.重音テト",
+"time": 135,
+"type": "song"
+},
+{
+"title": "アイデンティティ",
+"artist": "Kanaria",
+"time": 539,
+"type": "song"
+},
+{
+"title": "ジャンキーナイトタウンオーケストラ",
+"artist": "すりぃ",
+"time": 914,
+"type": "song"
+},
+{
+"title": "丸の内サディスティック",
+"artist": "椎名林檎",
+"time": 1231,
+"type": "song"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 1653,
+"type": "song"
+}
+]
+},
+{
 "date": "2023-03-15",
 "membersOnly": false,
 "title": "【歌】理　解　し　ま　し　た",
@@ -4879,5 +4922,6 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-}
+},
+
 ];
