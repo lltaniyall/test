@@ -2867,7 +2867,7 @@ body > header{
 }
 
 .archiveDetailSection .playerHead{
-  align-items:flex-start;
+  align-items:flex-end;
   gap:16px;
   margin-bottom:18px;
 }
