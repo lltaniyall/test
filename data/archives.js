@@ -1,5 +1,334 @@
 const ARCHIVES = [
 {
+"date": "2023-07-24",
+"membersOnly": false,
+"title": "【歌枠】ほぼカラオケボツクス【 #新人Vtuber 】",
+"videoId": "bBgmvqmpaL0",
+"songs": [
+{
+"title": "開始",
+"time": 83,
+"type": "talk"
+},
+{
+"title": "ここでキスして。",
+"artist": "椎名林檎",
+"time": 745,
+"type": "song"
+},
+{
+"title": "天体観測",
+"artist": "BUMP OF CHICKEN",
+"time": 1225,
+"type": "song"
+},
+{
+"title": "部屋とYシャツと私",
+"artist": "平松愛理",
+"time": 1713,
+"type": "song"
+},
+{
+"title": "気まぐれロマンティック",
+"artist": "いきものがかり",
+"time": 2228,
+"type": "song"
+},
+{
+"title": "グリズリーに襲われたら♡",
+"artist": "神宿",
+"time": 3030,
+"type": "song"
+},
+{
+"title": "ラムのラブソング",
+"artist": "松谷祐子",
+"time": 3708,
+"type": "song"
+},
+{
+"title": "待つわ",
+"artist": "あみん",
+"time": 4123,
+"type": "song"
+},
+{
+"title": "プレイバックPart2",
+"artist": "山口百恵",
+"time": 4520,
+"type": "song"
+},
+{
+"title": "DESIRE -情熱-",
+"artist": "中森明菜",
+"time": 4988,
+"type": "song"
+},
+{
+"title": "小さな恋のうた",
+"artist": "MONGOL800",
+"time": 5402,
+"type": "song"
+},
+{
+"title": "SPELL MAGIC",
+"artist": "Acid Black Cherry",
+"time": 6364,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-07-15",
+"membersOnly": false,
+"title": "【歌枠】お唄のリストを作りましたの【 #新人Vtuber 】",
+"videoId": "rkqExWm6Fm0",
+"songs": [
+{
+"title": "開始",
+"time": 99,
+"type": "talk"
+},
+{
+"title": "プラチナ",
+"artist": "坂本真綾",
+"time": 443,
+"type": "song"
+},
+{
+"title": "君の知らない物語",
+"artist": "supercell",
+"time": 859,
+"type": "song"
+},
+{
+"title": "月光花",
+"artist": "Janne Da Arc",
+"time": 1361,
+"type": "song"
+},
+{
+"title": "歌うたいのバラッド",
+"artist": "斉藤和義",
+"time": 2219,
+"type": "song"
+},
+{
+"title": "愛してない",
+"artist": "Acid Black Cherry",
+"time": 2724,
+"type": "song"
+},
+{
+"title": "Butter-Fly",
+"artist": "和田光司",
+"time": 3328,
+"type": "song"
+},
+{
+"title": "小夜子",
+"artist": "みきとP",
+"time": 3671,
+"type": "song"
+},
+{
+"title": "遭難",
+"artist": "東京事変",
+"time": 4363,
+"type": "song"
+},
+{
+"title": "KING",
+"artist": "Kanaria",
+"time": 4828,
+"type": "song"
+},
+{
+"title": "HOT LIMIT",
+"artist": "T.M.Revolution",
+"time": 5132,
+"type": "song"
+},
+{
+"title": "初恋サイダー",
+"artist": "Buono!",
+"time": 5545,
+"type": "song"
+},
+{
+"title": "怪獣の花唄",
+"artist": "Vaundy",
+"time": 5882,
+"type": "song"
+},
+{
+"title": "ファンサ",
+"artist": "HoneyWorks",
+"time": 6559,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-07-10",
+"membersOnly": false,
+"title": "【歌枠】何度目かの歌枠テスト【 #新人Vtuber 】",
+"videoId": "hZ3auxY3DQE",
+"songs": [
+{
+"title": "開始",
+"time": 62,
+"type": "talk"
+},
+{
+"title": "怪獣の花唄",
+"artist": "Vaundy",
+"time": 399,
+"type": "song"
+},
+{
+"title": "セプテンバーさん",
+"artist": "RADWIMPS",
+"time": 1007,
+"type": "song"
+},
+{
+"title": "カブトムシ",
+"artist": "aiko",
+"time": 1271,
+"type": "song"
+},
+{
+"title": "U&I",
+"artist": "放課後ティータイム",
+"time": 1855,
+"type": "song"
+},
+{
+"title": "丸の内サディスティック",
+"artist": "椎名林檎",
+"time": 2292,
+"type": "song"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 2959,
+"type": "song"
+},
+{
+"title": "ジャンキーナイトタウンオーケストラ",
+"artist": "すりぃ",
+"time": 4228,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-05-04",
+"membersOnly": false,
+"title": "【 #歌枠 】低音ハスキヰなヲンナのお唄 【 新人Vtuber 】",
+"videoId": "iQd-aJBCkhQ",
+"songs": [
+{
+"title": "開始",
+"time": 93,
+"type": "talk"
+},
+{
+"title": "丸の内サディスティック",
+"artist": "椎名林檎",
+"time": 435,
+"type": "song"
+},
+{
+"title": "薄ら氷心中",
+"artist": "林原めぐみ",
+"time": 977,
+"type": "song"
+},
+{
+"title": "群青日和",
+"artist": "東京事変",
+"time": 1305,
+"type": "song"
+},
+{
+"title": "ギブス",
+"artist": "椎名林檎",
+"time": 1620,
+"type": "song"
+},
+{
+"title": "シャルル",
+"artist": "バルーン",
+"time": 2402,
+"type": "song"
+},
+{
+"title": "罪と罰",
+"artist": "椎名林檎",
+"time": 2902,
+"type": "song"
+},
+{
+"title": "長く短い祭",
+"artist": "椎名林檎",
+"time": 3335,
+"type": "song"
+},
+{
+"title": "吉原ラメント",
+"artist": "亜沙 feat.重音テト",
+"time": 3799,
+"type": "song"
+},
+{
+"title": "いろは唄",
+"artist": "銀サク",
+"time": 4305,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-03-15",
+"membersOnly": false,
+"title": "【歌】理　解　し　ま　し　た",
+"videoId": "atgNGsJ21hY",
+"songs": [
+{
+"title": "開始",
+"time": 92,
+"type": "talk"
+},
+{
+"title": "夕立のりぼん",
+"artist": "みきとP",
+"time": 940,
+"type": "song"
+},
+{
+"title": "シザーハンズ",
+"artist": "Nem",
+"time": 1445,
+"type": "song"
+},
+{
+"title": "酔いどれ知らず",
+"artist": "Kanaria",
+"time": 2005,
+"type": "song"
+},
+{
+"title": "歌舞伎町の女王",
+"artist": "椎名林檎",
+"time": 2465,
+"type": "song"
+      }
+    ]
+  },
+{
 "date": "2023-10-19",
 "membersOnly": false,
 "title": "【歌枠】※※ほぼ作業枠でした【新人Vtuber｜甘萬つもり】",
