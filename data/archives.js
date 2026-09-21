@@ -1,5 +1,467 @@
 const ARCHIVES = [
 {
+"date": "2024-01-06",
+"membersOnly": false,
+"title": "【縦型配信】珍しく午前中に起きました【 甘萬つもり｜#新人Vtuber 】",
+"videoId": "HuoWFC3gyaM",
+"songs": [
+{
+"title": "開始",
+"time": 185,
+"type": "talk"
+},
+{
+"title": "丸の内サディスティック",
+"artist": "椎名林檎",
+"time": 3903,
+"type": "song"
+},
+{
+"title": "Ready Steady Go",
+"artist": "L'Arc～en～Ciel",
+"time": 4746,
+"type": "song"
+},
+{
+"title": "からくりピエロ",
+"artist": "40mP",
+"time": 5474,
+"type": "song"
+},
+{
+"title": "アイデンティティ",
+"artist": "Kanaria",
+"time": 6337,
+"type": "song"
+},
+{
+"title": "カブトムシ",
+"artist": "aiko",
+"time": 7125,
+"type": "song"
+},
+{
+"title": "ルージュの伝言",
+"artist": "荒井由実",
+"time": 8355,
+"type": "song"
+},
+{
+"title": "本能",
+"artist": "椎名林檎",
+"time": 9032,
+"type": "song"
+},
+{
+"title": "真夜中は純潔",
+"artist": "椎名林檎",
+"time": 9647,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-12-16",
+"membersOnly": false,
+"title": "【雑談｜歌枠】のんびり歌うなどする【新人Vtuber｜甘萬つもり】",
+"videoId": "T4mDIVcvV6Y",
+"songs": [
+{
+"title": "開始",
+"time": 87,
+"type": "talk"
+},
+{
+"title": "Butter-Fly",
+"artist": "和田光司",
+"time": 1478,
+"type": "song"
+},
+{
+"title": "ウィーアー！",
+"artist": "きただにひろし",
+"time": 2708,
+"type": "song"
+},
+{
+"title": "月光花",
+"artist": "Janne Da Arc",
+"time": 3216,
+"type": "song"
+},
+{
+"title": "ふたりごと",
+"artist": "RADWIMPS",
+"time": 3944,
+"type": "song"
+},
+{
+"title": "木綿のハンカチーフ",
+"artist": "太田裕美",
+"time": 4532,
+"type": "song"
+},
+{
+"title": "ワインレッドの心",
+"artist": "安全地帯",
+"time": 4903,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-12-07",
+"membersOnly": false,
+"title": "【歌枠】ちゆ♡ゲリラでごめん（笑）【新人Vtuber｜甘萬つもり】",
+"videoId": "zotNunuPwVg",
+"songs": [
+{
+"title": "開始",
+"time": 182,
+"type": "talk"
+},
+{
+"title": "ダーリンダンス",
+"artist": "かいりきベア feat.初音ミク",
+"time": 643,
+"type": "song"
+},
+{
+"title": "きゅうくらりん",
+"artist": "いよわ feat.可不",
+"time": 784,
+"type": "song"
+},
+{
+"title": "プロトディスコ",
+"artist": "ぬゆり",
+"time": 1137,
+"type": "song"
+},
+{
+"title": "ボッカデラベリタ",
+"artist": "柊キライ feat.flower",
+"time": 1503,
+"type": "song"
+},
+{
+"title": "キャットラビング",
+"artist": "香椎モイミ feat. 可不",
+"time": 1877,
+"type": "song"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 2115,
+"type": "song"
+},
+{
+"title": "お呪い",
+"artist": "なきそ",
+"time": 2963,
+"type": "song"
+},
+{
+"title": "神っぽいな",
+"artist": "ピノキオピー",
+"time": 3296,
+"type": "song"
+},
+{
+"title": "ファンサ",
+"artist": "mona(CV：夏川椎菜)【HoneyWorks】",
+"time": 3726,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-12-06",
+"membersOnly": false,
+"title": "【歌枠】ガチ恋距離（笑）【新人Vtuber｜甘萬つもり】",
+"videoId": "BmTTkJy4MOE",
+"songs": [
+{
+"title": "開始",
+"time": 125,
+"type": "talk"
+},
+{
+"title": "からくりピエロ",
+"artist": "40mP",
+"time": 765,
+"type": "song"
+},
+{
+"title": "月のワルツ",
+"artist": "諫山実生",
+"time": 1206,
+"type": "song"
+},
+{
+"title": "薄ら氷心中",
+"artist": "林原めぐみ",
+"time": 1458,
+"type": "song"
+},
+{
+"title": "遭難",
+"artist": "東京事変",
+"time": 1715,
+"type": "song"
+},
+{
+"title": "小夜子",
+"artist": "みきとP",
+"time": 2439,
+"type": "song"
+},
+{
+"title": "だいしきゅーだいしゅき",
+"artist": "femme fatale",
+"time": 2861,
+"type": "song"
+},
+{
+"title": "初恋サイダー",
+"artist": "Buono!",
+"time": 3083,
+"type": "song"
+},
+{
+"title": "え？あぁ、そう。",
+"artist": "蝶々P",
+"time": 3840,
+"type": "song"
+},
+{
+"title": "部屋とYシャツと私",
+"artist": "平松愛理",
+"time": 4125,
+"type": "song"
+},
+{
+"title": "元カレ殺ス",
+"artist": "ゴールデンボンバー",
+"time": 5160,
+"type": "song"
+},
+{
+"title": "カブトムシ",
+"artist": "aiko",
+"time": 5766,
+"type": "song"
+},
+{
+"title": "タッチ",
+"artist": "岩崎良美",
+"time": 6638,
+"type": "song"
+},
+{
+"title": "ギブス",
+"artist": "椎名林檎",
+"time": 7098,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-11-18",
+"membersOnly": false,
+"title": "【雑談｜歌枠】土曜日の夜如何お過ごしですか【新人Vtuber｜甘萬つもり】",
+"videoId": "qMX8f696JXo",
+"songs": [
+{
+"title": "開始",
+"time": 98,
+"type": "talk"
+},
+{
+"title": "雪の華",
+"artist": "中島美嘉",
+"time": 2167,
+"type": "song"
+},
+{
+"title": "嘘",
+"artist": "シド",
+"time": 2435,
+"type": "song"
+},
+{
+"title": "三日月",
+"artist": "絢香",
+"time": 2841,
+"type": "song"
+},
+{
+"title": "CHE.R.RY",
+"artist": "Yui",
+"time": 3606,
+"type": "song"
+},
+{
+"title": "A Perfect Sky",
+"artist": "BONNIE PINK",
+"time": 3800,
+"type": "song"
+},
+{
+"title": "さくらんぼ",
+"artist": "大塚愛",
+"time": 4861,
+"type": "song"
+},
+{
+"title": "READY STEADY GO",
+"artist": "L'Arc～en～Ciel",
+"time": 5078,
+"type": "song"
+},
+{
+"title": "ノスタルジックJpop",
+"artist": "大森靖子",
+"time": 6863,
+"type": "song"
+},
+{
+"title": "りんごのうた",
+"artist": "椎名林檎",
+"time": 7106,
+"type": "song"
+},
+{
+"title": "月光花",
+"artist": "Janne Da Arc",
+"time": 7986,
+"type": "song"
+},
+{
+"title": "残酷な天使のテーゼ",
+"artist": "高橋洋子",
+"time": 8371,
+"type": "song"
+},
+{
+"title": "God Knows...",
+"artist": "平野　綾",
+"time": 9232,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-11-07",
+"membersOnly": false,
+"title": "【歌枠】古のボヲカロイド曲をたくさん【新人Vtuber｜甘萬つもり】",
+"videoId": "C6tJEhLDzi8",
+"songs": [
+{
+"title": "開始",
+"time": 109,
+"type": "talk"
+},
+{
+"title": "ドミノ倒シ",
+"artist": "すこっぷ",
+"time": 549,
+"type": "song"
+},
+{
+"title": "白い雪のプリンセスは",
+"artist": "のぼる↑",
+"time": 1175,
+"type": "song"
+},
+{
+"title": "Who?",
+"artist": "Azari",
+"time": 1636,
+"type": "song"
+},
+{
+"title": "夢喰い白黒バク",
+"artist": "Nem",
+"time": 2264,
+"type": "song"
+},
+{
+"title": "ワールドイズマイン",
+"artist": "supercell",
+"time": 2628,
+"type": "song"
+},
+{
+"title": "うつけ論争",
+"artist": "獅子志司",
+"time": 2989,
+"type": "song"
+},
+{
+"title": "からくりピエロ",
+"artist": "40mP",
+"time": 3480,
+"type": "song"
+},
+{
+"title": "ハロ／ハワユ",
+"artist": "ナノウ",
+"time": 3871,
+"type": "song"
+},
+{
+"title": "きゅうくらりん",
+"artist": "いよわ feat.可不",
+"time": 4285,
+"type": "song"
+},
+{
+"title": "メルト",
+"artist": "ryo",
+"time": 4936,
+"type": "song"
+},
+{
+"title": "ジャンキーナイトタウンオーケストラ",
+"artist": "すりぃ",
+"time": 5507,
+"type": "song"
+},
+{
+"title": "愛して愛して愛して",
+"artist": "Kikuo",
+"time": 5872,
+"type": "song"
+},
+{
+"title": "サリシノハラ",
+"artist": "みきとP",
+"time": 6254,
+"type": "song"
+},
+{
+"title": "聖槍爆裂ボーイ",
+"artist": "れるりり",
+"time": 7249,
+"type": "song"
+},
+{
+"title": "Fire◎Flower",
+"artist": "halyosy",
+"time": 7937,
+"type": "song"
+},
+{
+"title": "キュートなカノジョ",
+"artist": "syudou",
+"time": 8459,
+"type": "song"
+}
+]
+},
+{
 "date": "2024-04-10",
 "membersOnly": false,
 "title": "【縦型歌枠】お歌の時間や～～～【#vtuber ｜甘萬つもり】",
