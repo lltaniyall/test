@@ -6,9 +6,9 @@ const SITE_CONFIG = {
   },
   socials: [
     { label: "YouTube", sub: "VIDEOS / STREAMS", url: "" },
-    { label: "X", sub: "TWITTER", url: "" },
-    { label: "BOOTH", sub: "SHOP", url: "" },
-    { label: "Bluesky", sub: "SOCIAL", url: "" },
-    { label: "LINK 5", sub: "SOCIAL", url: "" }
+    { label: "TWITTER（現X）", sub: "TWITTER", url: "https://x.com/amn_tsumori" },
+    { label: "BOOTH", sub: "SHOP", url: "https://amamam0808.booth.pm/" },
+    { label: "Bluesky", sub: "SOCIAL", url: "https://bsky.app/profile/amntmr.bsky.social" },
+    { label: "ファンボックス", sub: "FANBOX", url: "https://amn-tsumori.fanbox.cc/" }
   ]
 };
