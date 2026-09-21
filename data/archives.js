@@ -4882,6 +4882,7 @@ const ARCHIVES = [
 },
   {
     "date": "2026-12-21",
+    "membersOnly": true,
     "title": "冬の夜歌 / DEMO",
     "videoId": "M7lc1UVf-VE",
     "songs": [
@@ -4917,6 +4918,7 @@ const ARCHIVES = [
   },
   {
     "date": "2026-12-23",
+    "membersOnly": false,
     "title": "深夜にゆったり歌う枠 / DEMO",
     "videoId": "M7lc1UVf-VE",
     "songs": [
