@@ -1,5 +1,520 @@
 const ARCHIVES = [
 {
+"date": "2023-10-19",
+"membersOnly": false,
+"title": "【歌枠】※※ほぼ作業枠でした【新人Vtuber｜甘萬つもり】",
+"videoId": "fPxF3HLep_c",
+"songs": [
+{
+"title": "開始",
+"time": 69,
+"type": "talk"
+},
+{
+"title": "歌うたいのバラッド",
+"artist": "斉藤和義",
+"time": 457,
+"type": "song"
+},
+{
+"title": "きゅうくらりん",
+"artist": "いよわ feat.可不",
+"time": 810,
+"type": "song"
+},
+{
+"title": "薄ら氷心中",
+"artist": "林原めぐみ",
+"time": 1236,
+"type": "song"
+},
+{
+"title": "ペペロンチーノ・キャンディ",
+"artist": "相対性理論",
+"time": 1484,
+"type": "song"
+},
+{
+"title": "気になるあの娘",
+"artist": "相対性理論",
+"time": 1644,
+"type": "song"
+},
+{
+"title": "青春コンプレックス",
+"artist": "結束バンド",
+"time": 1846,
+"type": "song"
+},
+{
+"title": "だいしきゅーだいしゅき",
+"artist": "femme fatale",
+"time": 2076,
+"type": "song"
+},
+{
+"title": "元カレ殺ス",
+"artist": "ゴールデンボンバー",
+"time": 2517,
+"type": "song"
+},
+{
+"title": "overdose",
+"artist": "なとり",
+"time": 2845,
+"type": "song"
+},
+{
+"title": "ヴィラン",
+"artist": "てにをは",
+"time": 3083,
+"type": "song"
+},
+{
+"title": "青いベンチ",
+"artist": "サスケ",
+"time": 3433,
+"type": "song"
+},
+{
+"title": "貴方の恋人になりたいのです",
+"artist": "阿部真央",
+"time": 4277,
+"type": "song"
+},
+{
+"title": "女の子は誰でも",
+"artist": "東京事変",
+"time": 4749,
+"type": "song"
+},
+{
+"title": "ギラギラ",
+"artist": "Ado",
+"time": 5775,
+"type": "song"
+},
+{
+"title": "丸の内サディスティック",
+"artist": "椎名林檎",
+"time": 6026,
+"type": "song"
+},
+{
+"title": "シャルル",
+"artist": "バルーン",
+"time": 6403,
+"type": "song"
+},
+{
+"title": "夕立のりぼん",
+"artist": "みきとP",
+"time": 6725,
+"type": "song"
+},
+{
+"title": "God Knows...",
+"artist": "平野　綾",
+"time": 7058,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-10-01",
+"membersOnly": false,
+"title": "【歌枠】懐メロ沢山！スナツク気分～～【新人Vtuber｜甘萬つもり】",
+"videoId": "GoRSuXvpRT4",
+"songs": [
+{
+"title": "開始",
+"time": 71,
+"type": "talk"
+},
+{
+"title": "待つわ",
+"artist": "あみん",
+"time": 393,
+"type": "song"
+},
+{
+"title": "ワインレッドの心",
+"artist": "安全地帯",
+"time": 863,
+"type": "song"
+},
+{
+"title": "千本桜",
+"artist": "黒うさP",
+"time": 1414,
+"type": "song"
+},
+{
+"title": "りんごのうた",
+"artist": "椎名林檎",
+"time": 2110,
+"type": "song"
+},
+{
+"title": "プラネタリウム",
+"artist": "大塚愛",
+"time": 2517,
+"type": "song"
+},
+{
+"title": "渚のシンドバッド",
+"artist": "ピンク・レディー",
+"time": 3085,
+"type": "song"
+},
+{
+"title": "恋のバカンス",
+"artist": "ザ・ピーナッツ",
+"time": 3532,
+"type": "song"
+},
+{
+"title": "異邦人",
+"artist": "久保田早紀",
+"time": 4168,
+"type": "song"
+},
+{
+"title": "部屋とYシャツと私",
+"artist": "平松愛理",
+"time": 4560,
+"type": "song"
+},
+{
+"title": "UFO",
+"artist": "ピンク・レディー",
+"time": 4988,
+"type": "song"
+},
+{
+"title": "モノクロのキス",
+"artist": "シド",
+"time": 5382,
+"type": "song"
+},
+{
+"title": "M",
+"artist": "PRINCESS PRINCESS",
+"time": 6050,
+"type": "song"
+},
+{
+"title": "赤いスイートピー",
+"artist": "松田聖子",
+"time": 6400,
+"type": "song"
+},
+{
+"title": "怪獣の花唄",
+"artist": "Vaundy",
+"time": 7049,
+"type": "song"
+},
+{
+"title": "カブトムシ",
+"artist": "aiko",
+"time": 7384,
+"type": "song"
+},
+{
+"title": "ウィーアー！",
+"artist": "きただにひろし",
+"time": 7979,
+"type": "song"
+},
+{
+"title": "Black Cherry",
+"artist": "Acid Black Cherry",
+"time": 8663,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-08-25",
+"membersOnly": false,
+"title": "【半年記念｜歌枠】【新人Vtuber｜甘萬つもり】",
+"videoId": "_55b2kWlpIo",
+"songs": [
+{
+"title": "開始",
+"time": 120,
+"type": "talk"
+},
+{
+"title": "吉原ラメント",
+"artist": "亜沙 feat.重音テト",
+"time": 355,
+"type": "song"
+},
+{
+"title": "Climax Jump",
+"artist": "AAA DEN-O form",
+"time": 824,
+"type": "song"
+},
+{
+"title": "Ready Steady Go",
+"artist": "L'Arc～en～Ciel",
+"time": 1238,
+"type": "song"
+},
+{
+"title": "テレキャスタービーボーイ(long ver.)",
+"artist": "すりぃ",
+"time": 1668,
+"type": "song"
+},
+{
+"title": "シャカビーチ～Laka Laka La～",
+"artist": "UVERworld",
+"time": 2062,
+"type": "song"
+},
+{
+"title": "神っぽいな",
+"artist": "ピノキオピー",
+"time": 2428,
+"type": "song"
+},
+{
+"title": "少女レイ",
+"artist": "みきとP",
+"time": 3027,
+"type": "song"
+},
+{
+"title": "シャボン玉",
+"artist": "モーニング娘。",
+"time": 3570,
+"type": "song"
+},
+{
+"title": "メルト",
+"artist": "ryo",
+"time": 4053,
+"type": "song"
+},
+{
+"title": "fancy baby doll",
+"artist": "田村ゆかり",
+"time": 4400,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-08-15",
+"membersOnly": false,
+"title": "【歌枠】椎名林檎/東京事変縛りで夜を迎えやうの回【 #新人Vtuber 】",
+"videoId": "MSIhDDQCx8U",
+"songs": [
+{
+"title": "開始",
+"time": 64,
+"type": "talk"
+},
+{
+"title": "罪と罰",
+"artist": "椎名林檎",
+"time": 553,
+"type": "song"
+},
+{
+"title": "丸の内サディスティック",
+"artist": "椎名林檎",
+"time": 1041,
+"type": "song"
+},
+{
+"title": "真夜中は純潔",
+"artist": "椎名林檎",
+"time": 1422,
+"type": "song"
+},
+{
+"title": "長く短い祭",
+"artist": "椎名林檎",
+"time": 2224,
+"type": "song"
+},
+{
+"title": "歌舞伎町の女王",
+"artist": "椎名林檎",
+"time": 2945,
+"type": "song"
+},
+{
+"title": "ギブス",
+"artist": "椎名林檎",
+"time": 3404,
+"type": "song"
+},
+{
+"title": "本能",
+"artist": "椎名林檎",
+"time": 4155,
+"type": "song"
+},
+{
+"title": "ここでキスして。",
+"artist": "椎名林檎",
+"time": 4691,
+"type": "song"
+},
+{
+"title": "修羅場",
+"artist": "東京事変",
+"time": 5460,
+"type": "song"
+},
+{
+"title": "透明人間",
+"artist": "東京事変",
+"time": 5812,
+"type": "song"
+},
+{
+"title": "カゲロウデイズ",
+"artist": "じん(自然の敵P)",
+"time": 6546,
+"type": "song"
+},
+{
+"title": "酔いどれ知らず",
+"artist": "Kanaria",
+"time": 7070,
+"type": "song"
+},
+{
+"title": "アイデンティティ",
+"artist": "Kanaria",
+"time": 7403,
+"type": "song"
+}
+]
+},
+{
+"date": "2023-07-29",
+"membersOnly": false,
+"title": "【歌枠】けふもけふとて、カラオケボツクス【 #新人Vtuber 】",
+"videoId": "nsNz9ncnm2w",
+"songs": [
+{
+"title": "開始",
+"time": 112,
+"type": "talk"
+},
+{
+"title": "フレンズ",
+"artist": "レベッカ",
+"time": 728,
+"type": "song"
+},
+{
+"title": "カブトムシ",
+"artist": "aiko",
+"time": 983,
+"type": "song"
+},
+{
+"title": "ムーンライト伝説",
+"artist": "DALI",
+"time": 1998,
+"type": "song"
+},
+{
+"title": "ミックスナッツ",
+"artist": "Official髭男dism",
+"time": 2514,
+"type": "song"
+},
+{
+"title": "ヴァンパイア",
+"artist": "Janne Da Arc",
+"time": 2986,
+"type": "song"
+},
+{
+"title": "ふたりごと",
+"artist": "RADWIMPS",
+"time": 3746,
+"type": "song"
+},
+{
+"title": "ダンデライオン",
+"artist": "BUMP OF CHICKEN",
+"time": 4504,
+"type": "song"
+},
+{
+"title": "女々しくて",
+"artist": "ゴールデンボンバー",
+"time": 5191,
+"type": "song"
+},
+{
+"title": "真夜中は純潔",
+"artist": "椎名林檎",
+"time": 5648,
+"type": "song"
+},
+{
+"title": "恋愛サーキュレーション",
+"artist": "千石撫子（花澤香菜）",
+"time": 6305,
+"type": "song"
+},
+{
+"title": "修羅場",
+"artist": "東京事変",
+"time": 7830,
+"type": "song"
+},
+{
+"title": "ハナミズキ",
+"artist": "一青窈",
+"time": 8550,
+"type": "song"
+},
+{
+"title": "からくりピエロ",
+"artist": "40mP",
+"time": 9058,
+"type": "song"
+},
+{
+"title": "天ノ弱",
+"artist": "164",
+"time": 9496,
+"type": "song"
+},
+{
+"title": "心拍数#0822",
+"artist": "蝶々P",
+"time": 9850,
+"type": "song"
+},
+{
+"title": "赤いスイートピー",
+"artist": "松田聖子",
+"time": 11166,
+"type": "song"
+},
+{
+"title": "部屋とYシャツと私",
+"artist": "平松愛理",
+"time": 11481,
+"type": "song"
+}
+]
+},
+{
 "date": "2024-01-06",
 "membersOnly": false,
 "title": "【縦型配信】珍しく午前中に起きました【 甘萬つもり｜#新人Vtuber 】",
