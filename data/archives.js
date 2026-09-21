@@ -658,7 +658,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": " 淋しい熱帯魚",
+"title": "淋しい熱帯魚",
 "artist": "Wink",
 "time": 6099,
 "type": "song"
@@ -2156,7 +2156,7 @@ const ARCHIVES = [
 "type": "song"
 },
 {
-"title": "KissHug ",
+"title": "KissHug",
 "artist": "aiko",
 "time": 3700,
 "type": "song"
@@ -4922,6 +4922,7 @@ const ARCHIVES = [
 "type": "song"
 }
 ]
-},
+}
+
 
 ];
