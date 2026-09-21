@@ -2906,7 +2906,15 @@ body > header{
   letter-spacing:.08em;
 }
 
-.archiveDetailSection .share{
+.archiveActions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex:0 0 auto;
+}
+
+.archiveDetailSection .archiveActions .share{
+  align-self:auto;
   white-space:nowrap;
 }
 
@@ -2953,8 +2961,12 @@ footer #footDate{
     margin-bottom:12px !important;
   }
 
-  main.archiveDetailPage .archiveDetailSection .share{
+  main.archiveDetailPage .archiveDetailSection .archiveActions{
     align-self:flex-end !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection .archiveActions .share{
+    align-self:auto !important;
   }
 
   main.archiveDetailPage .archiveDetailSection .archiveDetailDateLine{

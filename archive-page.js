@@ -225,6 +225,26 @@ async function copyText(text){
   return true;
 }
 
+const shareButton=$("#share");
+const archiveActions=document.createElement("div");
+archiveActions.className="archiveActions";
+
+const youtubeOpenButton=document.createElement("button");
+youtubeOpenButton.type="button";
+youtubeOpenButton.className="share youtubeOpenButton";
+youtubeOpenButton.textContent="YouTubeで開く ↗";
+
+if(shareButton?.parentElement){
+  shareButton.parentElement.insertBefore(archiveActions,shareButton);
+  archiveActions.appendChild(youtubeOpenButton);
+  archiveActions.appendChild(shareButton);
+}
+
+youtubeOpenButton.onclick=()=>{
+  const t=ready ? Math.floor(player.getCurrentTime()) : Math.floor(currentTime||0);
+  window.open(getYouTubeShareUrl(t),"_blank","noopener,noreferrer");
+};
+
 let toastTimer;
 function showToast(message,type="success"){
   let toast=document.getElementById("toast");
@@ -251,7 +271,7 @@ function showToast(message,type="success"){
   },2600);
 }
 
-$("#share").onclick=async()=>{
+shareButton.onclick=async()=>{
   const t=ready ? Math.floor(player.getCurrentTime()) : Math.floor(currentTime||0);
   const url=getYouTubeShareUrl(t);
 
