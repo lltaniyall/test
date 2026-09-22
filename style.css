@@ -2935,8 +2935,9 @@ body > header{
 }
 
 .memberViewingNote{
-  color:inherit;
+  color:var(--deep);
   font-size:1em;
+  font-weight:700;
   letter-spacing:.04em;
   line-height:1.6;
 }
@@ -3032,6 +3033,12 @@ footer #footDate{
 
   main.archiveDetailPage .archiveDetailSection #meta{
     font-size:1em !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection .memberViewingNote{
+    font-size:.82em !important;
+    letter-spacing:.02em;
+    white-space:nowrap;
   }
 
   main.archiveDetailPage .archiveDetailSection .share{
