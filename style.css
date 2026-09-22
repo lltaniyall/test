@@ -2917,11 +2917,28 @@ body > header{
   letter-spacing:.03em;
 }
 
-.archiveDetailSection #meta{
-  margin:0;
+.archiveMetaLine{
+  display:flex;
+  align-items:baseline;
+  gap:.85rem;
+  min-width:0;
   color:var(--accent);
   font-size:.8rem;
+}
+
+.archiveDetailSection #meta{
+  margin:0;
+  color:inherit;
+  font-size:1em;
   letter-spacing:.08em;
+  white-space:nowrap;
+}
+
+.memberViewingNote{
+  color:inherit;
+  font-size:1em;
+  letter-spacing:.04em;
+  line-height:1.6;
 }
 
 .archiveActions{
@@ -3007,8 +3024,14 @@ footer #footDate{
     letter-spacing:.015em !important;
   }
 
-  main.archiveDetailPage .archiveDetailSection #meta{
+  main.archiveDetailPage .archiveDetailSection .archiveMetaLine{
+    flex-wrap:wrap;
+    gap:.25rem .65rem;
     font-size:.68rem !important;
+  }
+
+  main.archiveDetailPage .archiveDetailSection #meta{
+    font-size:1em !important;
   }
 
   main.archiveDetailPage .archiveDetailSection .share{

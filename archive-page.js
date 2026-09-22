@@ -60,7 +60,22 @@ if(archive.membersOnly === true){
 
 $("#archiveTitle").textContent=archive.title;
 document.title=`${archive.title}｜歌枠らいぶらりゐ`;
-$("#meta").textContent=jpDaijiCount(archive.songs.filter(s=>s.type==="song").length);
+
+const archiveMeta=$("#meta");
+archiveMeta.textContent=jpDaijiCount(archive.songs.filter(s=>s.type==="song").length);
+
+const archiveMetaLine=document.createElement("div");
+archiveMetaLine.className="archiveMetaLine";
+archiveMeta.before(archiveMetaLine);
+archiveMetaLine.appendChild(archiveMeta);
+
+if(archive.membersOnly === true){
+  const viewingNote=document.createElement("span");
+  viewingNote.className="memberViewingNote";
+  viewingNote.textContent="※メンバー限定配信はYouTubeでのみ視聴可能です";
+  archiveMetaLine.appendChild(viewingNote);
+}
+
 $("#footDate").textContent=jpArchiveDate(archive.date);
 
 $("#tracks").innerHTML=archive.songs.map(s=>
