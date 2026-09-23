@@ -3036,8 +3036,8 @@ footer #footDate{
   }
 
   main.archiveDetailPage .archiveDetailSection .memberViewingNote{
-    font-size:.82em !important;
-    letter-spacing:.02em;
+    font-size:.92em !important;
+    letter-spacing:.015em;
     white-space:nowrap;
   }
 
