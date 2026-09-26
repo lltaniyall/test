@@ -59,7 +59,7 @@ if(archive.membersOnly === true){
 }
 
 $("#archiveTitle").textContent=archive.title;
-document.title=`${archive.title}｜歌枠らいぶらりゐ`;
+document.title=`${archive.title}｜歌枠らいぶらり`;
 
 const archiveMeta=$("#meta");
 archiveMeta.textContent=jpDaijiCount(archive.songs.filter(s=>s.type==="song").length);

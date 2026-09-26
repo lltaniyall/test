@@ -4,8 +4,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
   <meta name="theme-color" content="#A85C83">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>歌唱履歴｜歌枠らいぶらりゐ</title><link rel="stylesheet" href="../../style.css"></head><body>
-<header><a class="logo" href="../../">歌枠らいぶらりゐ</a><nav><a href="../../archive/">ARCHIVE</a><a href="../">SONGS</a></nav></header>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>歌唱履歴｜歌枠らいぶらり</title><link rel="stylesheet" href="../../style.css"></head><body>
+<header><a class="logo" href="../../">歌枠らいぶらり</a><nav><a href="../../archive/">ARCHIVE</a><a href="../">SONGS</a></nav></header>
 
 <main>
 <section class="section historyHero">
@@ -26,7 +26,7 @@
 </section>
 </main>
 
-<footer><b>歌枠らいぶらりゐ</b><span>歌唱履歴</span></footer>
+<footer><b>歌枠らいぶらり</b><span>歌唱履歴</span></footer>
 
 <script src="../../data/archives.js"></script>
 <script>
@@ -42,7 +42,7 @@ const params = new URLSearchParams(location.search);
 const songName = params.get("song") || "";
 const artistName = params.get("artist") || "";
 
-document.title = songName ? `${songName} 歌唱履歴｜歌枠らいぶらりゐ` : "歌唱履歴｜歌枠らいぶらりゐ";
+document.title = songName ? `${songName} 歌唱履歴｜歌枠らいぶらり` : "歌唱履歴｜歌枠らいぶらり";
 const songTitleEl = document.getElementById("songTitle");
 songTitleEl.textContent = songName || "SONG";
 const artistNameEl = document.getElementById("artistName");
