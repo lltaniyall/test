@@ -1316,10 +1316,6 @@ header{
   right:14px;
 }
 
-.heroKissa{
-  font-family:"Shippori Mincho","Noto Serif JP",serif;
-
-  font-size:clamp(1.7rem,4.4vw,4rem);}
 
 .hero-v7 h1{
   margin:0;
@@ -1548,7 +1544,8 @@ header{
 
 .heroKissa{
   margin-bottom:18px;
-  font-size:clamp(.95rem,1.8vw,1.2rem);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-size:clamp(1.2rem,2.1vw,1.8rem);
   letter-spacing:.42em;
   text-indent:.42em;
   color:#625870;
@@ -1604,6 +1601,10 @@ header{
   .heroLibraryTitle{
     font-size:clamp(1.35rem,7.2vw,2.35rem) !important;
     letter-spacing:.015em !important;
+  }
+
+  .heroKissa{
+    font-size:clamp(1rem,3.6vw,1.2rem);
   }
 }
 
