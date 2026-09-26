@@ -11,4 +11,5 @@ const SITE_CONFIG = {
     { label: "Bluesky", sub: "SOCIAL", url: "https://bsky.app/profile/amntmr.bsky.social" },
     { label: "ファンボックス", sub: "FANBOX", url: "https://amn-tsumori.fanbox.cc/" }
   ]
+  
 };
