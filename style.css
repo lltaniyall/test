@@ -461,7 +461,7 @@ nav a{
 }
 
 .stats strong{
-  font:600 2.1rem "Playfair Display";
+  font:600 2.1rem "Shippori Mincho","Noto Serif JP",serif;
   color:var(--accent);
 }
 
@@ -1546,6 +1546,7 @@ header{
   margin-bottom:18px;
   font-family:"Shippori Mincho","Noto Serif JP",serif;
   font-size:clamp(1.2rem,2.1vw,1.8rem);
+  font-weight:600;
   letter-spacing:.42em;
   text-indent:.42em;
   color:#625870;
