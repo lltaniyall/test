@@ -32,7 +32,7 @@
   <div class="heroCenter">
     <div class="heroTitleFrame">
       <div class="heroRule heroRule-top" aria-hidden="true"><span>◆</span></div>
-      <div class="heroKissa">喫茶甘萬</div>
+      <div class="heroKissa">喫茶〇〇</div>
       <h1 class="heroLibraryTitle">歌枠らいぶらり</h1>
       <div class="heroRule" aria-hidden="true"><span>◆</span></div>
       <p class="heroCatchcopy">キャッチコピー</p>
@@ -45,7 +45,7 @@
       <a href="./archive/" class="ghostButton">歌枠の記録 ↗</a>
       <a href="./songs/" class="ghostButton">歌の目録 ↗</a>
     </div>
-<p class="fanmadeNote">個人VTuber甘萬つもりさんの歌枠や、歌った曲をまとめたファンメイドサイトです。</p>
+<p class="fanmadeNote">個人VTuber〇〇さんの歌枠や歌った曲をまとめた、ファンメイドサイトです。</p>
 
   </div>
 </section>
@@ -147,9 +147,9 @@ const latestArchives = [...ARCHIVES]
   .slice(0,5);
 
 document.getElementById("latestList").innerHTML = latestArchives.map((archive, index) => `
-  <a class="latestRow" href="./archive/${archive.date}/">
+  <a class="latestRow" href="./archive/${encodeURIComponent(String(archive.date))}/">
     <span class="latestNumber">${String(index + 1).padStart(2,"0")}</span>
-    <span class="latestDate">${archive.date.replaceAll("-",".")}</span>
+    <span class="latestDate">${escapeHtml(String(archive.date).replaceAll("-","."))}</span>
     <span class="homeMemberSlot">${archive.membersOnly === true ? '<span class="memberBadge homeMemberBadge">メン限</span>' : ''}</span>
     <strong class="latestTitle">${escapeHtml(archive.title)}</strong>
     <span class="latestArrow">↗</span>

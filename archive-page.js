@@ -6,6 +6,12 @@ function jpArchiveDate(value){
     simple[Math.floor(n/10)] + "十" + (n%10 ? simple[n%10] : "");
   return String(y).split("").map(x => simple[Number(x)]).join("") + "年 " + num(m) + "月 " + num(d) + "日";
 }
+function escapeHtml(value){
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[c]));
+}
+
 function jpDaijiCount(n){
   const d = ["","壱","弐","参","肆","伍","陸","漆","捌","玖"];
   const units = [[10000,"萬"],[1000,"阡"],[100,"陌"],[10,"拾"]];
@@ -79,11 +85,11 @@ if(archive.membersOnly === true){
 $("#footDate").textContent=jpArchiveDate(archive.date);
 
 $("#tracks").innerHTML=archive.songs.map(s=>
-  `<button class="track" data-t="${s.time}">
+  `<button class="track" data-t="${Number(s.time)||0}">
     <span class="time">${fmt(s.time)}</span>
     <span class="trackInfo">
-      <span class="trackTitle">${s.title}</span>
-      ${s.type==="song"&&s.artist?`<span class="trackArtist"> / ${s.artist}</span>`:""}
+      <span class="trackTitle">${escapeHtml(s.title)}</span>
+      ${s.type==="song"&&s.artist?`<span class="trackArtist"> / ${escapeHtml(s.artist)}</span>`:""}
     </span>
   </button>`
 ).join("");
@@ -130,7 +136,7 @@ function renderArchivePager(){
     a.href=getArchiveDetailHref(archiveItem);
     a.innerHTML=`
       <span class="archivePagerLabel">${label}</span>
-      <span class="archivePagerTitle">${archiveItem.title}</span>
+      <span class="archivePagerTitle">${escapeHtml(archiveItem.title)}</span>
       <span class="archivePagerDate">${jpArchiveDate(archiveItem.date)}</span>
     `;
     return a;

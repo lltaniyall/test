@@ -63,6 +63,12 @@ const collator = new Intl.Collator("ja", {numeric:true, sensitivity:"base"});
 let sortKey = "title";
 let sortDir = "asc";
 
+function escapeHtml(value){
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[c]));
+}
+
 function buildSongData(){
   const map = new Map();
 
@@ -122,8 +128,8 @@ function render(){
 
   $("#songList").innerHTML = filtered.map(item => `
     <div class="songDbRow">
-      <a class="songTitleLink" href="${makeHistoryUrl(item)}">${item.title}<span class="songArrow">↗</span></a>
-      <a class="songArtist artistLink" href="../artists/?artist=${encodeURIComponent(item.artist)}">${item.artist}<span class="songArrow">↗</span></a>
+      <a class="songTitleLink" href="${makeHistoryUrl(item)}">${escapeHtml(item.title)}<span class="songArrow">↗</span></a>
+      <a class="songArtist artistLink" href="../artists/?artist=${encodeURIComponent(item.artist)}">${escapeHtml(item.artist)}<span class="songArrow">↗</span></a>
       <div class="songCount">${item.count}</div>
     </div>
   `).join("");

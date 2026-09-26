@@ -118,6 +118,12 @@ const memberFilterInputs = [...document.querySelectorAll('input[name="archiveMem
 const simpleKanji = "〇一二三四五六七八九";
 const daiji = ["","壱","弐","参","肆","伍","陸","漆","捌","玖"];
 
+function escapeHtml(value){
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[c]));
+}
+
 function formatArchiveDate(value){
   const [y,m,d] = value.split("-").map(Number);
   const year = String(y).split("").map(n => simpleKanji[Number(n)]).join("");
@@ -239,7 +245,7 @@ function archiveCard(a){
       <span class="card-date">${formatArchiveDate(a.date)}</span>
       ${a.membersOnly === true ? '<span class="memberBadge">メン限</span>' : ''}
     </span>
-    <h3>${a.title}</h3>
+    <h3>${escapeHtml(a.title)}</h3>
     <p class="card-meta">${formatDaijiCount(count)}</p>
     <span class="archiveCardArrow" aria-hidden="true">↗</span>
   </a>`;

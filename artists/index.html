@@ -33,6 +33,12 @@
 const params = new URLSearchParams(location.search);
 const artist = params.get("artist") || "";
 
+function escapeHtml(value){
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[c]));
+}
+
 document.title = artist ? `${artist} 歌手別｜歌枠らいぶらり` : "歌手別｜歌枠らいぶらり";
 
 const artistTitleEl = document.getElementById("artistTitle");
@@ -96,7 +102,7 @@ if(!songs.length){
     const p = new URLSearchParams({song:song.title, artist});
     return `
       <a class="artistSongCard" href="../songs/history/?${p.toString()}">
-        <div class="artistSongTitle">${song.title}</div>
+        <div class="artistSongTitle">${escapeHtml(song.title)}</div>
         <div class="artistSongCount">${song.count}回</div>
         <div class="artistSongArrow">↗</div>
       </a>

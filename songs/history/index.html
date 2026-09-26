@@ -30,6 +30,12 @@
 
 <script src="../../data/archives.js"></script>
 <script>
+function escapeHtml(value){
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[c]));
+}
+
 function formatHistoryDate(value){
   const k="〇一二三四五六七八九";
   const [y,m,d]=value.split("-").map(Number);
@@ -110,12 +116,12 @@ if(!performances.length){
   nf.hidden = false;
 } else {
   root.innerHTML = performances.map(p => `
-    <a class="historyCard" href="../../archive/${p.date}/?t=${p.time}">
+    <a class="historyCard" href="../../archive/${encodeURIComponent(String(p.date))}/?t=${Math.max(0, Number(p.time)||0)}">
       <div class="historyDateLine">
         <span class="historyDate">${formatHistoryDate(p.date)}</span>
         ${p.membersOnly ? '<span class="memberBadge">メン限</span>' : ''}
       </div>
-      <div class="historyArchiveTitle">${p.archiveTitle}</div>
+      <div class="historyArchiveTitle">${escapeHtml(p.archiveTitle)}</div>
       <div class="historyListen">視聴 ↗</div>
     </a>
   `).join("");
