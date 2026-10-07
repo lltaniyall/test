@@ -2670,7 +2670,7 @@ body > header{
   grid-row:2;
   margin-top:2px;
   color:var(--muted);
-  font-size:.76rem;
+  font-size:.80rem;
   line-height:1.55;
 }
 .archiveHoverTooltip{
@@ -2951,7 +2951,7 @@ body > header{
     margin-left:2.25rem;
   }
   .archiveSongTitle{font-size:.88rem;}
-  .archiveSongArtist{font-size:.72rem;}
+  .archiveSongArtist{font-size:.76rem;}
   .archiveHoverTooltip{display:none;}
 
   .share{

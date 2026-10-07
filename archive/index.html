@@ -287,8 +287,8 @@ function archiveCard(a){
         <span class="archiveSongNumber">${String(index + 1).padStart(2,"0")}</span>
         <a class="archiveSongTime" data-archive-tooltip="該当箇所をYouTubeで開く" href="${makeYouTubeUrl(a.videoId, song.time)}" target="_blank" rel="noopener noreferrer">${formatTimestamp(song.time)} ↗</a>
       </div>
-      <a class="archiveSongTitle" data-archive-tooltip="曲名の歌唱履歴を確認" href="${makeSongHistoryUrl(song.title, song.artist)}">${escapeHtml(song.title)}</a>
-      <a class="archiveSongArtist" data-archive-tooltip="歌手名の他の曲を見る" href="${makeArtistUrl(song.artist)}">${escapeHtml(song.artist || "未登録")}</a>
+      <a class="archiveSongTitle" data-archive-tooltip="この曲の歌唱履歴を確認" href="${makeSongHistoryUrl(song.title, song.artist)}">${escapeHtml(song.title)}</a>
+      <a class="archiveSongArtist" data-archive-tooltip="この歌手の他の曲を見る" href="${makeArtistUrl(song.artist)}">${escapeHtml(song.artist || "未登録")}</a>
     </li>
   `).join("");
 

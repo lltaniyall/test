@@ -1,0 +1,18 @@
+OGP / Xカード用メモ
+
+追加したHTML内の以下を必要に応じて書き換えてください。
+- og:title / twitter:title
+- og:description / twitter:description
+- og:image / twitter:image
+
+※ og:image / twitter:image は本番で表示される公開URL（推奨: 絶対URL）にしてください。
+例: https://your-domain.com/assets/social-card.jpg
+
+今回meta追記済みのHTML:
+- /index.html
+- /archive/index.html
+- /archive/2026-12-21/index.html
+- /archive/2026-12-23/index.html
+- /songs/index.html
+- /songs/history/index.html
+- /artists/index.html
