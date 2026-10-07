@@ -2611,21 +2611,30 @@ body > header{
   list-style:none;
 }
 .archiveAccordionSong{
+  display:grid;
+  grid-template-columns:max-content minmax(0,1fr);
+  grid-template-rows:auto auto;
+  column-gap:1.05rem;
+  align-items:center;
   padding:14px 0;
 }
 .archiveAccordionSong + .archiveAccordionSong{
   border-top:1px solid rgba(116,85,123,.18);
 }
 .archiveSongTop{
+  grid-column:1;
+  grid-row:1 / 3;
+  align-self:center;
   display:flex;
   align-items:baseline;
   gap:.72rem;
-  margin-bottom:5px;
+  margin:0;
+  white-space:nowrap;
 }
 .archiveSongNumber{
   min-width:1.75rem;
   color:var(--main);
-  font:600 .74rem "Playfair Display","Noto Serif JP",serif;
+  font:600 .72rem "Playfair Display","Noto Serif JP",serif;
   letter-spacing:.05em;
 }
 .archiveSongTime{
@@ -2643,12 +2652,14 @@ body > header{
 }
 .archiveSongTitle,
 .archiveSongArtist{
+  grid-column:2;
   display:table;
-  max-width:calc(100% - 2.45rem);
-  margin-left:2.45rem;
+  max-width:100%;
+  margin-left:0;
   overflow-wrap:anywhere;
 }
 .archiveSongTitle{
+  grid-row:1;
   color:var(--text);
   font-family:"Shippori Mincho","Noto Serif JP",serif;
   font-size:.96rem;
@@ -2656,10 +2667,37 @@ body > header{
   line-height:1.55;
 }
 .archiveSongArtist{
+  grid-row:2;
   margin-top:2px;
   color:var(--muted);
   font-size:.76rem;
   line-height:1.55;
+}
+.archiveHoverTooltip{
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:9999;
+  max-width:min(260px,calc(100vw - 16px));
+  padding:7px 10px;
+  border:1px solid rgba(116,85,123,.28);
+  background:rgba(249,246,249,.97);
+  box-shadow:0 6px 18px rgba(93,65,100,.12);
+  color:var(--deep);
+  font:600 .66rem "Noto Serif JP","Shippori Mincho",serif;
+  line-height:1.45;
+  letter-spacing:.035em;
+  pointer-events:none;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(2px);
+  transition:opacity .12s ease,transform .12s ease,visibility 0s linear .12s;
+}
+.archiveHoverTooltip.is-visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+  transition:opacity .12s ease,transform .12s ease;
 }
 
 /* ---------- Archive detail ---------- */
@@ -2896,16 +2934,25 @@ body > header{
     padding:.48rem .68rem;
     font-size:.63rem;
   }
-  .archiveAccordionSong{padding:12px 0;}
-  .archiveSongNumber{font-size:.7rem;}
+  .archiveAccordionSong{
+    display:block;
+    padding:12px 0;
+  }
+  .archiveSongTop{
+    display:flex;
+    margin-bottom:5px;
+  }
+  .archiveSongNumber{font-size:.69rem;}
   .archiveSongTime{font-size:.69rem;}
   .archiveSongTitle,
   .archiveSongArtist{
+    display:table;
     max-width:calc(100% - 2.25rem);
     margin-left:2.25rem;
   }
   .archiveSongTitle{font-size:.88rem;}
   .archiveSongArtist{font-size:.72rem;}
+  .archiveHoverTooltip{display:none;}
 
   .share{
     padding:7px 11px !important;

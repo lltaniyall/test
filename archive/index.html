@@ -258,10 +258,7 @@ function formatTimestamp(seconds){
   const hours = Math.floor(total / 3600);
   const minutes = Math.floor((total % 3600) / 60);
   const secs = total % 60;
-  if(hours > 0){
-    return `${hours}:${String(minutes).padStart(2,"0")}:${String(secs).padStart(2,"0")}`;
-  }
-  return `${String(minutes).padStart(2,"0")}:${String(secs).padStart(2,"0")}`;
+  return `${String(hours).padStart(2,"0")}:${String(minutes).padStart(2,"0")}:${String(secs).padStart(2,"0")}`;
 }
 
 function makeYouTubeUrl(videoId, seconds = 0){
@@ -288,10 +285,10 @@ function archiveCard(a){
     <li class="archiveAccordionSong">
       <div class="archiveSongTop">
         <span class="archiveSongNumber">${String(index + 1).padStart(2,"0")}</span>
-        <a class="archiveSongTime" href="${makeYouTubeUrl(a.videoId, song.time)}" target="_blank" rel="noopener noreferrer">${formatTimestamp(song.time)} ↗</a>
+        <a class="archiveSongTime" data-archive-tooltip="該当箇所をYouTubeで開く" href="${makeYouTubeUrl(a.videoId, song.time)}" target="_blank" rel="noopener noreferrer">${formatTimestamp(song.time)} ↗</a>
       </div>
-      <a class="archiveSongTitle" href="${makeSongHistoryUrl(song.title, song.artist)}">${escapeHtml(song.title)}</a>
-      <a class="archiveSongArtist" href="${makeArtistUrl(song.artist)}">${escapeHtml(song.artist || "未登録")}</a>
+      <a class="archiveSongTitle" data-archive-tooltip="曲名の歌唱履歴を確認" href="${makeSongHistoryUrl(song.title, song.artist)}">${escapeHtml(song.title)}</a>
+      <a class="archiveSongArtist" data-archive-tooltip="歌手名の他の曲を見る" href="${makeArtistUrl(song.artist)}">${escapeHtml(song.artist || "未登録")}</a>
     </li>
   `).join("");
 
@@ -420,6 +417,66 @@ clearFilter.addEventListener("click", () => {
   populateDays();
   renderArchives();
 });
+
+const archiveHoverTooltip = document.createElement("div");
+archiveHoverTooltip.className = "archiveHoverTooltip";
+archiveHoverTooltip.setAttribute("role", "tooltip");
+document.body.appendChild(archiveHoverTooltip);
+
+const canHoverPrecisely = window.matchMedia("(hover: hover) and (pointer: fine)");
+let activeTooltipTarget = null;
+
+function positionArchiveTooltip(event){
+  if(!archiveHoverTooltip.classList.contains("is-visible")) return;
+
+  const gap = 14;
+  const edge = 8;
+  const rect = archiveHoverTooltip.getBoundingClientRect();
+  let left = event.clientX + gap;
+  let top = event.clientY + gap;
+
+  if(left + rect.width > window.innerWidth - edge){
+    left = Math.max(edge, event.clientX - rect.width - gap);
+  }
+  if(top + rect.height > window.innerHeight - edge){
+    top = Math.max(edge, event.clientY - rect.height - gap);
+  }
+
+  archiveHoverTooltip.style.left = `${left}px`;
+  archiveHoverTooltip.style.top = `${top}px`;
+}
+
+root.addEventListener("pointerover", event => {
+  if(!canHoverPrecisely.matches) return;
+  const target = event.target.closest("[data-archive-tooltip]");
+  if(!target || !root.contains(target)) return;
+
+  activeTooltipTarget = target;
+  archiveHoverTooltip.textContent = target.dataset.archiveTooltip || "";
+  archiveHoverTooltip.classList.add("is-visible");
+  positionArchiveTooltip(event);
+});
+
+root.addEventListener("pointermove", event => {
+  if(!activeTooltipTarget || !canHoverPrecisely.matches) return;
+  positionArchiveTooltip(event);
+});
+
+root.addEventListener("pointerout", event => {
+  if(!activeTooltipTarget) return;
+  if(event.relatedTarget && activeTooltipTarget.contains(event.relatedTarget)) return;
+
+  const leavingTarget = event.target.closest("[data-archive-tooltip]");
+  if(leavingTarget !== activeTooltipTarget) return;
+
+  activeTooltipTarget = null;
+  archiveHoverTooltip.classList.remove("is-visible");
+});
+
+window.addEventListener("scroll", () => {
+  activeTooltipTarget = null;
+  archiveHoverTooltip.classList.remove("is-visible");
+}, {passive:true, capture:true});
 
 populateYears();
 populateMonths();
