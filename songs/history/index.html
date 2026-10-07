@@ -10,13 +10,13 @@
   <meta property="og:site_name" content="歌枠らいぶらり">
   <meta property="og:title" content="歌枠らいぶらり">
   <meta property="og:description" content="個人VTuber〇〇さんの歌枠や歌った曲をまとめた、ファンメイドサイトです。">
-  <meta property="og:image" content="https://example.com/assets/social-card.jpg">
+  <meta property="og:image" content="https://example.com/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="歌枠らいぶらり">
   <meta name="twitter:description" content="個人VTuber〇〇さんの歌枠や歌った曲をまとめた、ファンメイドサイトです。">
-  <meta name="twitter:image" content="https://example.com/assets/social-card.jpg">
+  <meta name="twitter:image" content="https://example.com/assets/social-card.png">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>歌唱履歴｜歌枠らいぶらり</title><link rel="stylesheet" href="../../style.css"></head><body>
 <header><a class="logo" href="../../">歌枠らいぶらり</a><nav><a href="../../archive/">ARCHIVE</a><a href="../">SONGS</a></nav></header>
 
@@ -114,6 +114,7 @@ ARCHIVES.forEach(archive => {
         date: archive.date,
         archiveTitle: archive.title,
         time: song.time,
+        videoId: archive.videoId,
         membersOnly: archive.membersOnly === true
       });
     });
@@ -122,6 +123,13 @@ ARCHIVES.forEach(archive => {
 performances.sort((a,b) => b.date.localeCompare(a.date));
 document.getElementById("totalCount").textContent = performances.length;
 
+function makeYouTubeUrl(videoId, seconds = 0){
+  const id = encodeURIComponent(String(videoId || ""));
+  const base = `https://www.youtube.com/watch?v=${id}`;
+  const t = Math.max(0, Math.floor(Number(seconds) || 0));
+  return t > 0 ? `${base}&t=${t}s` : base;
+}
+
 const root = document.getElementById("historyList");
 const nf = document.getElementById("notFound");
 
@@ -129,7 +137,7 @@ if(!performances.length){
   nf.hidden = false;
 } else {
   root.innerHTML = performances.map(p => `
-    <a class="historyCard" href="../../archive/${encodeURIComponent(String(p.date))}/?t=${Math.max(0, Number(p.time)||0)}">
+    <a class="historyCard" href="${makeYouTubeUrl(p.videoId, p.time)}" target="_blank" rel="noopener noreferrer">
       <div class="historyDateLine">
         <span class="historyDate">${formatHistoryDate(p.date)}</span>
         ${p.membersOnly ? '<span class="memberBadge">メン限</span>' : ''}

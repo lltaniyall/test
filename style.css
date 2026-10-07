@@ -285,15 +285,48 @@ nav a{
 
 .latestRow{
   display:grid;
-  grid-template-columns:70px 80px 44px 1fr 28px;
+  grid-template-columns:70px 80px 44px minmax(0,1fr) auto;
   gap:1rem;
   align-items:center;
-  padding:1.25rem .6rem;
+  padding:1.05rem .6rem;
   border-bottom:1px solid var(--line);
 }
 
 .latestRow:hover,.rankingRow:hover,.historyCard:hover,.artistSongCard:hover{
   background:rgba(169,93,132,.075);
+}
+
+.latestTitle{
+  min-width:0;
+}
+
+.latestActions{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:.45rem;
+}
+
+.latestAction{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:31px;
+  padding:.42rem .68rem;
+  border:1px solid rgba(116,85,123,.28);
+  background:rgba(244,236,242,.62);
+  color:var(--deep);
+  font:600 .62rem "Noto Serif JP","Shippori Mincho",serif;
+  letter-spacing:.045em;
+  line-height:1;
+  white-space:nowrap;
+  transition:background .18s ease,border-color .18s ease,color .18s ease;
+}
+
+.latestAction:hover{
+  border-color:var(--accent);
+  background:var(--accent);
+  color:#fff;
 }
 
 .latestNumber,.rankNumber{
@@ -835,12 +868,20 @@ footer{
   }
 
   .latestRow{
-    grid-template-columns:24px 74px minmax(0,1fr) 14px;
+    grid-template-columns:24px 74px minmax(0,1fr);
     column-gap:.375rem;
+    row-gap:.55rem;
     padding:1rem .1rem;
   }
 
+  .latestNumber{
+    grid-column:1;
+    grid-row:1;
+  }
+
   .latestDate{
+    grid-column:2;
+    grid-row:1;
     font-size:.8rem;
     letter-spacing:.035em;
     white-space:nowrap;
@@ -851,9 +892,25 @@ footer{
   }
 
   .latestTitle{
+    grid-column:3;
+    grid-row:1;
     min-width:0;
     font-size:.78rem !important;
     line-height:1.5;
+  }
+
+  .latestActions{
+    grid-column:3;
+    grid-row:2;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    gap:.38rem;
+  }
+
+  .latestAction{
+    min-height:32px;
+    padding:.43rem .62rem;
+    font-size:.59rem;
   }
 
   .rankingHead,.rankingRow{
@@ -1550,7 +1607,7 @@ header{
   line-height:1;
   letter-spacing:.42em;
   text-indent:.42em;
-  color:#625870;
+  color:var(--deep);
 }
 
 .heroLibraryTitle{
@@ -2397,12 +2454,10 @@ body > header{
 }
 .archiveIndexCards{position:relative;z-index:1;gap:14px !important;}
 .archiveIndexCard{
-  min-height:138px;
-  padding:22px 26px 20px;
-  display:grid;
-  grid-template-columns:minmax(0,1fr) auto;
-  grid-template-rows:auto 1fr auto;
-  align-items:start;
+  min-height:0;
+  padding:0;
+  display:block;
+  scroll-margin-top:88px;
   background:linear-gradient(110deg,rgba(244,238,245,.93),rgba(232,223,234,.82));
   border-color:rgba(116,85,123,.24);
   box-shadow:0 9px 22px rgba(93,65,100,.055);
@@ -2411,9 +2466,10 @@ body > header{
   content:"";
   position:absolute;
   right:0;
-  bottom:0;
+  bottom:auto;
+  top:0;
   width:44%;
-  height:100%;
+  height:138px;
   border:0;
   transform:none;
   background:url("./assets/asanoha.png") right bottom/150px auto repeat;
@@ -2427,7 +2483,32 @@ body > header{
   transform:translateY(-2px);
   box-shadow:0 12px 26px rgba(93,65,100,.09);
 }
+.archiveIndexCard.is-open:hover{
+  transform:none;
+}
+.archiveCardToggle{
+  width:100%;
+  min-height:138px;
+  padding:22px 26px 20px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  grid-template-rows:auto 1fr auto;
+  align-items:start;
+  position:relative;
+  z-index:2;
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+}
+.archiveCardToggle:focus-visible{
+  outline:2px solid rgba(154,109,145,.72);
+  outline-offset:-3px;
+}
 .archiveCardDateLine{
+  grid-column:1;
   display:flex;
   align-items:center;
   gap:.55rem;
@@ -2441,7 +2522,6 @@ body > header{
 }
 
 .archiveIndexCard .card-date{
-  grid-column:1;
   position:relative;
   z-index:1;
   color:var(--accent);
@@ -2451,7 +2531,7 @@ body > header{
   letter-spacing:.09em;
   white-space:nowrap;
 }
-.archiveIndexCard h3{
+.archiveCardTitle{
   grid-column:1;
   position:relative;
   z-index:1;
@@ -2480,7 +2560,106 @@ body > header{
   z-index:2;
   padding-left:28px;
   color:var(--gold);
-  font-size:.86rem;
+  font-size:.92rem;
+  line-height:1;
+}
+.archiveCardCollapse{
+  display:grid;
+  grid-template-rows:0fr;
+  position:relative;
+  z-index:2;
+  visibility:hidden;
+  pointer-events:none;
+  transition:grid-template-rows .24s ease,visibility 0s linear .24s;
+}
+.archiveIndexCard.is-open .archiveCardCollapse{
+  grid-template-rows:1fr;
+  visibility:visible;
+  pointer-events:auto;
+  transition:grid-template-rows .24s ease;
+}
+.archiveCardBody{
+  min-height:0;
+  overflow:hidden;
+}
+.archiveCardBodyInner{
+  padding:20px 26px 22px;
+  border-top:1px solid rgba(116,85,123,.22);
+}
+.archiveYoutubeLink{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  margin:0 0 18px;
+  padding:.5rem .78rem;
+  border:1px solid rgba(116,85,123,.30);
+  background:rgba(244,236,242,.62);
+  color:var(--deep);
+  font:600 .66rem "Noto Serif JP","Shippori Mincho",serif;
+  letter-spacing:.055em;
+  transition:background .18s ease,border-color .18s ease,color .18s ease;
+}
+.archiveYoutubeLink:hover{
+  border-color:var(--accent);
+  background:var(--accent);
+  color:#fff;
+}
+.archiveAccordionSetlist{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.archiveAccordionSong{
+  padding:14px 0;
+}
+.archiveAccordionSong + .archiveAccordionSong{
+  border-top:1px solid rgba(116,85,123,.18);
+}
+.archiveSongTop{
+  display:flex;
+  align-items:baseline;
+  gap:.72rem;
+  margin-bottom:5px;
+}
+.archiveSongNumber{
+  min-width:1.75rem;
+  color:var(--main);
+  font:600 .74rem "Playfair Display","Noto Serif JP",serif;
+  letter-spacing:.05em;
+}
+.archiveSongTime{
+  color:var(--accent);
+  font-family:"Noto Serif JP","Shippori Mincho",serif;
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.025em;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.archiveSongTime:hover,
+.archiveSongTitle:hover,
+.archiveSongArtist:hover{
+  color:var(--deep);
+}
+.archiveSongTitle,
+.archiveSongArtist{
+  display:table;
+  max-width:calc(100% - 2.45rem);
+  margin-left:2.45rem;
+  overflow-wrap:anywhere;
+}
+.archiveSongTitle{
+  color:var(--text);
+  font-family:"Shippori Mincho","Noto Serif JP",serif;
+  font-size:.96rem;
+  font-weight:600;
+  line-height:1.55;
+}
+.archiveSongArtist{
+  margin-top:2px;
+  color:var(--muted);
+  font-size:.76rem;
+  line-height:1.55;
 }
 
 /* ---------- Archive detail ---------- */
@@ -2693,18 +2872,40 @@ body > header{
     padding-bottom:38px !important;
   }
   .archiveIndexCard{
-    min-height:118px;
-    padding:17px 16px 16px;
+    min-height:0;
+    padding:0;
   }
   .archiveIndexCard::after{
     width:58%;
+    height:118px;
     background-size:125px auto;
   }
-  .archiveIndexCard h3{font-size:.94rem; line-height:1.42;}
+  .archiveCardToggle{
+    min-height:118px;
+    padding:17px 16px 16px;
+  }
+  .archiveCardTitle{font-size:.94rem; line-height:1.42;}
   .archiveCardDateLine{font-size:.68rem;}
   .archiveIndexCard .card-date{font-size:1em;}
   .archiveIndexCard .card-meta{font-size:.72rem;}
-  .archiveCardArrow{font-size:.78rem; padding-left:12px;}
+  .archiveCardArrow{font-size:.82rem; padding-left:12px;}
+  .archiveCardBodyInner{padding:16px 16px 18px;}
+  .archiveYoutubeLink{
+    min-height:34px;
+    margin-bottom:14px;
+    padding:.48rem .68rem;
+    font-size:.63rem;
+  }
+  .archiveAccordionSong{padding:12px 0;}
+  .archiveSongNumber{font-size:.7rem;}
+  .archiveSongTime{font-size:.69rem;}
+  .archiveSongTitle,
+  .archiveSongArtist{
+    max-width:calc(100% - 2.25rem);
+    margin-left:2.25rem;
+  }
+  .archiveSongTitle{font-size:.88rem;}
+  .archiveSongArtist{font-size:.72rem;}
 
   .share{
     padding:7px 11px !important;

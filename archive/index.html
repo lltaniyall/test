@@ -9,6 +9,19 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <meta name="theme-color" content="#A85C83">
+  <!-- OGP / X(Twitter) card: change the title/description/image URL as needed -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="歌枠らいぶらり">
+  <meta property="og:title" content="歌枠らいぶらり">
+  <meta property="og:description" content="個人VTuber〇〇さんの歌枠や歌った曲をまとめた、ファンメイドサイトです。">
+  <meta property="og:image" content="https://example.com/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="歌枠らいぶらり">
+  <meta name="twitter:description" content="個人VTuber〇〇さんの歌枠や歌った曲をまとめた、ファンメイドサイトです。">
+  <meta name="twitter:image" content="https://example.com/assets/social-card.png">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -238,17 +251,71 @@ function matchesFilter(archive){
   return true;
 }
 
+const openArchiveDates = new Set();
+
+function formatTimestamp(seconds){
+  const total = Math.max(0, Math.floor(Number(seconds) || 0));
+  const hours = Math.floor(total / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  const secs = total % 60;
+  if(hours > 0){
+    return `${hours}:${String(minutes).padStart(2,"0")}:${String(secs).padStart(2,"0")}`;
+  }
+  return `${String(minutes).padStart(2,"0")}:${String(secs).padStart(2,"0")}`;
+}
+
+function makeYouTubeUrl(videoId, seconds = 0){
+  const id = encodeURIComponent(String(videoId || ""));
+  const base = `https://www.youtube.com/watch?v=${id}`;
+  const t = Math.max(0, Math.floor(Number(seconds) || 0));
+  return t > 0 ? `${base}&t=${t}s` : base;
+}
+
+function makeSongHistoryUrl(title, artist){
+  const params = new URLSearchParams({song:String(title || ""), artist:String(artist || "")});
+  return `../songs/history/?${params.toString()}`;
+}
+
+function makeArtistUrl(artist){
+  return `../artists/?artist=${encodeURIComponent(String(artist || ""))}`;
+}
+
 function archiveCard(a){
-  const count = a.songs.filter(s => s.type === "song").length;
-  return `<a class="card archiveIndexCard" href="./${a.date}/">
-    <span class="archiveCardDateLine">
-      <span class="card-date">${formatArchiveDate(a.date)}</span>
-      ${a.membersOnly === true ? '<span class="memberBadge">メン限</span>' : ''}
-    </span>
-    <h3>${escapeHtml(a.title)}</h3>
-    <p class="card-meta">${formatDaijiCount(count)}</p>
-    <span class="archiveCardArrow" aria-hidden="true">↗</span>
-  </a>`;
+  const songs = a.songs.filter(s => s.type === "song");
+  const isOpen = openArchiveDates.has(a.date);
+  const panelId = `archive-panel-${a.date}`;
+  const songRows = songs.map((song, index) => `
+    <li class="archiveAccordionSong">
+      <div class="archiveSongTop">
+        <span class="archiveSongNumber">${String(index + 1).padStart(2,"0")}</span>
+        <a class="archiveSongTime" href="${makeYouTubeUrl(a.videoId, song.time)}" target="_blank" rel="noopener noreferrer">${formatTimestamp(song.time)} ↗</a>
+      </div>
+      <a class="archiveSongTitle" href="${makeSongHistoryUrl(song.title, song.artist)}">${escapeHtml(song.title)}</a>
+      <a class="archiveSongArtist" href="${makeArtistUrl(song.artist)}">${escapeHtml(song.artist || "未登録")}</a>
+    </li>
+  `).join("");
+
+  return `<article class="card archiveIndexCard${isOpen ? " is-open" : ""}" id="${a.date}" data-archive-date="${a.date}">
+    <button class="archiveCardToggle" type="button" aria-expanded="${isOpen}" aria-controls="${panelId}">
+      <span class="archiveCardDateLine">
+        <span class="card-date">${formatArchiveDate(a.date)}</span>
+        ${a.membersOnly === true ? '<span class="memberBadge">メン限</span>' : ''}
+      </span>
+      <span class="archiveCardTitle">${escapeHtml(a.title)}</span>
+      <span class="card-meta">${formatDaijiCount(songs.length)}</span>
+      <span class="archiveCardArrow" aria-hidden="true">${isOpen ? "⌃" : "⌄"}</span>
+    </button>
+    <div class="archiveCardCollapse" id="${panelId}" aria-hidden="${isOpen ? "false" : "true"}">
+      <div class="archiveCardBody">
+        <div class="archiveCardBodyInner">
+          <a class="archiveYoutubeLink" href="${makeYouTubeUrl(a.videoId)}" target="_blank" rel="noopener noreferrer">YouTubeで配信を見る ↗</a>
+          <ol class="archiveAccordionSetlist">
+            ${songRows}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </article>`;
 }
 
 function renderArchives(){
@@ -267,11 +334,50 @@ function renderArchives(){
   }
 }
 
+function setArchiveOpen(date, shouldOpen){
+  if(shouldOpen) openArchiveDates.add(date);
+  else openArchiveDates.delete(date);
+
+  const card = document.getElementById(date);
+  if(!card) return;
+  const toggle = card.querySelector(".archiveCardToggle");
+  const arrow = card.querySelector(".archiveCardArrow");
+  const panel = card.querySelector(".archiveCardCollapse");
+  card.classList.toggle("is-open", shouldOpen);
+  toggle?.setAttribute("aria-expanded", String(shouldOpen));
+  panel?.setAttribute("aria-hidden", String(!shouldOpen));
+  if(arrow) arrow.textContent = shouldOpen ? "⌃" : "⌄";
+}
+
+function openArchiveFromHash({scroll = true} = {}){
+  const raw = location.hash.slice(1);
+  let date = "";
+  try{ date = decodeURIComponent(raw); }catch{ date = raw; }
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(date)) return;
+  if(!archives.some(a => a.date === date)) return;
+
+  setArchiveOpen(date, true);
+  if(scroll){
+    requestAnimationFrame(() => {
+      document.getElementById(date)?.scrollIntoView({behavior:"smooth", block:"start"});
+    });
+  }
+}
+
 function setFilterMode(mode){
   ymdFields.hidden = mode !== "ymd";
   rangeFields.hidden = mode !== "range";
   renderArchives();
 }
+
+root.addEventListener("click", event => {
+  const toggle = event.target.closest(".archiveCardToggle");
+  if(!toggle) return;
+  const card = toggle.closest(".archiveIndexCard");
+  const date = card?.dataset.archiveDate;
+  if(!date) return;
+  setArchiveOpen(date, toggle.getAttribute("aria-expanded") !== "true");
+});
 
 filterToggle.addEventListener("click", () => {
   const isOpen = filterToggle.getAttribute("aria-expanded") === "true";
@@ -319,6 +425,8 @@ populateYears();
 populateMonths();
 populateDays();
 setFilterMode("ymd");
+openArchiveFromHash({scroll:true});
+window.addEventListener("hashchange", () => openArchiveFromHash({scroll:true}));
 </script>
 </body>
 </html>
