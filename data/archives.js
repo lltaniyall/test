@@ -1,4 +1,95 @@
 const ARCHIVES = [
+  {
+    "date": "2026-10-07",
+    "membersOnly": false,
+    "title": "【 歌枠 】寝る前のまつたりアカペラ歌枠です【 甘萬つもり｜#個人Vtuber 】",
+    "videoId": "HQTNxLfqpvg",
+    "songs": [
+      {
+        "title": "開始",
+        "time": 140,
+        "type": "talk"
+      },
+      {
+        "title": "薄ら氷心中",
+        "artist": "林原めぐみ",
+        "time": 850,
+        "type": "song"
+      },
+      {
+        "title": "心做し",
+        "artist": "蝶々P",
+        "time": 1484,
+        "type": "song"
+      },
+      {
+        "title": "フレンズ",
+        "artist": "レベッカ",
+        "time": 1792,
+        "type": "song"
+      },
+      {
+        "title": "ラムのラブソング",
+        "artist": "松谷祐子",
+        "time": 2447,
+        "type": "song"
+      },
+      {
+        "title": "Loveit?",
+        "artist": "biz×ZERA",
+        "time": 3274,
+        "type": "song"
+      },
+      {
+        "title": "プロポーズ",
+        "artist": "内緒のピアス",
+        "time": 3437,
+        "type": "song"
+      },
+      {
+        "title": "ありあまる富",
+        "artist": "椎名林檎",
+        "time": 3905,
+        "type": "song"
+      },
+      {
+        "title": "丸の内サディスティック",
+        "artist": "椎名林檎",
+        "time": 4889,
+        "type": "song"
+      },
+      {
+        "title": "あした地球がこなごなになっても",
+        "artist": "でんぱ組.inc",
+        "time": 5309,
+        "type": "song"
+      },
+      {
+        "title": "スキスキ絶頂症",
+        "artist": "koyori(電ポルp)",
+        "time": 5738,
+        "type": "song"
+      },
+      {
+        "title": "ワインレッドの心",
+        "artist": "安全地帯",
+        "time": 6211,
+        "type": "song"
+      },
+      {
+        "title": "小夜子",
+        "artist": "みきとP",
+        "time": 6425,
+        "type": "song"
+      },
+      {
+        "title": "ドミノ倒シ",
+        "artist": "すこっぷ",
+        "time": 6748,
+        "type": "song"
+      }
+    ]
+  },
 {
 "date": "2026-07-26",
 "membersOnly": false,
